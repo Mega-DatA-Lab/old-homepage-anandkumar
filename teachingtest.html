@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1365px">
+    <title>Animashree Anandkumar</title>
+    <link rel="stylesheet" href="MainCSS.css">
+    <link rel="stylesheet" href="Teaching.css">
+    
+</head>
+
+<body>
+    <script src=""></script>
+    
+    <div id = "TeachingTest">
+
+    <h1 id = "TeachingHeading"> Software </h1>
+
+        
+        <!-- ###### Format to add new class ######### -->
+        
+
+
+  <!-- Softwares -->
+                      
+              <!-- ###### Format to add new software ######### -->
+              <!--
+             <div class = "SoftwareDetails">
+                  
+                  <h3>*Title*</h3>
+                  <p class="SoftwareIntro">
+                     *Software details*
+                    <a target="_blank" href="PROJECT PAGE URL" style="text-decoration:none">Read more</a>
+                  </p>
+                  
+              </div>
+                -->
+
+
+
+
+
+<div class = "rowTeaching">
+                  
+                 <p><a target = "_blank" href = "https://bitbucket.org/kazizzad/tensor-power-method">Tensor Power Method</a></p>
+                  <p class="description">
+                   Tensor Power Method as a robust tensor CP decomposition involves decomposing a tensor into summation of its rank-one components. We provide simple Matlab code for tensor power method. In this code we show how this code whitens the input tensor by taking the SVD of its diagonal slice and apples iterative algorithm on whitened tensor to compute eigenvalues and eigenvectors. We illustrate how it computes the eigenvalues and eigenvectors of whitened tensor by iterative algorithm. At each iteration it multiplies the input tensor by a vector and normalize the result vector. Then multiply the tensor again by the result vector and normalize it again. It does it on and on until the iterative algorithm converges to a stable vector. We store this final vector and its normalization coefficient. For next step, it deflates the corresponding rank one tensor from the original whitened tensor and update the original whitened tensor. After that it pursues the iteration and deflation until the original whitened tensor vanishes. Then we show how it dewhitens the stored vectors and their corresponding coefficients to come up with eigenvalues and eigenvectors original tensor.
+
+                  </p>
+                  
+              </div>      
+
+
+
+<div class = "rowTeaching">
+                  
+                 <p><a target = "_blank" href = "https://bitbucket.org/shiyangdaisy/tensor-robust-pca">Tensor Robust Principle Component Analysis</a></p>
+                  <p class="description">
+                   Robust tensor CP decomposition involves decomposing a tensor into low rank and sparse components.
+We propose a novel non-convex iterative algorithm with guaranteed recovery. It alternates between lowrank
+CP decomposition through gradient ascent (a variant of the tensor power method), and hard
+thresholding of the residual. We prove convergence to the globally optimal solution under natural incoherence
+conditions on the low rank component, and bounded level of sparse perturbations. We compare
+our method with natural baselines, viz., which apply robust matrix PCA either to the flattened tensor,
+or to the matrix slices of the tensor. Our method can provably handle a far greater level of perturbation
+when the sparse tensor is block-structured.
+                  </p>
+                  
+              </div>      
+
+<div class = "rowTeaching">
+                  
+                 <p><a target = "_blank" href = "https://github.com/FurongHuang/SpectralLDA-TensorSpark">Spectral LDA Using Tensor Decomposition on Spark</a></p>
+                  <p class="description">
+                    Learning latent variable mixture models in high-dimension is applicable in numerous domains where low dimensional latent
+factors out of the high-dimensional observations are desired. Popular likelihood based methods optimize over a non-convex
+likelihood which is computationally challenging to achieve due to the high-dimensionality of the data, and therefore it is usually
+not guaranteed to converge to a global or even local optima without additional assumptions. We propose a framework to
+overcome the problem of unscalable and non-convex likelihood by taking the power of inverse method of moments. By
+matching the moments, the problem of learning latent variable mixture models is reduced to a tensor (higher order matrix)
+decomposition problem in low-dimensional space. This framework incorporates dimensionality reduction and thus is scalable
+to high-dimensional data. Moreover, we show that the algorithm is highly parallel and implemented a distributed version on
+Spark in Scala language.
+                  </p>
+                  
+              </div>      
+<div class = "rowTeaching">
+                  
+                 <p><a target = "_blank" href = "https://github.com/FurongHuang/Fast-Detection-of-Overlapping-Communities-via-Online-Tensor-Methods">Fast Detection of Overlapping Communities</a></p>
+                  <p class="description">
+                    We present a fast tensor-based approach for detecting hidden overlapping communities under the Mixed Membership Stochastic Block Model (MMSB). We present two implementations, viz., a GPU-based implementation which exploits the parallelism of SIMD architectures and a CPU-based implementation for larger datasets, wherein the GPU memory does not suffice.
+                  </p>
+                  
+              </div>
+
+<!--<div class = "SoftwareDetails">
+                  
+                 <p><a target = "_blank" href = "https://github.com/FurongHuang/StructureParameterLatentTree">Structure and Parameter Learning in Latent Tree Graphical Models</a></p>
+                  <p class="description">
+			We present an integrated approach to structure and parameter estimation in latent tree graphical models, where some nodes are hidden. Our overall approach follows a ``divide-and-conquer'' strategy that learns models  over small groups of variables and iteratively merges into a global solution.   The structure learning involves  combinatorial operations such as minimum spanning tree construction and local recursive grouping; the parameter learning is based on the method of moments and on tensor decompositions. Our method  is guaranteed to correctly recover the unknown tree structure and the model parameters with low sample complexity for the class of linear multivariate latent tree models which includes discrete and Gaussian distributions, and Gaussian mixtures. Our bulk asynchronous parallel algorithm is implemented in parallel using the OpenMP framework and scales logarithmically with the number of variables and linearly with dimensionality of each variable. Our experiments confirm a high degree of efficiency and accuracy on large datasets of electronic health records. The proposed algorithm also generates intuitive and clinically meaningful disease hierarchies. 
+                  </p>
+                  
+              </div>
+ -->      
+<div class = "rowTeaching">
+                  
+                 <p><a target = "_blank" href = 
+"https://bitbucket.org/megaDataLab/tensormethodsforml/overview">Topic Modeling using Tensor 
+Decomposition</a></p>
+                  <p class="description">
+                     Single node topic model learning and inference via method of moments using tensor decomposition. Alternating least squares with 
+pre-processing (a whitening step consists of orthogonalization and dimensionality reduction) is implemented. Comments on the contents of the software 
+can be found &nbsp;<a
+target="_blank" href="http://newport.eecs.uci.edu/anandkumar/Lab/Lab_sub/TopicModeling.html" style="text-decoration:none">here</a> and &nbsp;<a
+target="_blank" href="http://newport.eecs.uci.edu/anandkumar/Lab/Lab_sub/M3decomp.html" style="text-decoration:none">here</a>.
+
+
+                  </p>
+                  
+              </div>
+
+             <div class = "rowTeaching">
+                  
+                 <p><a target = "_blank" href = "https://bitbucket.org/megaDataLab/reason2.git">Multi-Step Stochastic ADMM in High Dimensions</a></p>
+                  <p class="description">
+                     We propose an efficient ADMM method with guarantees for high-dimensional problems. We provide explicit bounds for the sparse optimization problem and the noisy matrix decomposition problem. For sparse optimization, we establish that the modified ADMM method has an optimal convergence rate of (slogd/T), where s is the sparsity level, d is the data dimension and T is the number of steps. &nbsp;<a target="_blank" href="http://arxiv.org/abs/1402.5131" style="text-decoration:none">Read more</a>
+                  </p>
+                  
+              </div>
+
+              
+              <div class = "rowTeaching">
+                  
+                  <p><a target = "_blank" href = "https://bitbucket.org/megaDataLab/ncrpca.git">Non-convex Robust PCA</a></p>
+                  <p class="description">
+                      We propose a new provable method for robust PCA, where the task is to recover a low-rank matrix, which is corrupted with sparse perturbations. Our method consists of simple alternating projections onto the set of low rank and sparse matrices with intermediate denoising steps. We prove correct recovery of the low rank and sparse components under tight recovery conditions, which match those for the state-of-art convex relaxation techniques. Our method is extremely simple to implement and has low computational complexity.&nbsp;<a target="_blank" href="http://newport.eecs.uci.edu/anandkumar/Lab/Lab_sub/ncrpca.html" style="text-decoration:none">Read more</a>
+                  </p>
+                  
+              </div>
+
+          
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

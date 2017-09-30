@@ -1,0 +1,140 @@
+
+<!-- saved from url=(0064)file:///Users/tejaswi/Desktop/ObjectClassification_Web/main.html -->
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="StyleSheet" href="./Multi-Object Classification_files/style.css" type="text/css" media="all"> 
+
+<title>Multi-Object Classification</title> 
+<style type="text/css">
+#primarycontent h1 {
+	font-variant: small-caps;
+}
+#primarycontent h3 {
+}
+#primarycontent teasertext {
+	text-align: center;
+}
+#primarycontent p {
+	text-align: center;
+}
+#primarycontent {
+	text-align: justify;
+}
+#primarycontent p {
+	text-align: justify;
+}
+#primarycontent p iframe {
+	text-align: center;
+}
+.featart {
+  margin:4px;
+}
+</style>
+
+<script type="text/javascript">
+  function togglevis(elid){
+    el=document.getElementById(elid);
+    aelid=elid+"a";
+    ael=document.getElementById(aelid);
+    if(el.style.display=='none'){
+      el.style.display='inline-table';
+      ael.innerHTML="[Hide BibTex]";
+    }else{
+      el.style.display='none';
+      ael.innerHTML="[Show BibTex]";
+    }
+  }
+</script>
+<style type="text/css"></style>
+</head><body itemscope="" itemtype="http://schema.org/ScholarlyArticle"> 
+<div id="primarycontent"> 
+<p class="hiddenDiv" itemprop="url">http://?/</p>
+<h1 align="center" itemprop="name"><strong> Multi-Object Classification and Scene Understanding
+</strong></h1> 
+<a><img src="./Multi-Object Classification_files/full.jpg" itemprop="image" width="800" alt="teaserImage"></a>
+<p style="text-align:center;margin-bottom:-15px;font-size:0.8em;font-weight:bold;"><!--Presented at <a href="http://www.siggraph.org/asia2011/techpaper-detail?id=38&session=techpapers"  target="_blank">SIGGRAPH Asia, 2011</a></p>-->
+</p><h3>People</h3>
+
+<ul id="people" itemprop="accountablePerson">
+<li><a href="">Animashree Anandkumar</a></li>
+<li><a href="">Tejaswi Nimmagadda</a></li>
+</ul>
+<h3>Abstract</h3>
+
+
+<p style="padding-left: 10px;	padding-right: 10px;">
+Deep learning has shown state-of-art classification performance on datasets such as ImageNet, which contain a single object in each image. However, multi-object classification is far more challenging. We present a unified framework which leverages the strengths of multiple machine learning methods, viz deep learning, probabilistic models and kernel methods to obtain state-of-art performance on Microsoft COCO, consisting of non-iconic images. We incorporate contextual information in natural images through a conditional latent tree probabilistic model (CLTM), where the object co-occurrences are conditioned on the extracted fc7 features from pre-trained Imagenet CNN as input. We learn the CLTM tree structure using conditional pairwise probabilities for object co-occurrences, estimated through kernel methods, and we learn its node and edge potentials by training a new 3-layer neural network, which takes fc7 features as input.  Moreover, the latent variables in the CLTM capture scene information and with  simple k-means clustering on this auxiliary information improves scene classification performance on the MIT-Indoor dataset, without the need for any retraining.
+</p>
+<h3>Paper &amp; Presentation</h3>
+<p style="padding-left: 10px;   padding-right: 10px;">
+<a href="http://arxiv.org/pdf/1505.00308v1.pdf"><img style="float:left;border:solid 0px #000;margin-right:30px;" src="./Multi-Object Classification_files/paper.png"></a>
+</p>
+
+<p style="margin-top:30px;">
+<a href="http://arxiv.org/pdf/1505.00308v1.pdf">Paper</a> <br>  <br>
+<a href="file:///Users/tejaswi/Desktop/ObjectClassification_Web/.files/poster">Poster</a> </p>
+<br>
+<p></p>
+
+<p><b>Citation</b><span style="font-size:4px;">&nbsp;<br></span> ????
+   <a href="javascript:togglevis('doersch12')" id="doersch12a">[Show BibTex]</a><br>
+      <table class="bibtex" style="display: none;" id="doersch12"><tbody><tr><td>
+          <pre>@article{,
+  title = {},
+  author = {},
+  journal = {},
+  volume = {},
+  number = {},
+  pages = {}
+  year = {},
+}
+          </pre>
+       <!--</div>-->
+       </td></tr></tbody></table>
+</p>
+<br>
+<h3 style="clear:both">Demo</h3><br><br>
+  <li><b><u>Extracted Latent Tree Structure</u></b></li>
+  <br>
+  <iframe width="800" height="600" src="./Multi-Object Classification_files/LatentTree.html" frameborder="1" allowfullscreen=""></iframe>
+  <br>
+<br>
+<br>
+  <li><b><u>Latent Tree in Action </u> </b> </li>
+  <a href="file:///Users/tejaswi/Desktop/ObjectClassification_Web/files/HeatMap.html"><table widht-"800"=""><tbody><tr><td><img src="./Multi-Object Classification_files/baseball.jpg" width="170px" height="150px"></td>
+<td><img src="./Multi-Object Classification_files/computer.jpg" width="170px" height="150px"></td>
+<td><img src="./Multi-Object Classification_files/veichles.jpg" width="170px" height="150px"></td>
+<td><img src="./Multi-Object Classification_files/kitchen.jpg" width="170px" height="150px"></td></tr></tbody></table></a>
+<p></p>
+
+<h3 style="clear:both">Related Papers</h3>
+<p style="padding-left: 10px;padding-right: 10px;">   Myung Jin Choi, Vincent Y. F. Tan, Animashree Anandkumar, and Alan S. Willsky   <a href="http://people.csail.mit.edu/myungjin/latentTree.html">"Learning Latent Tree Graphical Models"</a> Journal of Machine Learning Research (JMLR).<span style="font-family:&#39;Courier New&#39;"></span></p>
+
+<h3 style="clear:both">Code</h3>
+<ul>
+<li>
+<a href="https://github.com/nimmagas/CLTM">Code (github)</a> : code for estimating conditional information distance matrix using kernel embedding framework
+</li>
+<li>
+<a href="http://www.cs.ubc.ca/~schmidtm/Software/UGM.html"> UGM tool box  </a> : toolbox for working with CRF 
+</li>
+<li>
+<a href="http://people.csail.mit.edu/myungjin/latentTree.html">CLRG</a> : code for extracting tree structure
+</li>
+</ul>
+
+<h3 style="clear:both">Dataset and Other Tools</h3>
+<ul>
+<li>
+<a href="http://mscoco.org/">Microsoft COCO </a> : non-iconic image dataset containing multiple object classes 
+</li>
+<li>
+<a href="http://web.mit.edu/torralba/www/indoor.html"> MIT Indoor </a> : indoor images for unsupervised scene classification
+</li>
+<li>
+ <a href="http://caffe.berkeleyvision.org/"><b>Caffe </b> </a> : for extracting fc7 features
+</li>
+</ul>
+</div>
+
+
+</body></html>

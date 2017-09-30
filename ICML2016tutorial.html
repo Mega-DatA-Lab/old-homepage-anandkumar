@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1365px">
+    <title>Animashree Anandkumar</title>
+    <link rel="stylesheet" href="MainCSS.css">
+    <link rel="stylesheet" href="ICML2016tutorial.css">
+    
+</head>
+
+<body>
+       
+    <div id = "Nonconvex optimization: Challenges and Recent Successes">
+
+        <img id = "logo" src = "images/Thumbnail/ICML.png" height="60" width="170"/>
+        <div id = "lab_header">
+        <h1 id = "pageTitle"><u>Nonconvex optimization: Challenges and Recent Successes</u></h1>
+        <CENTER> <h1 id = "LabHeading">  </h1>
+        <h2 id = "LabAddress">ICML2016 Tutorial</h2>
+         </div>
+        
+        <!-- ###### Format to add New class ######### -->
+        
+        <!--
+            <div class = "rowTeaching">
+
+                <p><a target="_blank" href="CLASS URL">*Course title*</a> <span class = "quarter"><i>*Quarter - year*</i></span></p>
+                <p class = "description">*Course description*</p>
+
+             </div>
+            -->
+        
+
+
+        <div class = "rowTeaching">
+                   
+                    <p><a target = "_blank" ><b> Information </b></a> </p>
+          <li class = "newsListItem"><font size="4">New York, NY &nbsp;<a target = "_blank" href="http://icml.cc/2016/" style="text-decoration:none">[ICML2016]</a>&nbsp;</font></li>
+          <li class = "newsListItem"><font size="4">Jun. 19th, 2:30-4:30pm &nbsp;<a target = "_blank" href="" style="text-decoration:none"></a>&nbsp;</font></li>        
+          <li class = "newsListItem"> <font size="4"> Presenter: Anima Anandkumar&nbsp;</font></li>        
+			<li class = "newsListItem"><font size="4">Slides: &nbsp;<a target = "_blank" href="slides/icml2016-tutorial.pdf" style="text-decoration:none">[Slides]</a>&nbsp;</font></li>
+        </div>
+
+
+<div class = "rowTeaching">
+                   
+                    <p><a target = "_blank" ><b> Topic Overview</b></a></p>
+                    <p> Most machine learning tasks require solving non-convex optimization problems. For these problems, as the data dimensions grow, the number of critical points can grow exponentially. Local search methods such as gradient descent can get stuck in one of these critical points. Finding the globally optimal solution is computationally hard in the worst case for nonconvex optimization. Instead, over the last few years, focus has shifted in characterizing transparent conditions for non-convex problems which are tractable. In many instances, these conditions turn out to be mild and natural for machine learning applications. This tutorial will provide an overview of the recent theoretical success stories in nonconvex optimization. This includes learning latent variable models, dictionary learning, robust principal component analysis, and so on. Simple iterative methods such as spectral methods, alternating projections, and so on, can be proven to learn consistent models with polynomial sample and computational complexity.  This tutorial will present main ingredients towards establishing these results. For instance, one approach is to first obtain an approximate solution which lands in the basin of the globally optimal solution, and then run gradient descent to reach the global optimum. Another approach is to discard the original objective function, and to instead optimize over different objective functions which are better behaved. For example, the use of moment fitting objective instead of maximum likelihood for learning latent variable models allows us to establish consistency in estimation. For problems where finding the globally optimal solution is not tractable, it is desirable to at least reach a local optimum. It turns out that even this is computationally hard in the worst case. In this tutorial, we will cover the important problem of escaping saddle points. Saddle points are critical points which are not local minima, meaning there exist directions where the objective value decreases (for minimization problems). Saddle points can slow down gradient descent arbitrarily. Alternatively, if Newton's method is run, it converges to an arbitrary critical point, and does not distinguish between a local minimum and a saddle 1 point. Solutions such as Trust region methods and recent work on noisy stochastic gradient descent will be covered.  There are certainly many challenging open problems in the area of non-convex optimization. While guarantees have been established in individual instances, there is no common unifying theme of what makes non-convex problem tractable. Many challenging instances such as optimization for training multi-layer neural networks or analyzing novel regularization techniques such as dropout for non-convex optimization still remain wide open. On the practical side, conversations between theorists and practitioners can help identify what kind of conditions are reasonable for specific applications, and thus lead to the design of practically motivated algorithms for non-convex optimization with rigorous guarantees. The tutorial will cover these issues as well. </p>
+</div>
+
+
+         <div class = "rowTeaching">
+                   
+                    <p><a target = "_blank" ><b>References</b></a> </p>
+ <li class = "newsListItem"><strong>"<strong>Non-convex Optimization in Machine Learning: Provable Guarantees Using Tensor Methods</strong>"</strong><br>
+By Majid Janzamin. <em>PhD thesis.</em><a href="http://newport.eecs.uci.edu/anandkumar/pubs/thesis/PhDthesis-MajidJanzamin.pdf"> Link</a></li>
+ <li class = "newsListItem"><strong>"Discovery of Latent Factors in High-dimensional Data Using Tensor Methods"</strong><br>
+   By Furong Huang. <em>PhD thesis. </em> <a href="http://arxiv.org/abs/1606.03212"> Link</a></li>
+ <li class = "newsListItem"><strong>"Efficient approaches for escaping higher order saddle points in non-convex optimization"</strong><br>
+   By Anima Anandkumar, Rong Ge. <em>Conference on Learning Theory (COLT), New-York City, USA, June 2016.</em> <a href="http://arxiv.org/pdf/1602.05908v1.pdf">Link</a></li>
+ <li class = "newsListItem"><strong>"Escaping From Saddle Points --- Online Stochastic Gradient for Tensor Decomposition"</strong><br>
+By  Rong Ge, Furong Huang, Chi Jin, Yang Yuan. <em>Conference on Learning Theory (COLT), Paris, France, June 2015.</em> <a href="http://www.jmlr.org/proceedings/papers/v40/Ge15.pdf">Link</a></li>
+ <li class = "newsListItem"><strong>"Tensor Decompositions for Learning Latent Variable Models"</strong> <em>by A. Anandkumar, R. Ge, D. Hsu, S.M. Kakade and M. Telgarsky. Journal of Machine Learning Research 15 (2014) 2773-2832.</em> <a href="http://jmlr.org/papers/volume15/anandkumar14b/anandkumar14b.pdf">Link</a></li>
+                    
+        </div>
+
+
+
+ 
+    </div>
+</body>
+</html>

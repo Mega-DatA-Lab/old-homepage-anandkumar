@@ -1,0 +1,90 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <title>Tracking in a Spaghetti Bowl: Monitoring Transactions Using Footprints</title>
+</head>
+<body>
+
+<h1>Tracking in a Spaghetti Bowl: Monitoring Transactions Using Footprints</h1>
+
+<p>
+<b>Download:</b>
+<a href="Anandkumar08Sigmetrics.pdf">PDF</a>,
+<a href="Anandkumar08Sigmetrics-slides.pdf">slides (PDF)</a>,
+<a href="Anandkumar07IBMRep.pdf">IBM Report .pdf</a>.
+</p>
+
+<p>
+&#8220;Tracking in a Spaghetti Bowl: Monitoring Transactions Using
+Footprints&#8221;
+by A. Anandkumar, C. Bisdikian, and
+<a href="http://www.research.ibm.com/people/a/agrawal">D. Agrawal</a>.
+In <em>Proc. ACM Intl. Conf. on Measurement &amp; Modeling of Computer
+Systems (Sigmetrics)</em>, (Annapolis, Maryland, USA ), June 2008.
+<br />
+A previous version appeared as IBM Research technical report RC24422
+(W0711-107), (Yorktown Heights, NY 10598), Nov. 2007.  <a
+href="http://domino.watson.ibm.com/library/CyberDig.nsf/home">http://domino.watson.ibm.com/library/CyberDig.nsf/home</a>.
+</p>
+
+<h2>Abstract</h2>
+
+<p>
+The problem of tracking end-to-end service-level transactions in the
+absence of instrumentation support is considered. The transaction
+instances progress through a state-transition model and generate
+time-stamped footprints on entering each state in the model. The goal is
+to track individual transactions using these footprints even when the
+footprints may not contain any tokens uniquely identifying the transaction
+instances that generated them. Assuming a semi-Markov process model for
+state transitions, the transaction instances are tracked probabilistically
+by matching them to the available footprints according to the maximum
+likelihood (ML) criterion. Under the ML-rule, for a two-state system, it
+is shown that the probability that all the instances are matched correctly
+is minimized when the transition times are i.i.d. exponentially
+distributed. When the transition times are i.i.d. distributed, the ML-rule
+reduces to a minimum weight bipartite matching and reduces further to a
+first-in first-out match for a special class of distributions. For a
+multi-state model with an acyclic state transition digraph, a constructive
+proof shows that the ML-rule reduces to splicing the results of
+independent matching of many bipartite systems.
+
+</p>
+<p>
+<b>Download:</b>
+<a href="Anandkumar08Sigmetrics.pdf">PDF</a>,
+<a href="Anandkumar08Sigmetrics-slides.pdf">slides (PDF)</a>,
+<a href="Anandkumar07IBMRep.pdf">IBM Report .pdf</a>.
+</p>
+
+<p>
+<b>BibTeX entry:</b>
+</p>
+<pre>
+@inproceedings{Anandkumar08Sigmetrics,
+   author = {A. Anandkumar and C. Bisdikian and D. Agrawal},
+   title = {{Tracking in a Spaghetti Bowl: Monitoring Transactions Using
+	Footprints}},
+   booktitle = {Proc. ACM Intl. Conf. on Measurement &amp; Modeling of
+	Computer Systems (Sigmetrics)},
+   address = {Annapolis, Maryland, USA },
+   month = jun,
+   year = {2008}
+}
+</pre>
+
+
+
+<hr />
+
+		  		 
+<p><span class="style8"><a href="http://www.ieee.org/web/publications/rights/policies.html">IEEE Copyright Information:</a> Personal use of this material is permitted. However, permission to reprint/republish this material for advertising or promotional purposes or for creating new collective works for resale or redistribution to servers or lists, or to reuse any copyrighted component of this work in other works, must be obtained from the copyright holder. 
+ </span></p>    
+		 		 
+
+
+
+</body>
+</html>

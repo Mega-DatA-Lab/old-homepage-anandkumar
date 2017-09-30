@@ -1,0 +1,98 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Animashree Anandkumar</title>
+<style type="text/css">
+.new {
+	color: #90C;
+}
+.new {
+	color: #906;
+	font-weight: bold;
+}
+.new1 {color: #90C;
+}
+.new1 {color: #906;
+}
+</style>
+</head>
+
+<body><h1 align="center"><font color="#000080">Animashree
+                    Anandkumar</font></h1><table border="0" width="100%"><tr>
+              <td height="31" ><h2><a href="index.html">Home</a> &nbsp; &nbsp; | <a href="resume.html">Bio</a> &nbsp; &nbsp; | Research&nbsp; &nbsp; |<a href="teaching.html"> Teaching </a> |<a href="Lab/Lab.html"> MEGA DatA Lab</a></h2></td>
+              </tr> <tr>
+<td width="100%" valign="top">
+ <p class align="justify"><font color="#000000">My research focus is in the area of inference and learning of probabilistic graphical models and latent variable models. Broadly I am interested in machine learning, </font>high-dimensional statistics, tensor methods, statistical physics, information theory and signal processing.</p>
+ <h2 class align="justify"><font color="#990099">Research Overview Presentations/Tutorials</font></h2>
+ <p class align="justify">Short presentation on overview of my research. <a href="Lab/overview.html">Streaming Link</a> Alternatively download the presentation: <a href="pubs/research-overview.zip">.zip</a></p>
+ <p class align="justify"><a name="Tutorial" id="Tutorial"></a>Recent tutorial on <strong>&quot;Tensor Decomposition Algorithms for Latent Variable Model Estimation&quot;</strong> at ICML 2013.<a href="pubs/ICML13-tutorial-part1.pdf"> Part 1.</a> <a href="pubs/ICML13-tutorial-part2.pdf">Part 2.</a> <a href="pubs/AnandkumarICML-tutorial13.pdf">Part 3.</a></p>
+ <h3 align="justify"><font color="#990099">Full List of Publications</font> <a href="pubs/pub-index.html">by chronlogical order</a> </h3>
+ <h2><font color="#990099">Selected Publications: Parameter Estimation in Latent Variable Models</font></h2>
+ <p><strong><b><img src="Images/New sign.jpg" width="40" height="20" alt="new" /></b></strong><strong><b>&#8220;</b>Learning Sparsely Used Overcomplete Dictionaries via Alternating Minimization</strong><b>&#8221;</b> by A. Agarwal, A. Anandkumar, P. Jain, P. Netrapalli, R. Tandon. <em>Preprint, Oct. 2013.</em><br />
+Download: <a href="pubs/AgarwalEtal-altmin2013.pdf">PDF.</a></p>
+ <p><strong><b><img src="Images/New sign.jpg" width="40" height="20" alt="new" />&#8220;</b>Exact Recovery of Sparsely Used Overcomplete Dictionaries</strong><b>&#8221;</b> by A. Agarwal, A. Anandkumar, P. Netrapalli. <em>Preprint, Sept. 2013.</em><br />
+   Download: <a href="pubs/AgarwalEtal2013.pdf">PDF.</a></p>
+ <p><strong><b><img src="Images/New sign.jpg" width="40" height="20" alt="new" />&#8220;</b>Fast Detection of Overlapping Communities via Online Tensor Methods </strong><b>&#8221;</b> by F. Huang, Niranjan U N, M. U. Hakeem,   A. Anandkumar. <em>Preprint, Sept. 2013.</em><br />
+   Download: <a href="pubs/Huang_etal_communities_GPU.pdf">PDF.</a></p>
+ <p><strong><b><img src="Images/New sign.jpg" width="40" height="20" alt="new" />&#8220;</b>When are Overcomplete Topic Models Identifiable? Uniqueness of Tensor Tucker Decompositions with Structured Sparsity</strong><b>&#8221;</b> by A. Anandkumar,  D. Hsu, M. Janzamin and S. Kakade.<em> Preprint, August 2013. An abridged version appears in Proc. of NIPS 2013.</em><br />
+   Download: <a href="pubs/Overcomplete_Ident.pdf">PDF</a>.</p>
+ <p><strong><b>&#8220;</b>A Tensor Spectral Approach to Learning Mixed Membership Community Models</strong><b>&#8221;</b> by A. Anandkumar, R. Ge, D. Hsu, and S.M. Kakade.<em> Conference on Learning Theory, June 2013.</em><br />
+   Download:<a href="pubs/AnandkumarCommunity.pdf"> PDF.</a> <a href="pubs/AnandkumarCommunityDec12-slides.pdf">Slides.</a> <a href="pubs/AnandkumarCommunityCOLT13.pdf">conf-version</a> <a href="http://www.newton.ac.uk/programmes/SCS/seminars/2013081310001">Video-lecture</a></p>
+ <p><strong><b>&#8220;</b>Tensor Decompositions for Learning Latent Variable Models</strong><b>&#8221;</b> by A. Anandkumar, R. Ge, D. Hsu,  S.M. Kakade and M. Telgarsky. <em>Preprint, October 2012.</em><br />
+Download:<a href="pubs/AnandkumarEtal_Tensor12.pdf"> PDF</a></p>
+ <p><strong><b>&#8220;</b>Learning Latent Bayesian Networks and Topic Models Under Expansion Constraints</strong><b>&#8221;</b> by A. Anandkumar,  D. Hsu, A. Javanmard and S.M. Kakade. <em>Preprint, March 2013. An abridged version appears in the Proc. of ICML, June 2013</em><a href="pubs/ChoiJMLR10-abstract.html"></a>.<br />
+Download: <a href="pubs/AnandkumarEtalDAG12.pdf">PDF.</a> <a href="pubs/AnandkumarEtalDAG-ICML13.pdf">ICML-version</a></p>
+ <p><strong><b>&#8220;</b>Two SVDs Suffice: Spectral decompositions for probabilistic topic modeling and latent Dirichlet allocation</strong><b>&#8221;</b> by A. Anandkumar, D. P. Foster, D. Hsu,  S.M. Kakade and Y.K. Liu. <em>Preprint, April 2012.</em> <em>An abridged version appears in NIPS 2012. Extended version to appear in the special issue of Algorithmica on &quot; New Theoretical Challenges in Machine Learning&quot; by invitation. </em><br />
+   Download: <a href="pubs/Anandkumar_LDA_apr12.pdf">PDF.</a> <a href="pubs/AnandkumarEtal_LDA_NIPS12.pdf">NIPS-version</a></p>
+ <p><b></b><b>&#8220;A Method of Moments for Mixture Models and Hidden
+   Markov Models.  &#8221;</b> by  A. Anandkumar, D. Hsu, and S.M. Kakade. <em>Preprint, Feb. 2012.</em> <em>An abridged version appears in the Proc. of COLT, June 2012</em><a href="pubs/ChoiJMLR10-abstract.html"></a>.<br />
+   Download: <a href="pubs/AnandkumarEtal_mixtures12.pdf">PDF</a>. <a href="pubs/AnandkumarEtalCOLT12.pdf">COLT-version</a></p>
+<h2><font color="#990099">Selected Publications: Structure Estimation in Graphical Models</font></h2>
+ <p><b></b><b>&#8220;Learning High-Dimensional Mixtures of Graphical Models  &#8221;</b>  by  A. Anandkumar, D. Hsu, F. Huang, and S.M. Kakade. <em> An abridged version appears in NIPS 2012. </em><br />
+   Download: <a href="pubs/AnandkumarEtal_graphicalmixtures12.pdf">PDF.</a> <a href="pubs/AnandkumarLIDS12.pdf">Slides.</a> <a href="pubs/AnandkumarHsuHuangKakadeNIPS12.pdf">NIPS-version</a></p>
+ <p><b>&#8220;Learning Loopy Graphical Models with Latent Variables: Efficient
+   Methods and Guarantees  &#8221;</b>    by  A. Anandkumar  and R. Valluvan.  <em><a href="http://projecteuclid.org/handle/euclid.aos">Ann. Statist.</a>&nbsp;Volume 41, Number 2 (2013), 401-435. An abridged version appears in NIPS 2012. </em><br />
+   Download: <a href="pubs/AnandkumarValluvanStat13.pdf">PDF</a>. <a href="pubs/AnandkumarValluvanStat-supp.pdf">Supplement.</a> <a href="pubs/AnandkumarIMA12.pdf">Slides</a>. <a href="pubs/AnandkumarValluvanNIPS12.pdf">NIPS-version.</a> <a href="pubs/Loopy-Latent-Results.zip">Software code and datasets.</a> <a href="http://www.ima.umn.edu/videos/index.php?id=1844">Videolecture.</a></p>
+ <p><b>&#8220;High-Dimensional Covariance Decomposition into Sparse Markov
+   and Independence Domains.  &#8221;</b> by M. Janzamin and A. Anandkumar. <em>Preprint, Feb. 2012.</em> <em>An abridged version appears in the Proc. of ICML, June 2012</em><a href="pubs/ChoiJMLR10-abstract.html"></a>.<br />
+   Download: <a href="pubs/JanzaminAnandkumar12.pdf">PDF.</a> <a href="pubs/JanzaminAnandkumarICML12.pdf">ICML-version.</a> <a href="pubs/AnandkumarICML12-slides.pdf">Slides.</a></p>
+ <p><b>&#8220;High-Dimensional Structure Learning of Ising Models:
+   Local Separation Criterion&#8221;</b>    by  A. Anandkumar, V.Y.F Tan, F. Huang, and A.S. Willsky.   <em> Annals of Statistics,   Volume 40, Number 3 (2012), 1346-1375.  </em> <em> An abridged version appears in the Proc. of NIPS, Dec. 2011</em><a href="pubs/ChoiJMLR10-abstract.html"></a>.<br />
+   <a href="pubs/AnandkumarTanIsing11-abstract.html">Details.</a> Download: <a href="pubs/AnandkumarTan-Ising11.pdf">PDF</a>. <a href="pubs/AnandkumarTan-Ising11-supp.pdf">Supplementary file.</a> <a href="pubs/code_IsingModel.zip">Software code and datasets.</a> <a href="pubs/AnandkumarTan11-shortver.pdf">Short (NIPS) Version</a> <a href="http://videolectures.net/nips2011_anandkumar_conditions/">Videolecture</a> <a href="pubs/AnandkumarNIPS11-slides.pdf">NIPS-Slides</a></p>
+ <p><b>&#8220;High-Dimensional Gaussian Graphical Model Selection: 
+   Walk-Summability and Local Separation Criterion&#8221;</b> by  A. Anandkumar, V.Y.F Tan, F. Huang, and A.S. Willsky. <em>J. Machine Learning Research,
+     13:2293&ndash;2337, Aug. 2012.  An abridged version appears in the Proc. of NIPS, Dec. 2011</em>. <br />
+   <a href="pubs/AnandkumarTanGaussian11-abstract.html">Details.</a> Download: <a href="pubs/AnandkumarTan-Gaussian11.pdf">PDF</a>.  <a href="pubs/GaussianStructLearning-code.zip">Softwa</a><a href="pubs/GaussianStructLearning-code.zip">re code and datasets.</a> <a href="pubs/AnandkumarTan11-shortver.pdf">Short (NIPS) Version</a> <a href="http://videolectures.net/nips2011_anandkumar_conditions/">Videolecture</a> <a href="pubs/AnandkumarNIPS11-slides.pdf">NIPS-Slides</a></p>
+ <p><b></b><b>&#8220;Spectral Methods for Learning Multivariate Latent Tree Structure&#8221;</b>  by  A. Anandkumar, K. Chaudhuri, D. Hsu, S.M. Kakade, L. Song and T. Zhang. <em>Preprint, July 2011</em><a href="pubs/ChoiJMLR10-abstract.html"></a>. <em> An abridged version appears in the Proc. of NIPS, Dec. 2011.</em><br />
+   <a href="pubs/AnandkumaretalSpectral-abstract.html">Details.</a> Download: <a href="pubs/1107.1283v1.pdf">PDF</a>.</p>
+ <p><b>&#8220;Topology Discovery of Sparse Random Graphs With Few Participants  &#8221;</b>   by  A. Anandkumar,  A. Hassidim, and J. Kelner.  <em>Proc. of ACM SIGMETRICS, (San Jose, USA), June 2011</em>. <strong><a href="http://cpcc.uci.edu/news.php#NewsAnimashreeAnandkumarBestPaperAward">Best Paper Award</a></strong> <em>Extended version  to appear in J. on Random Structures and Algorithms, Dec. 2011.</em><br />
+   <a href="pubs/AnandkumarSigmetrics11-abstract.html">Details.</a> Download: <a href="pubs/AnandkumarHassidimKelner_Sigmetrics11.pdf">PDF</a>. <a href="pubs/AnandkumarHassidimKelner_Discovery.pdf">Full Version.</a> <a href="pubs/AnandkumarITA11.pdf">Talk </a></p>
+ <p><b>&#8220;Learning Latent Tree Graphical Models&#8221;</b>   by M.J. Choi, V. Tan, A. Anandkumar, and A. Willsky.   <em> Journal of Machine Learning Research, </em> volume 12, pp. 1771&minus;1812, May 2011. <br />
+   <a href="pubs/ChoiJMLR10-abstract.html">Details</a>. Download: <a href="pubs/ChoiJMLR10.pdf">PDF</a>. <a href="http://people.csail.mit.edu/myungjin/latentTree.html">Project Webpage.</a> <a href="pubs/latentTree.tar">Code</a>. <a href="pubs/ChoiAllerton10.pdf">Allerton Version.</a> <a href="pubs/ChoiAllerton10-slides.pdf">Slides.</a> <a href="pubs/AnandkumarUIUC10.pdf">Seminar Slides.</a></p>
+ <p><b></b><b>&#8220;Learning Gaussian Tree Models: Analysis of Error Exponents and Extremal Structures&#8221;</b>   by V. Tan, A. Anandkumar, and A. Willsky.  <em> IEEE Tran. on Signal Processing, </em>vol. 58, no. 5, May 2010, pp. 2701-2714.<br />
+   <a href="pubs/TanSP09-abstract.html">Details</a>.
+   Download: <a href="pubs/TanSP09.pdf">PDF</a>. <a href="pubs/TanAllerton09-slides.pdf">slides (PDF)</a>. <a href="pubs/LearningGaussianTreeModels.zip">Code</a>. <a href="http://web.mit.edu/newsoffice/2010/sizing-samples-0825.html">MIT News</a>. <a href="http://technews.acm.org/archives.cfm?fo=2010-09-sep/sep-01-2010.html">ACM Technews.</a> <a href="http://www.kdnuggets.com/2010/09/f-most-viewed-week-Sep-05.html?c2b">KDnuggets</a>.<b></b></p>
+ <h2><font color="#990099">Selected Publications: Distributed Inference in Sensor Networks</font></h2>
+ <p><b>&#8220;Distributed Algorithms for Learning and Cognitive Medium  Access with Logarithmic Regret&#8221;</b><br />
+by A. Anandkumar, N. Michael, A.K. Tang, and A. Swami.<br />
+<em> IEEE JSAC on Advances in Cognitive Radio Networking and Communications</em>,   &nbsp;Apr. 2011, volume 29, no. 4, pp. 781-745.<span class="new1"> <em><strong>Featured in the Best Readings on Cognitive Radio by IEEE Comsoc society. <a href="http://www.comsoc.org/BestReadings/topic/Cognitive-Radio">link</a>.</strong></em></span><br />
+<a href="pubs/AnandkumarEtal_JSAC10-abstract.html">Details</a>. Download: <a href="pubs/AnandkumarJSAC10.pdf">PDF</a>.</p>
+ <p align="justify"><b>&#8220;Energy Scaling Laws for Distributed Inference in Random Fusion Networks&#8221;</b>   by A. Anandkumar, J.E.Yukich, L. Tong, and A. Swami.   <em>IEEE J. Selec. Area Comm.</em>,  vol. 27, no. 7, pp.1203-1217,  Sept. 2009.<br />
+   <a href="pubs/AnandkumarEtal09JSAC-abstract.html">Details</a>.
+   Download: <a href="pubs/AnandkumarEtal09JSAC.pdf">Paper</a>. </p>
+ <p align="justify"><b></b><b>&#8220;Detection of Gauss-Markov random fields with nearest-neighbor dependency&#8221;</b> by A. Anandkumar, L. Tong, and A. Swami. <em>IEEE Trans. Information Theory</em>, vol. 55, no. 2, Feb. 2009. <br />
+<a href="pubs/Anandkumar09IT-abstract.html">Details</a>.
+Download: <a href="pubs/Anandkumar09IT.pdf">Paper</a></p>
+ <p align="justify"><b>&#8220;Type-Based Random Access for Distributed Detection over Multiaccess Fading Channels&#8221;</b> by A. Anandkumar and L. Tong. <em>IEEE Trans. Signal Proc.</em>, vol. 55, no. 10, Oct. 2007, pp. 5032-5043.<strong> <font color="#993366">(2008 IEEE Signal Proc. Society Young Author Best Paper Award). </font></strong><br />
+<a href="pubs/AnandkumarTong07SP-abstract.html">Details</a>.
+Download: <a href="pubs/AnandkumarTong07SP.pdf">Paper</a>.</p>
+ <p><a href="http://www.ieee.org/web/publications/rights/policies.html">Copyright notice</a></p>
+<p>&nbsp;</p>
+</tr>
+              <tr>
+                <td valign="top">                
+              </tr>
+                    </table>
+</body>
+</html>

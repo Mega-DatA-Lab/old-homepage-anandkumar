@@ -1,0 +1,156 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>MEGA DatA Lab</title>
+<style type="text/css">
+.class1 {
+	color: #093;
+}
+.class2 {
+	color: #00F;
+}
+.class2 font {
+	color: #009;
+}
+</style>
+
+<!-- style type="text/css">
+
+/* All Styles Optional */
+
+* {
+font-family:calibri,arial;
+font-size:16pt;
+}
+
+div#show {
+background-color:#efefe7;
+width:400px;
+margin:0; padding:2px;
+border:1px solid #909090;
+}
+
+div#show table input,  div#show4 table input {
+outline-style:none;
+}
+
+</style -->
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+});
+</script>
+<script type="text/javascript"
+  src="https://c328740.ssl.cf1.rackcdn.com/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+<script src="swissarmy.js" type="text/javascript"></script>
+
+<script src="slideshow.js" type="text/javascript"></script>
+
+</head>
+
+<body style="background-color:#e6e6e6">
+<h1 align="center"><font color="#000080">MEGA DatA Lab</font></h1>
+<h2 align="center"><span class="class1"><span class="class"> Model Estimation, Graphical Algorithms, Data Analysis Lab</span></span></h2>
+<p align="center">EECS, University of California, Irvine, CA 92697.</p>
+<hr />
+
+<h3 align="left"><font color="#990099">Learning hidden group dynamics via conditional latent tree models (CLTM)</font></h3>
+
+<p align="left"><b>&#8220;Are you going to the party: Depends, who else is coming? [Learning hidden group dynamics via conditional latent tree models] &#8221;</b> by F. Arabshahi, F. Huang, 
+A. Anandkumar, C. T. Butts and S. M. Fitzhugh, <i>Appearing in the proceedings of the International Conference on Data Mining (ICDM), IEEE, Nov 2015</i>
+<br />
+Download: <a href="http://arxiv.org/pdf/1411.1132v6.pdf">ArXiv version.</a> </p>
+
+<p align="left"> The goal of this project is to track and predict the evolution of time series. Let us give some examples of such time evolving data. 
+Consider the performance of students in an online course (like a course on coursera). Students can address different questions corresponding to 
+different topics throughout the course. According to their answers and the topics that they have addressed we can now track and predict their learning 
+behavior. This can be of valuable informtaion to the teachers as they go through the course, since they can understand which topics need more time and 
+which topics are easier for the students to follow. As another example, consider the evolution of network attendees in an online social network like 
+Twitter through time. We can model a Twitter network by a social graph in which the attendees are the nodes of the graph and the communication ties are 
+direct messages between the nodes. As expected the nodes and 
+the edges of such a graph change drastically at different time points. We are interested in tracking the learning behavior of the students and the 
+dynamics of the Twitter network.</p>
+
+<!-- <p align="left">Modeling and tracking the evolution of dynamic networks is a problem of great relevance in a number of areas. Examples include 
+tracking the formation of new alliances and/or expanding networks, such as mass convergence of organizations in disasters, the formation of 
+inter-firm networks within new industries, and interpersonal networks under strong external perturbations. Traditionally, network evolution has been 
+studied with a fixed vertex set. This is not true in many settings 
+e.g., addition and deletion of servers, entry and exit of students in a classroom or in online social networks such as twitter friend/follower 
+networks. The aim of this project is to model and predict the co-evolution of node and edge states in such networks.</p> -->
+
+<p align="left">Now how do we predict such dynamics? Our claim is that there are hidden groupings in the data that represent this dynamic behavior as well
+as some exogenous factors, a.k.a. covariates. In order to make this more clear let's give some examples for 
+the the Educational data and Twitter data explained previously. We claim that knowing the day of the week matters in performing prediction as student 
+are more reluctant to work in the weekend. This also holds for the Twitter network, as the tendency of the users to be active on the network is 
+affected by day of week. To be more clear, the behvior of the network on a Saturday is different from the behavior of the network on a
+Tuesday and considering such exogenous informtaion can help prediction. As another example it is useful to know which concept is being addressed by the  
+students in any given day. However, these exogenous factor are not enough to track the dynamic behavior of the users. We are claiming that there are 
+hidden groupings in the data the drive the dynamcs. For example useen groups of strong and weak learners in the educational data that tend to act 
+similarly. Or unseen friendships or communities that the users belong to in a Twitter network.</p>
+
+<p align="left">We present condictional latent tree models (CLTM) to account for the effect of the covariates as well as the effect of the hidden 
+groupings. The problem, therefore, reduces to a structured prediction problem. The overall idea of such a model is that the students/Twitter users are 
+dependent random variables whose depdendence structure is represented by a conditional latent tree undirected graph, whose structure and latent 
+nodes are learned from the data conditioned on the covariates. This is an unsupervised learning task. Once we have the dependency structure of the 
+data we perform expectation maximization to maximize the likelihood of the data. More details about the model and how it is trained is found <a 
+href="http://arxiv.org/pdf/1411.1132v4.pdf">here.</a></p>
+
+<p align="left"> We consider three datasets to indicate the performance of our method. The Educational dataset is the performance of students on an 
+online psycology course on the Stanford Open Learning Library and is available on <a href="https://pslcdatashop.web.cmu.edu/DatasetInfo?datasetId=863"> 
+CMU datashop</a>. It contains 2,493,612 records of 5,615 students throughout a 92 day long semester. We consider a subsset of 244 students that loyally 
+stay throughout the whole semester. Another dataset is a subset of the Twitter network with 333 participants that discuss an emergency management 
+topic #smemchat. The network was observed for 6 months from Dec 1st 2012 to Apr 20th 2013. The last dataset is Freeman's beach dataset that 
+includes a one-month observation of a total number of 95 beach goers that go for windsurfing on a southern California beach.</p>
+
+<!-- <p align="left">The following figures show the vertex and edge prediction results on a subset of the Twitter network with 333 total participants 
+tracked for 6 months from Dec 1st 2012 to Apr 20th 2013. Data is binned weekly to ensure enough presence. Users are the vertices of the network and at 
+any given instance they are either active or not active (a vertex is said to be active if it updates its status). Edges are formed when a particular 
+vertex mensions another person in their status update. Our presented method's performance is shown with red and we see good improvements in both 
+vertex and edge prediction accuracy compared to the logistic regression baseline method.</p> -->
+
+<h3 align="left"><font color="#990099">Links to the visualization of the learning algortithm and the performance</font></h3>
+
+<p align ="left"> The final learned tree over the knowledge components is given <a 
+href="Projects_sub/CLTM/eduTree.html">here</a>. The yellow nodes are the inserted hidden variables learned by the algorithm and the blue nodes are 
+the labeled knowledge components covered in the course. You can zoom into the tree for a better look at the labels and the learned relations among 
+them</p>
+
+<p align ="left"> The process of the structure learning algorithm can be viewed <a
+href="Projects_sub/CLTM/dynamicTree.html">here</a>. You can see the steps of the learning algorithm as the latent tree evolves over iterations. You 
+can also zoom into different parts of the
+learned
+tree and explore the relevant parts that are grouped together.</p>
+
+<p align ="left"> Finally, you can look at the performance of strong and weak clusters of different students clustered by the student tree shown for 
+each concept 
+cluster <a
+href="Projects_sub/CLTM/stdPerformance.html">here</a>.</p>
+
+<!-- <img src="Projects_sub/CLTM/struct9.jpg" alt="KC graph" width="500" height="300" align="center" /> -->
+
+<!-- <p align="left"> The following figures represent the groupings of strong and weak learners: </p> -->
+
+<!--<img src="Projects_sub/TwitterVertexFinal.jpg" alt="DynamicNetwork" width="500" height="300" align="center" />
+<img src="Projects_sub/TwitterEdgeFinal.jpg" alt="DynamicNetwork" width="500" height="300" align="center" /> -->
+
+<!-- <p align="left">The model is conditioned on the previous state of the network as well as some relevant covariates of the network such as the 
+network users' group memberships or seasonal effects (e.g. the day of the week). We develop a Conditional Latent Tree Model (CLTM) for predicting 
+the state of the vertices and a Naive Bayes model for the edge states. The CLTM model assumes that the vertex relations can be modeled by a latent 
+tree whose hidden variables represent the unobservable groups the vertices belong to. Once the vertex model arises, we regress on the inferred 
+state of the latent variables as well as the previous network state and other relevant covariates to predict the social interactions.</p> -->
+
+<iframe src="http://prezi.com/embed/ye_qng_pr0zx/?bgcolor=ffffff&amp;lock_to_path=0&amp;autoplay=0&amp;autohide_ctrls=0&amp;features=undefined&amp;token=undefined&amp;disabled_features=undefined" 
+width="550" height="400" frameBorder="0" webkitAllowFullScreen mozAllowFullscreen allowfullscreen></iframe>
+
+<p align="left">&nbsp;</p>
+<hr />
+
+<p align="left"></p>
+<p align="left">&nbsp;</p>
+
+</body>
+</html>

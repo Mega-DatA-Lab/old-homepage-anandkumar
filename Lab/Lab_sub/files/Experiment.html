@@ -1,0 +1,1570 @@
+<script type="text/javascript" src="vis.js"></script>
+<link rel="stylesheet" href="vis.css">
+
+<!-- jQuery -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+
+<!-- CSV libraries -->
+<script src="http://jquery-csv.googlecode.com/git/src/jquery.csv.js"></script>
+<script src="https://rawgit.com/henix/csv.js/master/csv.js"></script>
+<script>var henixCsv = CSV; // avoid namespace collision</script>
+<script src="https://rawgit.com/knrz/CSV.js/master/csv.min.js"></script>
+<script src="https://rawgit.com/mholt/PapaParse/master/papaparse.min.js"></script>
+<script>
+// Papa Parse 3.1 version of the parser
+function Papa3Parser(e){function y(){while(f<n.length){if(g)break;if(u>0&&m>=u)break;if(a=='"')E();else if(l)S();else x();b()}return w()}function b(){f++;a=n[f]}function w(){if(g)B("Abort","ParseAbort","Parsing was aborted by the user's step function");if(l)B("Quotes","MissingQuotes","Unescaped or mismatched quotes");A();if(!q(s))return I()}function E(){if(P()&&!D())l=!l;else{C();if(l&&D())f++;else B("Quotes","UnexpectedQuotes","Unexpected quotes")}}function S(){if(M(f)||_(f))c++;C()}function x(){if(a==r)k();else if(M(f)){L();b()}else if(_(f))L();else if(T())N();else C()}function T(){if(!i)return false;var e=f==0||_(f-1)||M(f-2);return e&&n[f]===i}function N(){while(!M(f)&&!_(f)&&f<n.length){b()}}function C(){h[d][v]+=a}function k(){h[d].push("");v=h[d].length-1}function L(){A();c++;m++;h.push([]);d=h.length-1;k()}function A(){O();if(q(s)){if(h[d])s(I());F()}}function O(){if(h[d].length==1&&t.test(h[d][0])){if(e.keepEmptyRows)h[d].splice(0,1);else h.splice(d,1);d=h.length-1}}function M(e){return e<n.length-1&&(n[e]=="\r"&&n[e+1]=="\n"||n[e]=="\n"&&n[e+1]=="\r")}function _(e){return n[e]=="\r"||n[e]=="\n"}function D(){return!P()&&f<n.length-1&&n[f+1]=='"'}function P(){return!l&&H(f-1)||H(f+1)}function H(e){if(typeof e!="number")e=f;var t=n[e];return e<=-1||e>=n.length||t==r||t=="\r"||t=="\n"}function B(e,t,n){p.push({type:e,code:t,message:n,line:c,row:d,index:f})}function j(e){n=e;l=false;f=0,m=0,c=1;F();h=[[""]];a=n[f]}function F(){h=[];p=[];d=0;v=0}function I(){return{data:h,errors:p,meta:{lines:c,delimiter:r,aborted:g,truncated:u>0&&f<n.length}}}function q(e){return typeof e==="function"}var t=/^\s*$/;var n;var r;var i;var s;var o;var u;var a;var f;var l;var c;var h;var p;var d;var v;var m;var g=false;e=e||{};r=e.delimiter;i=e.comments;s=e.step;u=e.preview;if(typeof r!=="string"||r.length!=1)r=",";if(i===true)i="#";else if(typeof i!=="string"||i.length!=1||i==r)i=false;this.parse=function(e){if(typeof e!=="string")throw"Input must be a string";j(e);return y()};this.abort=function(){g=true};this.getCharIndex=function(){return f}};
+</script>
+
+
+<style>
+nav {
+    line-height:10px;
+    width:180px;
+    float:left;
+    padding:0px;
+    border: 10 gray;	      
+}
+section {
+    float:left;
+    padding:0px;	
+    width:900px; 	
+    
+}
+table, th, td {
+    border: .1 black;
+    font-size:8
+}
+font {
+size:2
+}
+</style>
+<nav>
+<button onclick="populateTable()">Generate Images</button>
+<button onclick="auto_play()">Autoplay</button>
+<table align="center" id="image_table"  width=170>
+</table>
+<table align='left' width="50px">
+  <tr>
+    <td> 0 - .1 </td>
+    <td bgcolor="AliceBlue"></td>
+  </tr>
+  <tr>
+    <td>.1 - .2</td>
+    <td bgcolor="lightblue" width ='10px'></td>
+  </tr>
+<tr>
+    <td>.2 - .3</td>
+    <td bgcolor="lightblue" width ='10px'></td>
+  </tr>
+<tr>
+    <td>.3 - .4</td>
+    <td bgcolor="blue" width ='10px'></td>
+  </tr>
+<tr>
+    <td>.4 - .5</td>
+    <td bgcolor="darkblue" width ='10px'></td>
+  </tr>
+<tr>
+    <td>.5 - .6</td>
+    <td bgcolor="yellow" width ='10px'></td>
+  </tr>
+<tr>
+    <td>.7- .8</td>
+    <td bgcolor="yellow" width ='10px'></td>
+  </tr>
+<tr>
+    <td>.8 - .9</td>
+    <td bgcolor="orange" width ='10px'></td>
+  </tr>
+<tr>
+    <td>.9 - 1</td>
+    <td bgcolor="red" width ='10px'></td>
+  </tr>
+</table>
+</nav>
+<section>
+<div id ="network_daig">
+<div id="mynetwork1" ></div>
+<div id="mynetwork2"></div>
+<div id="mynetwork3"></div>
+<div id="mynetwork4"></div>
+</section>
+<script type="text/javascript">
+
+var thenetwork = null;
+var container1 = document.getElementById('mynetwork1');
+var previous_id =0;
+var myTimer;
+var timerId;
+var main_arr = [];
+var main_id;
+var options = {
+
+groups: {
+  0: {
+    shape: 'eclipse',
+    color: {
+      border: 'black',
+      background: 'AliceBlue',
+      highlight: {
+        border: 'yellow',
+        background: 'orange'
+      }
+    }
+  },
+ 1: {
+    shape: 'eclipse',
+    color: {
+      border: 'black',
+      background: 'lightblue',
+      highlight: {
+        border: 'yellow',
+        background: 'orange'
+      }
+    }
+  },
+ 2: {
+    shape: 'eclipse',
+    color: {
+      border: 'black',
+      background: 'lightblue',
+      highlight: {
+        border: 'yellow',
+        background: 'orange'
+      }
+    }
+  },
+3: {
+    shape: 'eclipse',
+    color: {
+      border: 'black',
+      background: 'blue',
+      highlight: {
+        border: 'yellow',
+        background: 'orange'
+      }
+    }
+  },
+4: {
+    shape: 'eclipse',
+    color: {
+      border: 'black',
+      background: 'darkblue',
+      highlight: {
+        border: 'yellow',
+        background: 'orange'
+      }
+    }
+  },
+5: {
+    shape: 'eclipse',
+    color: {
+      border: 'black',
+      background: 'yellow',
+      highlight: {
+        border: 'yellow',
+        background: 'orange'
+      }
+    }
+  },
+6: {
+    shape: 'eclipse',
+    color: {
+      border: 'black',
+      background: 'yellow',
+      highlight: {
+        border: 'yellow',
+        background: 'orange'
+      }    
+    }    
+  },
+7: {
+    shape: 'eclipse',
+    color: {
+      border: 'black',
+      background: 'orange',
+      highlight: {
+        border: 'yellow',
+        background: 'orange'
+      }    
+    }    
+  },
+8: {
+    shape: 'eclipse',
+    color: {
+      border: 'black',
+      background: 'orange',
+      highlight: {
+        border: 'yellow',
+        background: 'orange'
+      }    
+    }    
+  },
+9: {
+    shape: 'eclipse',
+    color: {
+      border: 'black',
+      background: 'red',
+      highlight: {
+        border: 'yellow',
+        background: 'orange'
+      }    
+    }    
+  },
+10: {
+    shape: 'eclipse',
+    color: {
+      border: 'black',
+      background: 'red',
+      highlight: {
+        border: 'yellow',
+        background: 'orange'
+      }    
+    }    
+  }
+
+},
+
+
+  nodes: {
+            shape: 'dot',
+            radiusMin: 20,
+            radiusMax: 20,
+            fontSize: 20,
+            fontFace: "Tahoma"
+            },
+        edges: {
+            width: 0.3,
+            inheritColor: "from"
+            },
+
+layout:{
+    hierarchical: true
+  },
+autoResize: true,
+ 
+};
+file ='./images/potentials';
+total_imags=100
+var potentials = []
+var i=0;
+Papa.parse("./images/potentials", {
+    download: true,
+    step: function(row) {
+        console.log("Row:", row.data);
+	potentials.push(row.data)[0];
+	i=i+1;
+    },
+    complete: function() {
+        console.log("All done!");
+    }
+});
+var i =0;
+var prev =0;
+num_images =10
+total_imags=100
+populateTable();
+
+
+
+
+
+function myFunction1() {
+	if(prev == 0 && i <=11 )
+		i = i +1;
+	else if( i >=2){
+		if(i%3 == 1)
+			i= i -3;
+		else
+			i = i-1;
+	}
+	if (i ==1)
+	{
+		show_image('kitchen.jpg')
+	}
+	else if( i ==2){
+		if(prev ==1)
+			network.zoomExtent()
+		else{
+//			delete_image()
+				document.getElementById('mynetwork1').style.display = 'block';
+			network.zoomExtent()
+		}}
+
+
+	else if( i ==3){
+
+		setTimeout( network.focusOnNode(72,{scale:1.1 ,duration:3000, easingFunction:'linear',animation:true}) ,500);
+	}
+
+	else if( i ==4){
+		remove_tree();
+		show_image('veichles.jpg')
+	}
+
+
+	else if ( i ==5){
+		if(prev ==1)
+			network1.zoomExtent()
+		else{
+//			delete_image()
+
+				document.getElementById('ynetwork2').style.display = 'block';
+			network1.zoomExtent();
+		}}
+	else if( i ==6){
+
+		setTimeout( network1.focusOnNode(2,{scale:1.1 ,duration:3000, easingFunction:'linear',animation:true}) ,500);
+	}
+
+	else if (i==7){
+		remove_tree();
+		show_image('baseball.jpg')
+
+	}
+
+
+	else if(i ==8){
+		if( prev ==1)
+			network2.zoomExtent();
+		else{
+//			delete_image()
+
+				document.getElementById('mynetwork3').style.display = 'block';
+			network2.zoomExtent();
+		}}
+	else if( i ==9){
+
+		setTimeout( network2.focusOnNode(34,{scale:1.1 ,duration:3000, easingFunction:'linear',animation:true}) ,500);
+	}
+
+	else if (i ==10){
+		remove_tree();
+		show_image('computer.jpg')
+	}
+
+
+	else if (i ==11){
+		if(prev ==1)
+			network3.zoomExtent();
+		else {
+//			delete_image()
+				document.getElementById('mynetwork4').style.display = 'block';
+			network3.zoomExtent();
+		}}
+	else if( i ==12){
+
+		setTimeout( network3.focusOnNode(62,{scale:1.1 ,duration:3000, easingFunction:'linear',animation:true}) ,500);
+
+
+	}
+}
+function myFunction2() {
+	prev =1
+		myFunction1()
+}
+
+function myFunction3() {
+	prev =0
+		myFunction1()
+}
+
+function delete_image1(){
+	if(document.getElementById("image_display") != null)
+		document.getElementById("image_display").remove();
+	
+}
+
+function delete_image(){
+	if(document.getElementById("image_display") != null)
+		document.getElementById("image_display").remove();
+	newelement = document.createElement("div");
+	newelement.id = "mynetwork";
+	document.body.appendChild(newelement);
+	container = document.getElementById('mynetwork');
+
+}
+function remove_tree(){
+	if(document.getElementById("mynetwork") != null)
+		document.getElementById("mynetwork").remove();
+}
+function show_image(src) {
+	hideNetworks();
+	delete_image1();
+	remove_tree();
+	var img1 = document.getElementById("image");
+	var img  = document.createElement("img");
+	img.src = src;
+	img.width = 340;
+	img.align = 'center';
+	img.id = 'image_display';
+
+	img1.appendChild(img);
+}
+function populateTable(){
+	clearTable();
+	arr = randomGen(num_images);
+	main_arr = arr;
+	loaded=true;
+	var arrayLength =arr.length;
+	for (var i = 0; i < arrayLength; i++) {
+		addRow(arr[i]);
+	}
+}
+function clearTable(){
+         tabBody=document.getElementById("image_table");
+         n = tabBody.children.length;	
+	 for( var i=0; i < n ; i++) {
+	   tabBody.deleteRow(tabBody.children.length-1);
+	}
+	previous_id  =0;
+
+}
+
+function randomGen(length)
+{
+    var arr = [];
+    var n;
+    for(var i=0; i<length; i++)
+    {
+        do
+            n = Math.floor(Math.random()*total_imags+1);
+        while(arr.indexOf(n) !== -1)
+
+       arr[i] = n;
+    }
+
+    return arr;
+}
+function addRow(content)
+{
+         if (!document.getElementsByTagName) return;
+         tabBody=document.getElementById("image_table");
+         row=document.createElement("tr");
+         cell = document.createElement("td");
+	 div_elem = document.createElement("div");
+	 var aTag = document.createElement('a');
+	 aTag.href= "#"
+	 div_elem.id = 'div'+content;
+	 image_src = './images/'+content+'.jpg';
+         imgnode=img_create(image_src,content);
+	  aTag.onclick = function() { createHeatMap(content);};
+	aTag.appendChild(imgnode);
+	 div_elem.appendChild(aTag);
+         cell.appendChild(div_elem);
+         row.appendChild(cell);
+         tabBody.appendChild(row);
+
+}
+
+function img_create(src, id) {
+    var img=  document.createElement('img');
+    img.src= src;
+    img.width = "150";
+    return img;
+}
+function createHeatMap(id) {
+if(previous_id >0){
+element = document.getElementById('div'+previous_id);
+element.style.backgroundColor = "white";
+}
+element = document.getElementById('div'+id);
+previous_id =id;
+element.style.backgroundColor = "gray";
+network_structure =  populateNetworkProperties(id);
+thenetwork = updateNetwork(network_structure);
+}
+function populateNetworkProperties(id){
+var group= potentials[id-1][0]
+group = preprocess(group);
+
+
+
+//for( var i =0; i<102;i++) {
+//	group[i] =1;
+//}
+
+var nodes1 =  [
+        {
+            "group": group[0], 
+            "id": 0, 
+            "links": 4, 
+            "label": "person"
+        }, 
+        {
+            "group": group[1], 
+            "id": 1, 
+            "links": 1, 
+            "label": " bicycle"
+        }, 
+        {
+            "group": group[2], 
+            "id": 2, 
+            "links": 9, 
+            "label": " car"
+        }, 
+        {
+            "group": group[3], 
+            "id": 3, 
+            "links": 0, 
+            "label": " motorcycle"
+        }, 
+        {
+            "group": group[4], 
+            "id": 4, 
+            "links": 1, 
+            "label": " airplane"
+        }, 
+        {
+            "group": group[5], 
+            "id": 5, 
+            "links": 0, 
+            "label": " bus"
+        }, 
+        {
+            "group": group[6], 
+            "id": 6, 
+            "links": 1, 
+            "label": " train"
+        }, 
+        {
+            "group": group[7], 
+            "id": 7, 
+            "links": 0, 
+            "label": " truck"
+        }, 
+        {
+            "group": group[8], 
+            "id": 8, 
+            "links": 1, 
+            "label": " boat"
+        }, 
+        {
+            "group": group[9], 
+            "id": 9, 
+            "links": 0, 
+            "label": " traffic light"
+        }, 
+        {
+            "group": group[10], 
+            "id": 10, 
+            "links": 0, 
+            "label": " fire hydrant"
+        }, 
+        {
+            "group": group[11], 
+            "id": 11, 
+            "links": 0, 
+            "label": " stop sign"
+        }, 
+        {
+            "group": group[12], 
+            "id": 12, 
+            "links": 0, 
+            "label": " parking meter"
+        }, 
+        {
+            "group": group[13], 
+            "id": 13, 
+            "links": 1, 
+            "label": " bench"
+        }, 
+        {
+            "group": group[14], 
+            "id": 14, 
+            "links": 1, 
+            "label": " bird"
+        }, 
+        {
+            "group": group[15], 
+            "id": 15, 
+            "links": 1, 
+            "label": " cat"
+        }, 
+        {
+            "group": group[16], 
+            "id": 16, 
+            "links": 1, 
+            "label": " dog"
+        }, 
+        {
+            "group": group[17], 
+            "id": 17, 
+            "links": 1, 
+            "label": " horse"
+        }, 
+        {
+            "group": group[18], 
+            "id": 18, 
+            "links": 1, 
+            "label": " sheep"
+        }, 
+        {
+            "group": group[19], 
+            "id": 19, 
+            "links": 1, 
+            "label": " cow"
+        }, 
+        {
+            "group": group[20], 
+            "id": 20, 
+            "links": 1, 
+            "label": " elephant"
+        }, 
+        {
+            "group": group[21], 
+            "id": 21, 
+            "links": 1, 
+            "label": " bear"
+        }, 
+        {
+            "group": group[22], 
+            "id": 22, 
+            "links": 1, 
+            "label": " zebra"
+        }, 
+        {
+            "group": group[23], 
+            "id": 23, 
+            "links": 1, 
+            "label": " giraffe"
+        }, 
+        {
+            "group": group[24], 
+            "id": 24, 
+            "links": 2, 
+            "label": " backpack"
+        }, 
+        {
+            "group": group[25], 
+            "id": 25, 
+            "links": 1, 
+            "label": " umbrella"
+        }, 
+        {
+            "group": group[26], 
+            "id": 26, 
+            "links": 1, 
+            "label": " handbag"
+        }, 
+        {
+            "group": group[27], 
+            "id": 27, 
+            "links": 1, 
+            "label": " tie"
+        }, 
+        {
+            "group": group[28], 
+            "id": 28, 
+            "links": 1, 
+            "label": " suitcase"
+        }, 
+        {
+            "group": group[29], 
+            "id": 29, 
+            "links": 1, 
+            "label": " frisbee"
+        }, 
+        {
+            "group": group[30], 
+            "id": 30, 
+            "links": 1, 
+            "label": " skis"
+        }, 
+        {
+            "group": group[31], 
+            "id": 31, 
+            "links": 0, 
+            "label": " snowboard"
+        }, 
+        {
+            "group": group[32], 
+            "id": 32, 
+            "links": 2, 
+            "label": " sports ball"
+        }, 
+        {
+            "group": group[33], 
+            "id": 33, 
+            "links": 1, 
+            "label": " kite"
+        }, 
+        {
+            "group": group[34], 
+            "id": 34, 
+            "links": 1, 
+            "label": " baseball bat"
+        }, 
+        {
+            "group": group[35], 
+            "id": 35, 
+            "links": 0, 
+            "label": " baseball glove"
+        }, 
+        {
+            "group": group[36], 
+            "id": 36, 
+            "links": 0, 
+            "label": " skateboard"
+        }, 
+        {
+            "group": group[37], 
+            "id": 37, 
+            "links": 1, 
+            "label": " surfboard"
+        }, 
+        {
+            "group": group[38], 
+            "id": 38, 
+            "links": 0, 
+            "label": " tennis racket"
+        }, 
+        {
+            "group": group[39], 
+            "id": 39, 
+            "links": 1, 
+            "label": " bottle"
+        }, 
+        {
+            "group": group[40], 
+            "id": 40, 
+            "links": 1, 
+            "label": " wine glass"
+        }, 
+        {
+            "group": group[41], 
+            "id": 41, 
+            "links": 1, 
+            "label": " cup"
+        }, 
+        {
+            "group": group[42], 
+            "id": 42, 
+            "links": 1, 
+            "label": " fork"
+        }, 
+        {
+            "group": group[43], 
+            "id": 43, 
+            "links": 1, 
+            "label": " knife"
+        }, 
+        {
+            "group": group[44], 
+            "id": 44, 
+            "links": 1, 
+            "label": " spoon"
+        }, 
+        {
+            "group": group[45], 
+            "id": 45, 
+            "links": 3, 
+            "label": " bowl"
+        }, 
+        {
+            "group": group[46], 
+            "id": 46, 
+            "links": 1, 
+            "label": " banana"
+        }, 
+        {
+            "group": group[47], 
+            "id": 47, 
+            "links": 1, 
+            "label": " apple"
+        }, 
+        {
+            "group": group[48], 
+            "id": 48, 
+            "links": 1, 
+            "label": " sandwich"
+        }, 
+        {
+            "group": group[49], 
+            "id": 49, 
+            "links": 1, 
+            "label": " orange"
+        }, 
+        {
+            "group": group[50], 
+            "id": 50, 
+            "links": 1, 
+            "label": " broccoli"
+        }, 
+        {
+            "group": group[51], 
+            "id": 51, 
+            "links": 1, 
+            "label": " carrot"
+        }, 
+        {
+            "group": group[52], 
+            "id": 52, 
+            "links": 1, 
+            "label": " hot dog"
+        }, 
+        {
+            "group": group[53], 
+            "id": 53, 
+            "links": 1, 
+            "label": " pizza"
+        }, 
+        {
+            "group": group[54], 
+            "id": 54, 
+            "links": 1, 
+            "label": " donut"
+        }, 
+        {
+            "group": group[55], 
+            "id": 55, 
+            "links": 1, 
+            "label": " cake"
+        }, 
+        {
+            "group": group[56], 
+            "id": 56, 
+            "links": 1, 
+            "label": " chair"
+        }, 
+        {
+            "group": group[57], 
+            "id": 57, 
+            "links": 1, 
+            "label": " couch"
+        }, 
+        {
+            "group": group[58], 
+            "id": 58, 
+            "links": 1, 
+            "label": " potted plant"
+        }, 
+        {
+            "group": group[59], 
+            "id": 59, 
+            "links": 1, 
+            "label": " bed"
+        }, 
+        {
+            "group": group[60], 
+            "id": 60, 
+            "links": 1, 
+            "label": " dining table"
+        }, 
+        {
+            "group": group[61], 
+            "id": 61, 
+            "links": 1, 
+            "label": " toilet"
+        }, 
+        {
+            "group": group[62], 
+            "id": 62, 
+            "links": 3, 
+            "label": " tv"
+        }, 
+        {
+            "group": group[63], 
+            "id": 63, 
+            "links": 1, 
+            "label": " laptop"
+        }, 
+        {
+            "group": group[64], 
+            "id": 64, 
+            "links": 1, 
+            "label": " mouse"
+        }, 
+        {
+            "group": group[65], 
+            "id": 65, 
+            "links": 1, 
+            "label": " remote"
+        }, 
+        {
+            "group": group[66], 
+            "id": 66, 
+            "links": 0, 
+            "label": " keyboard"
+        }, 
+        {
+            "group": group[67], 
+            "id": 67, 
+            "links": 1, 
+            "label": " cell phone"
+        }, 
+        {
+            "group": group[68], 
+            "id": 68, 
+            "links": 1, 
+            "label": " microwave"
+        }, 
+        {
+            "group": group[69], 
+            "id": 69, 
+            "links": 1, 
+            "label": " oven"
+        }, 
+        {
+            "group": group[70], 
+            "id": 70, 
+            "links": 1, 
+            "label": " toaster"
+        }, 
+        {
+            "group": group[71], 
+            "id": 71, 
+            "links": 3, 
+            "label": " sink"
+        }, 
+        {
+            "group": group[72], 
+            "id": 72, 
+            "links": 1, 
+            "label": " refrigerator"
+        }, 
+        {
+            "group": group[73], 
+            "id": 73, 
+            "links": 1, 
+            "label": " book"
+        }, 
+        {
+            "group": group[74], 
+            "id": 74, 
+            "links": 1, 
+            "label": " clock"
+        }, 
+        {
+            "group": group[75], 
+            "id": 75, 
+            "links": 1, 
+            "label": " vase"
+        }, 
+        {
+            "group": group[76], 
+            "id": 76, 
+            "links": 1, 
+            "label": " scissors"
+        }, 
+        {
+            "group": group[77], 
+            "id": 77, 
+            "links": 1, 
+            "label": " teddy bear"
+        }, 
+        {
+            "group": group[78], 
+            "id": 78, 
+            "links": 1, 
+            "label": " hair drier"
+        }, 
+        {
+            "group": group[79], 
+            "id": 79, 
+            "links": 1, 
+            "label": " toothbrush"
+        }, 
+        {
+            "group": group[80], 
+            "id": 80, 
+            "links": 3, 
+            "label": "h1"
+        }, 
+        {
+            "group": group[81], 
+            "id": 81, 
+            "links": 4, 
+            "label": "h2"
+        }, 
+        {
+            "group": group[82], 
+            "id": 82, 
+            "links": 1, 
+            "label": "h3"
+        }, 
+        {
+            "group": group[83], 
+            "id": 83, 
+            "links": 0, 
+            "label": "h4"
+        }, 
+        {
+            "group": group[84], 
+            "id": 84, 
+            "links": 0, 
+            "label": "h5"
+        }, 
+        {
+            "group": group[85], 
+            "id": 85, 
+            "links": 1, 
+            "label": "h6"
+        }, 
+        {
+            "group": group[86], 
+            "id": 86, 
+            "links": 1, 
+            "label": "h7"
+        }, 
+        {
+            "group": group[87], 
+            "id": 87, 
+            "links": 0, 
+            "label": "h8"
+        }, 
+        {
+            "group": group[88], 
+            "id": 88, 
+            "links": 0, 
+            "label": "h9"
+        }, 
+        {
+            "group": group[89], 
+            "id": 89, 
+            "links": 0, 
+            "label": "h10"
+        }, 
+        {
+            "group": group[90], 
+            "id": 90, 
+            "links": 1, 
+            "label": "h11"
+        }, 
+        {
+            "group": group[91], 
+            "id": 91, 
+            "links": 0, 
+            "label": "h12"
+        }, 
+        {
+            "group": group[92], 
+            "id": 92, 
+            "links": 1, 
+            "label": "h13"
+        }, 
+        {
+            "group": group[93], 
+            "id": 93, 
+            "links": 0, 
+            "label": "h14"
+        }, 
+        {
+            "group": group[94], 
+            "id": 94, 
+            "links": 0, 
+            "label": "h15"
+        }, 
+        {
+            "group": group[95], 
+            "id": 95, 
+            "links": 0, 
+            "label": "h16"
+        }, 
+        {
+            "group": group[96], 
+            "id": 96, 
+            "links": 1, 
+            "label": "h17"
+        }, 
+        {
+            "group": group[97], 
+            "id": 97, 
+            "links": 1, 
+            "label": "h18"
+        }, 
+        {
+            "group": group[98], 
+            "id": 98, 
+            "links": 0, 
+            "label": "h19"
+        }, 
+        {
+            "group": group[99], 
+            "id": 99, 
+            "links": 0, 
+            "label": "h20"
+        }, 
+        {
+            "group": group[100], 
+            "id": 100, 
+            "links": 0, 
+            "label": "h21"
+        }, 
+        {
+            "group": group[101], 
+            "id": 101, 
+            "links": 0, 
+            "label": "h22"
+        }
+    ] ;
+    var edges1 = [
+        {
+            "to": 2, 
+            "from": 0
+        }, 
+        {
+            "to": 13, 
+            "from": 0
+        }, 
+        {
+            "to": 80, 
+            "from": 0
+        }, 
+        {
+            "to": 81, 
+            "from": 0
+        }, 
+        {
+            "to": 2, 
+            "from": 1
+        }, 
+        {
+            "to": 3, 
+            "from": 2
+        }, 
+        {
+            "to": 5, 
+            "from": 2
+        }, 
+        {
+            "to": 7, 
+            "from": 2
+        }, 
+        {
+            "to": 9, 
+            "from": 2
+        }, 
+        {
+            "to": 10, 
+            "from": 2
+        }, 
+        {
+            "to": 11, 
+            "from": 2
+        }, 
+        {
+            "to": 12, 
+            "from": 2
+        }, 
+        {
+            "to": 36, 
+            "from": 2
+        }, 
+        {
+            "to": 82, 
+            "from": 2
+        }, 
+        {
+            "to": 7, 
+            "from": 4
+        }, 
+        {
+            "to": 86, 
+            "from": 6
+        }, 
+        {
+            "to": 86, 
+            "from": 8
+        }, 
+        {
+            "to": 34, 
+            "from": 13
+        }, 
+        {
+            "to": 80, 
+            "from": 14
+        }, 
+        {
+            "to": 85, 
+            "from": 15
+        }, 
+        {
+            "to": 87, 
+            "from": 16
+        }, 
+        {
+            "to": 88, 
+            "from": 17
+        }, 
+        {
+            "to": 88, 
+            "from": 18
+        }, 
+        {
+            "to": 88, 
+            "from": 19
+        }, 
+        {
+            "to": 88, 
+            "from": 20
+        }, 
+        {
+            "to": 80, 
+            "from": 21
+        }, 
+        {
+            "to": 88, 
+            "from": 22
+        }, 
+        {
+            "to": 88, 
+            "from": 23
+        }, 
+        {
+            "to": 30, 
+            "from": 24
+        }, 
+        {
+            "to": 82, 
+            "from": 24
+        }, 
+        {
+            "to": 82, 
+            "from": 25
+        }, 
+        {
+            "to": 82, 
+            "from": 26
+        }, 
+        {
+            "to": 99, 
+            "from": 27
+        }, 
+        {
+            "to": 82, 
+            "from": 28
+        }, 
+        {
+            "to": 87, 
+            "from": 29
+        }, 
+        {
+            "to": 31, 
+            "from": 30
+        }, 
+        {
+            "to": 35, 
+            "from": 32
+        }, 
+        {
+            "to": 38, 
+            "from": 32
+        }, 
+        {
+            "to": 89, 
+            "from": 33
+        }, 
+        {
+            "to": 35, 
+            "from": 34
+        }, 
+        {
+            "to": 89, 
+            "from": 37
+        }, 
+        {
+            "to": 90, 
+            "from": 39
+        }, 
+        {
+            "to": 81, 
+            "from": 40
+        }, 
+        {
+            "to": 91, 
+            "from": 41
+        }, 
+        {
+            "to": 92, 
+            "from": 42
+        }, 
+        {
+            "to": 92, 
+            "from": 43
+        }, 
+        {
+            "to": 93, 
+            "from": 44
+        }, 
+        {
+            "to": 84, 
+            "from": 45
+        }, 
+        {
+            "to": 93, 
+            "from": 45
+        }, 
+        {
+            "to": 95, 
+            "from": 45
+        }, 
+        {
+            "to": 84, 
+            "from": 46
+        }, 
+        {
+            "to": 84, 
+            "from": 47
+        }, 
+        {
+            "to": 94, 
+            "from": 48
+        }, 
+        {
+            "to": 84, 
+            "from": 49
+        }, 
+        {
+            "to": 95, 
+            "from": 50
+        }, 
+        {
+            "to": 95, 
+            "from": 51
+        }, 
+        {
+            "to": 94, 
+            "from": 52
+        }, 
+        {
+            "to": 92, 
+            "from": 53
+        }, 
+        {
+            "to": 81, 
+            "from": 54
+        }, 
+        {
+            "to": 81, 
+            "from": 55
+        }, 
+        {
+            "to": 96, 
+            "from": 56
+        }, 
+        {
+            "to": 98, 
+            "from": 57
+        }, 
+        {
+            "to": 97, 
+            "from": 58
+        }, 
+        {
+            "to": 85, 
+            "from": 59
+        }, 
+        {
+            "to": 81, 
+            "from": 60
+        }, 
+        {
+            "to": 101, 
+            "from": 61
+        }, 
+        {
+            "to": 66, 
+            "from": 62
+        }, 
+        {
+            "to": 98, 
+            "from": 62
+        }, 
+        {
+            "to": 100, 
+            "from": 62
+        }, 
+        {
+            "to": 64, 
+            "from": 63
+        }, 
+        {
+            "to": 66, 
+            "from": 64
+        }, 
+        {
+            "to": 98, 
+            "from": 65
+        }, 
+        {
+            "to": 99, 
+            "from": 67
+        }, 
+        {
+            "to": 83, 
+            "from": 68
+        }, 
+        {
+            "to": 83, 
+            "from": 69
+        }, 
+        {
+            "to": 83, 
+            "from": 70
+        }, 
+        {
+            "to": 83, 
+            "from": 71
+        }, 
+        {
+            "to": 90, 
+            "from": 71
+        }, 
+        {
+            "to": 101, 
+            "from": 71
+        }, 
+        {
+            "to": 83, 
+            "from": 72
+        }, 
+        {
+            "to": 100, 
+            "from": 73
+        }, 
+        {
+            "to": 80, 
+            "from": 74
+        }, 
+        {
+            "to": 97, 
+            "from": 75
+        }, 
+        {
+            "to": 80, 
+            "from": 76
+        }, 
+        {
+            "to": 85, 
+            "from": 77
+        }, 
+        {
+            "to": 101, 
+            "from": 78
+        }, 
+        {
+            "to": 101, 
+            "from": 79
+        }, 
+        {
+            "to": 86, 
+            "from": 80
+        }, 
+        {
+            "to": 87, 
+            "from": 80
+        }, 
+        {
+            "to": 88, 
+            "from": 80
+        }, 
+        {
+            "to": 91, 
+            "from": 81
+        }, 
+        {
+            "to": 92, 
+            "from": 81
+        }, 
+        {
+            "to": 94, 
+            "from": 81
+        }, 
+        {
+            "to": 96, 
+            "from": 81
+        }, 
+        {
+            "to": 99, 
+            "from": 82
+        }, 
+        {
+            "to": 100, 
+            "from": 85
+        }, 
+        {
+            "to": 89, 
+            "from": 86
+        }, 
+        {
+            "to": 91, 
+            "from": 90
+        }, 
+        {
+            "to": 93, 
+            "from": 92
+        }, 
+        {
+            "to": 98, 
+            "from": 96
+        }, 
+        {
+            "to": 98, 
+            "from": 97
+        }
+    ];
+ var mynetwork = { nodes: nodes1, edges:edges1}
+ return mynetwork;
+}
+
+
+function updateNetwork(mynetwork){
+	if(thenetwork == null){
+		var container1 = document.getElementById('mynetwork1');
+		tmp = new vis.Network(container1,mynetwork,options);
+		container1.style.display='block';
+		return tmp;
+}
+else{
+thenetwork.setData(mynetwork);
+}
+return thenetwork;
+}
+function preprocess(group){
+var group_id =[];
+for(var i=0; i<group.length;i++){
+group_id.push(Math.floor(group[i]/(0.1)));
+}
+main_id = findIndexOfGreatest(group);
+return group_id
+}
+function auto_play(){
+if(loaded != true){
+        populateTable();
+}
+timerId =0;
+myTimer = setInterval(function () {visualiseTimer()}, 8000);
+
+}
+
+function visualiseTimer(){
+                if(timerId == main_arr.length)
+                {
+                        populateTable();        
+                        timerId =0;
+                        
+                }
+                createHeatMap(main_arr[timerId]);
+
+                setTimeout(function(){ thenetwork.focusOnNode(main_id,{scale:1.1 ,duration:30000, easingFunction:'linear',animation:true})} ,2000);
+                timerId = timerId +1;
+}
+function getMaxOfArray(numArray) {
+return numArray.indexOf(Math.max.apply(Math, numArray));
+}
+function findIndexOfGreatest(array) {
+  var greatest;
+  var greatest2;
+  var indexOfGreatest;
+  for (var i = 0; i < array.length; i++) {
+    if (!greatest || array[i] > greatest) {
+      greatest = array[i];
+      indexOfGreatest2 = indexOfGreatest 
+      indexOfGreatest = i;
+    }
+
+  }
+  return indexOfGreatest2-1;
+}
+</script>

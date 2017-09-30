@@ -1,0 +1,153 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
+<html lang="">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1365">
+    <title>Animashree Anandkumar</title>
+    <link rel="stylesheet" href="MainCSS.css">
+    <link rel="stylesheet" href="Home.css">
+
+    <script type="text/javascript" src="ticker.js"></script>
+    <script type="text/javascript">
+     /*
+        $(function() {
+     
+            var ticker = $("#ticker");
+             ticker.children().filter("dt").each(function() {
+           
+            var dt = $(this),
+            container = $("<div>");
+            dt.next().appendTo(container);
+            dt.prependTo(container);          
+            container.appendTo(ticker);
+             });
+                 
+        //hide the scrollbar
+            ticker.css("overflow", "hidden");
+         
+            //animator function
+            function animator(currentItem) {
+             
+    //work out new anim duration
+    var distance = currentItem.height(),
+    duration = (distance - Math.abs(parseInt(currentItem.css("marginTop")))) / 0.0125;
+ 
+    //animate the first child of the ticker
+    currentItem.animate({ marginTop: -distance }, duration, "linear", function() {
+             
+      //move current item to the bottom     
+        currentItem.appendTo(currentItem.parent()).css("marginTop", 0);
+ 
+    //recurse
+    animator(currentItem.parent().children(":first"));
+    }); 
+  };
+         
+  //start the ticker
+  animator(ticker.children(":first"));
+         
+ //set mouseenter
+ticker.mouseenter(function() {
+           
+  //stop current animation
+  ticker.children().stop();
+           
+});
+         
+//set mouseleave
+ticker.mouseleave(function() {
+                   
+  //resume animation
+  animator(ticker.children(":first"));
+});
+         
+});
+        
+                function fn_stopticker(){
+            
+           $("#ticker").children().stop();
+            
+        }
+
+        */
+    </script>
+
+</head>
+
+<body>
+    
+    <!-- Main div-->
+    <div id = "Home">
+            
+        <!-- Bio div -->
+        <div id = "HomeBio">
+                
+            <p class="bio">I am a faculty at the EECS Department at University of California Irvine since August 2010. I am a member of the center for pervasive communications and computing (CPCC). I also hold a joint appointment with the ICS Dept. at UCI.</p>
+
+            <p class="bio">My research focus is in the high-dimensional learning of probabilistic graphical models and latent variable models. Broadly I am interested in machine learning, high-dimensional statistics, tensor methods, statistical physics, information theory and signal processing.</p>
+            
+            <p class="bio"> <i>Short presentation on overview of my research.</i> &nbsp; &nbsp; 
+           
+                <a class="fancybox-media" href="https://www.youtube.com/watch?v=gEFaLKzrKYc">[Streaming Link]</a>
+            
+            <br/><br/><br/>
+            <p style="text-align:center">****&nbsp;****&nbsp;****&nbsp;****</p>
+            
+            <p class = "bio"><a href="" onclick="return false" style="text-decoration:none"><i>Prospective students/ Postdoctoral researchers/ Visitors:</i></a> We are looking for highly motivated and self-driven MS/PhD students with a strong mathematical background in machine learning, probability, statistics, algorithms and graph theory. Above, you can see a short presentation providing an overview of our research. If this sounds exciting, apply to the UCI graduate program <a target = "_blank" href="http://www.eng.uci.edu/dept/eecs/prospective">here</a>. We are also interested in having post-doctoral researchers with an interest in high-dimensional learning.</p>
+        </div>
+        
+        <!-- Tweets and upcoming events -->
+        <div id = "HomeDP">
+            
+            <!-- Add Twitter -->
+            <p><b>Recent Tweets</b></p>
+            
+            <a class="twitter-timeline" href="https://twitter.com/AnimaAnandkumar"
+data-widget-id="541037279175647232"  width="320"
+  height="250" data-chrome="noheader noscrollbar nofooter" data-border-color="#aaaaaa">Tweets by @AnimaAnandkumar</a>
+<script>!function(d,s,id){var
+js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+            
+            <br/> <br/>
+            
+            <!-- Upcoming events ticker-->
+            <p><b>Upcoming Events</b></p>
+            
+              <dl id="ticker">
+                  
+                  <!-- ########## Format to add new News item ########### -->
+                  <!-- <dt>Event Name</dt><dd>Date</dd> -->
+                  
+                  <dt>Simons workshop on "Tensors in Computer Science and Geometry"</dt><dd>Nov.10-14th, 2014</dd>
+                  <dt>Invited talk, Theory of Big Data Science at UCL, London</dt><dd>Jan 7-9 2015</dd>
+                  <dt>Bootcamp talk, big data program, Fields Institute</dt><dd>Jan 16th 2015</dd>
+                  <dt>Member of organizing committee, workshop on "Optimization in Big Data" at the Fields Institute, Toronto</dt>  <dd>February 9 – 13, 2015</dd>
+                  <dt>Invited talk at Strata conference</dt><dd>Feb 18th 2015</dd>
+                  <dt>Simon's workshop on Information Theory, Learning and Big Data</dt><dd>March 2015</dd>
+                  <dt>Dagstuhl workshop, "Mathematical and Computational Foundations of Learning Theory"</dt><dd>Aug. 30th - Sept. 4th 2015</dd>
+            </dl>
+        </div>
+    </div>
+    
+
+        <!-- Fancy box code -->
+  <script type="text/javascript">
+	$(document).ready(function() {
+	$('.fancybox-media').fancybox({
+		openEffect  : 'none',
+		closeEffect : 'none',
+		helpers : {
+			media : {},
+            overlay:{
+                showEarly: false
+            }
+		}
+	});
+});
+
+</script>
+
+
+</body>
+</html>

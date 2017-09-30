@@ -1,0 +1,65 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Parallel Latent Tree Learning via Tensor Factorization</title>
+<style type="text/css">
+.class1 {	color: #093;
+}
+.class2 {	color: #00F;
+}
+</style>
+</head>
+
+<body style="background-color:#e6e6e6">
+<h1 align="center"><font color="#000080">MEGA DatA Lab</font></h1>
+<h2 align="center"><span class="class1"><span class="class"> Model Estimation, Graphical Algorithms, Data Analysis Lab</span></span></h2>
+<p align="center">EECS, University of California, Irvine, CA 92697.</p>
+<hr />
+<h3 align="left"><font color="#990099">Learning High Dimensional Latent Tree Graphical Models in Parallel through Tensor Methods</font></h3>
+
+<p align="left">&nbsp;</p>
+<p align="left"><strong><b>[1] </b>Scalable Latent Tree Model and its Application to Health Analytics</strong><b>. </b>by  Furong Huang, Niranjan U.N., Joachim Perros, Robert Chen, Jimeng Sun, Anima Anandkumar. <em>Preprint, Feb. 2015.</em><br />
+Download: <a href="../../pubs/latent-struct-param.pdf">PDF</a>. <a href="https://github.com/FurongHuang/StructureParameterLatentTree">Code</a>.<em></em> <a href="../../pubs/Huang_LatentTreeSlides.pdf">Slides</a></p>
+
+
+<p>The task of learning a latent tree models consists of two parts: learning the tree structure, and learning the parameters
+of the tree. There exist many challenges which prohibit efficient or guaranteed learning of the latent tree graphical
+model:</p>
+<p>[1] The location and the number of latent variables are hidden and the marginalized graph over the observable
+variables no longer conforms to a tree structure.</p>
+<p>[2] Structure learning algorithms are typically of computational complexity polynomial with <em>p</em> (number of variables). These methods are serial in nature and therefore are not scalable for large
+p.</p>
+<p>[3] Parameter estimation in latent tree models is typically carried out through Expectation Maximization (EM)
+or other local search heuristics. These methods have no consistency guarantees, suffer from the
+problem of local optima and are not easily parallelizable. </p>
+<p>[4] Typically structure learning and parameter estimation are treated sequentially, not together.</p>
+
+<p align="left"><img src="../../pubs/StructureLearning.png" width="1000" height="200" alt="Parallel Latent Tree Model Learning" /></p>
+<p align="left">Figure 1: (a) Ground truth latent tree to be estimated, numbers on edges are multivariate information distances. (b) MST
+constructed using the multivariate information distances. <em>v3<em> and <em>v5<em> are internal nodes (leaders). Note that multivariate information
+distances are additive on latent tree, not on MST. (c1) LCR on nbd[<em>v3<em>, MST] to get local structure <em>N3<em>. Pink shadow denotes the
+active set. Local parameter estimation is carried out over triplets with joint node, such as (<em>v2<em>, <em>v3<em>, <em>v5<em>) with joint node <em>h1<em>. (c2) LCR
+on nbd[<em>v5<em>, MST] to get local structure <em>N5</em>. Cyan shadow denotes the active set. (d1)(d2) Merging local sub-trees. Path(<em>v3<em>,<em>v5<em>; <em>N3<em>)
+and path(<em>v3<em>,<em>v5<em>; <em>N5<em>) conflict. (e) Final recovery.</p>
+<blockquote>
+  <blockquote>&nbsp;</blockquote>
+</blockquote>
+<p>
+We present an integrated approach to structure and parameter estimation in latent tree graphical models, where some nodes are hidden. Our overall approach follows a <em>divide-and-conquer</em> strategy that learns models over small groups of variables and iteratively merges into a global solution. The structure learning involves combinatorial operations such as minimum spanning tree construction and local recursive grouping; the parameter learning is based on the method of moments and on tensor decompositions. Our method is guaranteed to correctly recover the unknown tree structure and the model parameters with low sample complexity for the class of linear multivariate latent tree models which includes discrete and Gaussian distributions, and Gaussian mixtures. Our bulk asynchronous parallel algorithm is implemented in parallel using the OpenMP framework and scales logarithmically with the number of variables and linearly with dimensionality of each variable. Our experiments confirm a high degree of efficiency and accuracy on large datasets of electronic health records. The proposed algorithm also generates intuitive and clinically meaningful disease hierarchies.
+</p>
+
+
+<p align="left"><img src="../../pubs/figure_tree_neoplasms_crop_smaller.png" width="1000" height="500" alt="Two Subtrees" /></p>
+<p align="left">Figure 2: An example of two subtrees which represent groups of similar diseases which may commonly co-occur.
+Nodes colored yellow are latent nodes from learned subtrees.</p>
+<blockquote>
+  <blockquote>&nbsp;</blockquote>
+</blockquote>
+<p align="left"><img src="../../pubs/figure_tree_trauma_smaller.png" width="1000" height="500" alt="Four Subtrees" /></p>
+<p align="left">Figure 3: An example of four subtrees which represent groups of similar diseases which may commonly co-occur.
+Most variables in this subtree are related to trauma.</p>
+<p align="left"></p>
+<p align="left">&nbsp;</p>
+</body>
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>MEGA DatA Lab</title>
+<style type="text/css">
+.class1 {
+	color: #093;
+}
+.class2 {
+	color: #00F;
+}
+.class2 font {
+	color: #009;
+}
+</style>
+
+<!-- style type="text/css">
+
+/* All Styles Optional */
+
+* {
+font-family:calibri,arial;
+font-size:16pt;
+}
+
+div#show {
+background-color:#efefe7;
+width:400px;
+margin:0; padding:2px;
+border:1px solid #909090;
+}
+
+div#show table input,  div#show4 table input {
+outline-style:none;
+}
+
+</style -->
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+});
+</script>
+<script type="text/javascript"
+  src="https://c328740.ssl.cf1.rackcdn.com/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+<script src="swissarmy.js" type="text/javascript"></script>
+
+<script src="slideshow.js" type="text/javascript"></script>
+
+</head>
+
+<body style="background-color:#e6e6e6">
+<h1 align="center"><font color="#000080">MEGA DatA Lab</font></h1>
+<h2 align="center"><span class="class1"><span class="class"> Model Estimation, Graphical Algorithms, Data Analysis Lab</span></span></h2>
+<p align="center">EECS, University of California, Irvine, CA 92697.</p>
+<hr />
+
+
+<h3><strong><font color="#990099">Non-convex Robust PCA</font></strong></h3>
+<p><strong>&ldquo;Non-convex Robust PCA &rdquo;</strong>&nbsp;by P Netrapalli, U N Niranjan, S Sanghavi, A Anandkumar, P Jain.&nbsp;<em>To appear in NIPS 2014.&nbsp;</em></p>
+<p><a href="../../pubs/nrpca.pdf">Paper.</a> <a href="http://simons.berkeley.edu/talks/animashree-anandkumar-2014-09-22">Talk.</a> <a href="../../pubs/CMU_fall2014.pdf">Slides.</a>  <a href="./Projects_sub/code_ncrpca.zip">Code.</a> </p>
+<p>We propose a new provable method for robust PCA, where the task is to recover a
+  low-rank matrix, which is corrupted with sparse perturbations. Our method consists
+  of simple alternating projections onto the set of low rank and sparse matrices
+  with intermediate denoising steps. We prove correct recovery of the low rank and
+  sparse components under tight recovery conditions, which match those for the
+  state-of-art convex relaxation techniques. Our method is extremely simple to implement
+  and has low computational complexity. For an $m \times n$ input matrix (say
+  $m \leq n$), our method has $O(r^2 m n \log(1/\epsilon))$ running time, where $r$ is the rank
+  of the low-rank component and $\epsilon$ is the accuracy. In contrast, convex relaxation
+  methods have a running time $O(m^2 n / \epsilon)$, which is not scalable to large problem
+  instances. Our algorithm thus provably solves the robust PCA problem in running
+  time that is just a factor r away from the $O (rmn \log(1/ \epsilon))$ running time of the
+  usual (non-robust) PCA. Our analysis represents one of the few instances of global
+  convergence guarantees for non-convex methods. </p>
+
+Sample results on the task of foreground-background separation in the restaurant video dataset:
+<br>
+<br>
+
+<iframe width="250" height="200" src="//www.youtube.com/embed/e9SHQAGBHr4?autoplay=1" frameborder="0" allowfullscreen></iframe>
+<iframe width="250" height="200" src="//www.youtube.com/embed/_lwnpHzY2qQ?autoplay=1" frameborder="0" allowfullscreen></iframe>
+<iframe width="250" height="200" src="//www.youtube.com/embed/c21CPu1fKKI?autoplay=1" frameborder="0" allowfullscreen></iframe>
+<br>
+From left to right: <a href="Projects_sub/restaurant/original.mp4">Original video</a>, <a href="Projects_sub/restaurant/nonconvex_low_rank.mp4">non-convex low-rank</a>, <a href="Projects_sub/restaurant/nonconvex_sparse.mp4">non-convex sparse</a>
+<br>
+<br>
+<iframe width="250" height="200" src="//www.youtube.com/embed/spfOWbrH_qg?autoplay=1" frameborder="0" allowfullscreen></iframe>
+<iframe width="250" height="200" src="//www.youtube.com/embed/ArLZs0J728I?autoplay=1" frameborder="0" allowfullscreen></iframe>
+<iframe width="250" height="200" src="//www.youtube.com/embed/d-PnPwGjF8s?autoplay=1" frameborder="0" allowfullscreen></iframe>
+<br>
+<br>
+From left to right: <a href="Projects_sub/restaurant/vanilla.mp4">Vanilla PCA</a>, <a href="Projects_sub/restaurant/convex_low_rank.mp4">convex low-rank</a>, <a href="Projects_sub/restaurant/convex_sparse.mp4">convex sparse</a>
+<br>
+<br>
+Note that our non-convex method is superior in the quality of the foreground-background separation (for example, notice that artifacts are not present in our method when compared against convex method), for a given accuracy, and has much faster running times (refer to the paper for more details).
+<br>
+<!-- Download:&nbsp;<a href="http://newport.eecs.uci.edu/anandkumar/pubs/AnandkumarEtal_graphicalmixtures12.pdf">PDF.</a>&nbsp;<a href="http://newport.eecs.uci.edu/anandkumar/pubs/AnandkumarLIDS12.pdf">Slides.</a>&nbsp;<a href="http://newport.eecs.uci.edu/anandkumar/pubs/AnandkumarHsuHuangKakadeNIPS12.pdf">NIPS-version</a></p>
+<p align="left">&nbsp;</p> -->
+<hr />
+
+<p align="left"></p>
+<p align="left">&nbsp;</p>
+
+</body>
+</html>

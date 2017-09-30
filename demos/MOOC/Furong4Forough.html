@@ -1,0 +1,257 @@
+<!doctype html>
+<html>
+<head>
+  <title>Network | DataSet</title>
+
+  <style type="text/css">
+    html, body {
+      font: 11pt arial;
+    }
+
+    h1 {
+      font-size: 150%;
+      margin: 5px 0;
+    }
+
+    h2 {
+      font-size: 100%;
+      margin: 5px 0;
+    }
+
+    table.view {
+      width: 100%;
+    }
+
+    table td {
+      vertical-align: top;
+    }
+
+    table table {
+      background-color: #f5f5f5;
+      border: 1px solid #e5e5e5;
+    }
+
+    table table td {
+      vertical-align: middle;
+    }
+
+    input[type=text], pre {
+      border: 1px solid lightgray;
+    }
+
+    pre {
+      margin: 0;
+      padding: 5px;
+      font-size: 10pt;
+    }
+
+    #network {
+      width: 100%;
+      height: 400px;
+      border: 1px solid lightgray;
+    }
+  </style>
+
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+  <script type="text/javascript" src="vis.js"></script>
+  <link href="vis.css" rel="stylesheet" type="text/css" />
+
+  <script type="text/javascript">
+    var nodes, edges, network;
+
+    // convenience method to stringify a JSON object
+    function toJSON (obj) {
+      return JSON.stringify(obj, null, 4);
+    }
+///////////Data
+
+var time_length = 2;
+function data_Nodes_TobeAdded(local_time_stamp){
+	switch(local_time_stamp){
+		case 0:
+		{Nodes_TobeAdded =[{id: 10,label: "10"}];		break;}
+		case 1:
+		{Nodes_TobeAdded =[{id: 11,label: "11"}];		break;}
+	}
+	return Nodes_TobeAdded;
+}
+
+function data_Edges_TobeAdded(local_time_stamp){
+	switch(local_time_stamp){
+	case 0:
+	{Edges_TobeAdded=[{id: 10, from: 1, to: 10}, {from: 10, to: 2}];	break;}
+	case 1:
+	{Edges_TobeAdded=[{id: 11, from: 11, to: 3}];	break;}
+	}
+	return Edges_TobeAdded;
+}
+
+function data_Edges_TobeRemoved(local_time_stamp){
+	switch(local_time_stamp){
+	case 0:
+	{Edges_TobeRemoved=[1];	break;}
+	case 1:
+	{Edges_TobeRemoved=[2];	break;}
+	}
+	return Edges_TobeRemoved;
+}
+
+///////////
+/*var delay = 1; // 5 second delay
+var now = new Date();
+var desiredTime = new Date().setSeconds(now.getSeconds() + delay);
+
+while (now < desiredTime) {
+    now = new Date(); // update the current time
+}
+*/
+var time_stamp = 0;
+    $(window).load(function () {
+      // attach actions to the node buttons
+      $('#play').click(function(){
+        var animationOn = setInterval(
+        	function(time_length){
+				var Nodes_TobeAdded = data_Nodes_TobeAdded(time_stamp);
+				var Edges_TobeAdded = data_Edges_TobeAdded(time_stamp);
+				var Edges_TobeRemoved = data_Edges_TobeRemoved(time_stamp);
+				for(var i = 0; i < Nodes_TobeAdded.length; i++){nodes.add(Nodes_TobeAdded[i]);}
+				for(var i = 0; i < Edges_TobeRemoved.length; i++){edges.remove(Edges_TobeRemoved[i]);}
+				for(var i = 0; i < Edges_TobeAdded.length; i++){edges.add(Edges_TobeAdded[i]);}
+				time_stamp++;
+			) // function(time_length)
+        ,1000); // setInterval
+        if(time_stamp > time_length -1){
+        		clearInterval(animationOn);
+        } // if
+      }); // click
+      $('#node-add').click(function () {
+        try {
+          nodes.add({
+            id: $('#node-id').val(),
+            label: $('#node-label').val()
+          });
+        }
+        catch (err) {
+          alert(err);
+        }
+      });
+      $('#node-update').click(function () {
+        try {
+          nodes.update({
+            id: $('#node-id').val(),
+            label: $('#node-label').val()
+          });
+        }
+        catch (err) {
+          alert(err);
+        }
+      });
+      $('#node-remove').click(function () {
+        try {
+          var id = $('#node-id').val();
+          nodes.remove(id);
+        }
+        catch (err) {
+          alert(err);
+        }
+      });
+
+      // attach actions to the edge buttons
+      $('#edge-add').click(function () {
+        try {
+          edges.add({
+            id: $('#edge-id').val(),
+            from: $('#edge-from').val(),
+            to: $('#edge-to').val()
+          });
+        }
+        catch (err) {
+          alert(err);
+        }
+      });
+      $('#edge-update').click(function () {
+        try {
+          edges.update({
+            id: $('#edge-id').val(),
+            from: $('#edge-from').val(),
+            to: $('#edge-to').val()
+          });
+        }
+        catch (err) {
+          alert(err);
+        }
+      });
+      $('#edge-remove').click(function () {
+        try {
+          var id = $('#edge-id').val();
+          edges.remove(id);
+        }
+        catch (err) {
+          alert(err);
+        }
+      });
+
+      // create an array with nodes
+      nodes = new vis.DataSet();
+      nodes.subscribe('*', function () {
+        $('#nodes').html(toJSON(nodes.get()));
+      });
+      nodes.add([
+        {id: '1', label: 'Node 1'},
+        {id: '2', label: 'Node 2'},
+        {id: '3', label: 'Node 3'},
+        {id: '4', label: 'Node 4'},
+        {id: '5', label: 'Node 5'}
+      ]);
+
+      // create an array with edges
+      edges = new vis.DataSet();
+      edges.subscribe('*', function () {
+        $('#edges').html(toJSON(edges.get()));
+      });
+      edges.add([
+        {id: '1', from: '1', to: '2'},
+        {id: '2', from: '1', to: '3'},
+        {id: '3', from: '2', to: '4'},
+        {id: '4', from: '2', to: '5'}
+      ]);
+
+      // create a network
+      var container = $('#network').get(0);
+      var data = {
+        nodes: nodes,
+        edges: edges
+      };
+      var options = {};
+      network = new vis.Network(container, data, options);
+    });
+  </script>
+</head>
+
+<body>
+
+<p>
+  This example demonstrates dynamically adding, updating and removing nodes
+  and edges using a DataSet.
+</p>
+
+<h1><button id="play"> PLAY </button></h1>
+<br>
+</br>
+<h1>View</h1>
+<table class="view">
+  <colgroup>
+    <col width="90%">
+  </colgroup>
+  <tr>
+  <td>
+      <h2>Network</h2>
+      <div id="network"></div>
+    </td>
+  </tr>
+</table>
+
+
+
+</body>
+</html>

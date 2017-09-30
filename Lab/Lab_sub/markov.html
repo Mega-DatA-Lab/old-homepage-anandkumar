@@ -1,0 +1,76 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>MEGA DatA Lab</title>
+<style type="text/css">
+.class1 {
+	color: #093;
+}
+.class2 {
+	color: #00F;
+}
+.class2 font {
+	color: #009;
+}
+</style>
+
+<!-- style type="text/css">
+
+/* All Styles Optional */
+
+* {
+font-family:calibri,arial;
+font-size:16pt;
+}
+
+div#show {
+background-color:#efefe7;
+width:400px;
+margin:0; padding:2px;
+border:1px solid #909090;
+}
+
+div#show table input,  div#show4 table input {
+outline-style:none;
+}
+
+</style -->
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+});
+</script>
+<script type="text/javascript"
+  src="https://c328740.ssl.cf1.rackcdn.com/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+<script src="swissarmy.js" type="text/javascript"></script>
+
+<script src="slideshow.js" type="text/javascript"></script>
+
+</head>
+
+<body style="background-color:#e6e6e6">
+<h1 align="center"><font color="#000080">MEGA DatA Lab</font></h1>
+<h2 align="center"><span class="class1"><span class="class"> Model Estimation, Graphical Algorithms, Data Analysis Lab</span></span></h2>
+<p align="center">EECS, University of California, Irvine, CA 92697.</p>
+<hr />
+
+
+<h3 align="left"><font color="#990099">Markov + Independence Model</font></h3>
+<p align="left">Fitting high-dimensional data involves   a delicate tradeoff between faithful representation and the use of sparse models. Too often, sparsity assumptions on the fitted model are too restrictive to provide a faithful representation of the observed data. In this project, we present a novel framework incorporating  sparsity in different domains.<img src="Projects_sub/MarkovIndepModel.png" alt="MarkovIndepModel" width="300" height="101" align="right" /></p>
+<p align="left">We decompose the observed covariance matrix into a sparse Gaussian Markov model (with a sparse precision matrix)  and a sparse independence model (with a sparse covariance matrix). This is shown in the following model. Our framework incorporates sparse covariance and sparse precision estimation as special cases and thus introduces a richer class of high-dimensional models.</p>
+<p align="left">We  characterize   sufficient conditions for identifiability  of the two models, viz.,  Markov and   independence models. We propose an efficient decomposition method based on a  modification of the popular $\ell_1$-penalized maximum-likelihood estimator ($\ell_1$-MLE). We establish that our estimator is consistent in both the domains, i.e., it successfully recovers the supports of both   Markov and   independence models, where the number of samples could be much more than the number of variables (high dimensional regime). Our experiments validate these results and also demonstrate that our models have better inference accuracy under simple algorithms such as loopy belief propagation. The proposed algorithm was also applied to the &quot;foreign exchange rate&quot; and &quot;stock market returns&quot; data sets. Detailed results can be found in the following paper.</p>
+<p align="left"><b>&#8220;High-Dimensional Covariance Decomposition into Sparse Markov
+  and Independence Domains.  &#8221;</b> by M. Janzamin and A. Anandkumar. <em>Preprint, Feb. 2012.</em> <em>An abridged version appears in the Proc. of ICML, June 2012</em><a href="pubs/ChoiJMLR10-abstract.html"></a>.<br />
+Download: <a href="../../pubs/JanzaminAnandkumar12.pdf">PDF.</a> <a href="../../pubs/JanzaminAnandkumarICML12.pdf">ICML-version.</a> <a href="../../pubs/JanzaminAnandkumar12-slides.pdf">Slides.</a></p>
+<p align="left">&nbsp;</p>
+<hr />
+
+<p align="left"></p>
+<p align="left">&nbsp;</p>
+
+</body>
+</html>

@@ -1,0 +1,160 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
+<html lang="">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1365px">
+    <title>Animashree Anandkumar</title>
+    <link rel="stylesheet" href="MainCSS.css">
+    <link rel="stylesheet" href="Impacts.css">
+    
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>    
+    
+   <script type="text/javascript">
+jQuery(document).ready(function() {
+  jQuery(".content").hide();
+    
+   // $("#default").next(".content").show();
+  //toggle the componenet with class msg_body
+  jQuery(".heading").click(function()
+  {
+    jQuery(this).next(".content").slideToggle(500);
+  });
+});
+</script>
+
+    
+</head>
+
+<body>
+    
+
+    <script src="simple-expand.js"></script>
+            <div id = "Publications">
+
+    <h1 id = "publicationsHeading"> Impact </h1>
+                <br/>
+                <br/>
+                
+                <p class = "message">Papers employing our methods for various applications.</p>
+                
+                <!-- Main div -->
+                <div class="layer1">
+     
+    
+    <!-- ##### Format to add a new category -->
+            <!--
+            <p class="heading" id = "default">*Category Name*</p>
+            <div class="content">
+                    <p class = "subTopic">*Sub category name*</p>
+                        <ul>
+                            <li class = "publication"><div>&nbsp; <b>"Title"</b><br/><i>By Author</i></div> <div class = "download"><span class="smallText">View:</span> &nbsp;<a target="_blank" href="URL" style="text-decoration:none">[Link]</a>&nbsp;</div></li>
+                        </ul>
+            </div>
+     
+            -->
+                    
+     <!-- Category -->
+     <p class="heading" id = "default">&nbsp;Tensor Methods<span class = "expand"><img src = "images/Thumbnail/arrow_down.png" width="32px" height = "32px"</span></p>
+                    
+<div class="content">
+    
+        <!-- ##### Format to add a new sub category -->
+            <!--
+                    <p class = "subTopic">*Sub category name*</p>
+                        <ul>
+                            <li class = "publication"><div>&nbsp; <b>"Title"</b><br/><i>By Author</i></div> <div class = "download"><span class="smallText">View:</span> &nbsp;<a target="_blank" href="URL" style="text-decoration:none">[Link]</a>&nbsp;</div></li>
+                        </ul>
+     
+            -->
+
+    
+        <!-- Sub category -->
+        <p class = "subTopic">Computational Biology</p>
+    <!-- Works in a sub category -->
+    <ul>
+        
+                <!-- ##### Format to add a new works in a sub category -->
+            <!--
+                            <li class = "publication"><div>&nbsp; <b>"Title"</b><br/><i>By Author</i></div> <div class = "download"><span class="smallText">View:</span> &nbsp;<a target="_blank" href="URL" style="text-decoration:none">[Link]</a>&nbsp;</div></li>
+     
+            -->
+
+        <li class = "publication"><div>&nbsp; <b>"Spectral Sequence Motif Discovery"</b><br/><i>By Nicoló Colombo
+and Nikos Vlassis, July 2014  </i></div> <div class = "download"><span class="smallText">View:</span> &nbsp;<a target="_blank" href="http://arxiv.org/pdf/1407.6125v1.pdf"><img src="images/Thumbnail/pdf_icon_red.png" width="25" height="30"></a>&nbsp;</div></li>
+    </ul>
+    
+    <p class = "subTopic">NLP/ Topic Models</p>
+    <ul>
+        
+        <li class = "publication"><div>&nbsp; <b>"Low-Rank Tensors for Scoring Dependency Structures"</b> [Best student paper]<br/><i>By Tao Lei, Yu Xin, Yuan Zhang, Regina Barzilay and Tommi Jaakkola, ACL 2014  </i></div> <div class = "download"><span class="smallText">View:</span> &nbsp;<a target="_blank" href="http://people.csail.mit.edu/taolei/papers/acl2014.pdf"><img src="images/Thumbnail/pdf_icon_red.png" width="25" height="30"></a>&nbsp;</div></li>
+        
+        <li  class = "publication"><div>&nbsp; <b>"Approximate PCFG Parsing Using Tensor Decomposition."</b><br/> <i>By Shay B. Cohen, Giorgio Satta, and Michael Collins, NAACL 2013.</i></div></li>
+        
+        <li class = "publication"><div>&nbsp; <b>"Graph-Sparse LDA: A Topic Model with Structured Sparsity"</b><br/> <i>By Finale Doshi-Velez, Byron Wallace, Ryan Adams.</i></div></li>
+        
+        <li class = "publication"><div>&nbsp; <b>"Methods of Moments for Learning Stochastic Languages: Unified Presentation and Empirical Comparison"</b><br/> <i>By B. Balle, W. Hamilton, and J. Pineau, International Conference on Machine Learning (ICML), 2014 .</i></div></li>
+        
+        <li class = "publication"><div>&nbsp; <b>"Multilingual Summarization: Dimensionality Reduction and a Step Towards Optimal Term Coverage"</b><br/> <i>By ohn M. Conroy Sashka T. DavisJeff Kubina Yi-Kai Liu Dianne P. O'Leary
+Judith D. Schlesinger, Workshop on Multilingual Multi-document Summarization 2013.</i></div></li>
+        
+        <li class = "publication"><div>&nbsp; <b>"Navigating the Local Modes of Big Data: The Case of Topic Models. In Data Analytics in Social Science, Government, and Industry"</b><br/> <i>By Roberts, M., Stewart, B., Tingley. D, New York: Cambridge University Press.</i></div></li>
+   
+    </ul>
+    
+     <p class = "subTopic">Social Networks</p>
+    <ul>
+        
+        <li class = "publication"><div>&nbsp; <b>"Fast Detection of Overlapping Communities via Online Tensor Methods"</b><br/><i>By F. Huang, U. N. Niranjan, M. U. Hakeem, A. Anandkumar. Preprint, Sept. 2013.</i></div></li>
+    </ul>
+    
+         <p class = "subTopic">Ranking models</p>
+    <ul>
+        
+        <li class = "publication"><div>&nbsp; <b>"Learning Mixtures of Ranking Models"</b><br/><i>By Pranjal Awasthi, Avrim Blum, Or Sheffet, Aravindan Vijayaraghavan.</i></div></li>
+                <li class = "publication"><div>&nbsp; <b>"Learning Mixed Multinomial Logit Model from Ordinal Data"</b><br/><i>By Seewong Oh and Devavrat Shah.</i></div></li>
+
+        
+    </ul>
+
+     <p class = "subTopic">Bayesian Non-Parametrics</p>
+    
+    <ul>
+        
+        <li class = "publication"><div>&nbsp; <b>"Spectral Methods for Indian Buffet Process Inference"</b><br/><i>By Hsiao-Yu Tung, Alex J Smola, Dec 2014</i></div> <div class = "download"><span class="smallText">View:</span> &nbsp;<a target="_blank" href="http://nips.cc/Conferences/2014/Program/event.php?ID=4773" style="text-decoration:none">[Link]</a>&nbsp;</div></li>
+
+    </ul>
+    
+</div>
+     
+    
+     <p class="heading" id = "default">&nbsp;Latent Trees<span class = "expand"><img src = "images/Thumbnail/arrow_down.png" width="32px" height = "32px"</span></p>
+<div class="content">
+    
+        <p class = "subTopic">Computer Vision</p>
+    <ul>
+        
+        <li class = "publication"><div>&nbsp; <b>"Context models and out-of-context objects"</b><br/><i>By M.J. Choi, A. Torralba, and A.S. Willsky, Pattern Recognition Letters, 2012.  </i></div></li>
+
+        <li class = "publication"><div>&nbsp; <b>" Beyond physical connections: Tree models in human pose estimation"</b><br/><i>By Fang Wang and Yi Li, In Proc. of CVPR, 2013.  </i></div></li>
+        
+                <li class = "publication"><div>&nbsp; <b>"Weak Attributes for Large-Scale Image Retrieval"</b><br/><i>By Felix X. Yu, Rongrong Ji, Ming-Hen Tsai, Guangnan Ye, Shih-Fu Chang, CVPR 2012</i></div></li>
+
+                <li class = "publication"><div>&nbsp; <b>"Latent Regression Forest: Structured Estimation of 3D Articulated Hand Posture"</b><br/><i>By Danhang Tang Hyung Jin Chang, Alykhan Tejani, Tae-Kyun Kim, CVPR 2014 </i></div></li>
+
+
+    </ul>
+    
+    <p class = "subTopic">Social Networks</p>
+    <ul>
+        
+        <li class = "publication"><div>&nbsp; <b>"Modeling Dynamic Social Interactions via Conditional Latent Tree Models"</b><br/> <i>By F.Arabshahi, F. Huang, A. Anandkumar and C Butts. Preprint, Oct. 2014.</i></div></li>
+   
+    </ul>
+    
+</div>
+                
+    </div>
+
+</body>
+</html>

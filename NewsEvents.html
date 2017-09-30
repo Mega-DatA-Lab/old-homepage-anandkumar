@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=1365px"/>
+    <title>Animashree Anandkumar</title>
+    <link rel="stylesheet" href="MainCSS.css"/>
+    <link rel="stylesheet" href="NewsEvents.css"/>
+    
+    
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+    <script>
+            console.log("Ready");
+    jQuery('.tabs .tab-links a').on('click', function(e)  {
+        var currentAttrValue = jQuery(this).attr('href');
+    console.log("Comes" + currentAttrValue);
+        jQuery('.tabs ' + currentAttrValue).fadeIn(1200).siblings().hide();
+        
+        // Change/remove current tab to active
+        jQuery(this).parent('li').addClass('active').siblings().removeClass('active');
+ 
+        e.preventDefault();
+    });
+    </script>
+    
+</head>
+
+<body>
+
+    <!-- Main Div -->
+    <div id = "NewsEvents">
+
+    <h1 id = "newsEventsHeading"> News & Events </h1>
+
+        <!-- Tabs -->
+    <div class="tabs">
+    <ul class="tab-links">
+        <li class="active"><a href="#tab1" style="text-decoration:none">Upcoming Events</a></li>
+        <li><a href="#tab2" style="text-decoration:none">Latest News</a></li>
+    </ul>
+ 
+        <!-- Tab content div -->
+    <div class="tab-content">
+        <!-- Events -->
+        <div id="tab1" class="tab active">
+             <ul>
+                 <!-- ######### Format for adding new event ########## -->
+                 <!--
+                <li class="NewsEventsListItem">
+                   *Event description*
+                </li>
+                -->
+                  
+                <li class="NewsEventsListItem">
+Talk at Applied Machine Learning Days,  EPFL, Switzerland, Jan 30th, 2017
+</li>
+                   <li class="NewsEventsListItem">
+Talk at Strata + Hadoop conference, San Jose, CA, March, 16th, 2017
+</li>                  
+                
+                
+  
+                
+   
+            </ul>
+           
+        </div>
+
+        <!-- News -->
+        <div id="tab2" class="tab">
+            
+             <ul>
+                
+                <!-- ######### Format for adding new news ########## -->
+                 <!--
+                <li class="NewsEventsListItem">
+                   *News description*
+                </li>
+                -->
+<li class="NewsEventsListItem">
+Bayarea Meetup, Dec. 14th, 2016
+</li>
+  <li class="NewsEventsListItem">
+Keynote speaker at WiML2016, Barcelona, Spain, Dec. 5th, 2016
+</li>             
+
+<li class="NewsEventsListItem"> 
+Talk at OxWoCS distinguished seminar series,  University of Oxford, Dec. 2nd, 2016
+</li>
+                         
+
+         <li class="NewsEventsListItem">    
+                      Talk at 4th BigVision workshop at CVPR 2016, Las Vegas, NV, June. 26th, 2016
+                 </li>
+  <li class="NewsEventsListItem">
+                     Talk at ICLR, San Juan, Puerto Rico, May. 2nd - 4th, 2016   
+                 </li> 
+<li class="NewsEventsListItem">
+                     Talk at workshop "Big Graph: Theory and Practice", UCSD, CA, Jan. 6th - 8th, 2016   
+                 </li>
+                  
+        
+ 
+                  <li class="NewsEventsListItem">
+                     Talk at MLconference, SF, CA, Nov. 13th, 2015   
+                 </li>
+                 <li class="NewsEventsListItem">
+                     Office of Navy research program review meeting, Oct. 27th - 29th, 2015   
+                 </li>
+                 
+                 
+
+                 <li class="NewsEventsListItem">
+                     Talk at Duke University, Oct. 28th, 2015   
+                 </li>
+
+                 <li class="NewsEventsListItem">
+                     Talk at John's Hopkins University, Oct. 27th, 2015   
+                 </li>
+                 <li class="NewsEventsListItem">
+                     Talk at University of Maryland, College Park, MD, Oct. 26th, 2015   
+                 </li>
+                 
+                
+
+
+                <li class="NewsEventsListItem">
+                     Talk at Facebook Research, Oct. 2nd 2015, NY   
+                 </li>
+                 <li class="NewsEventsListItem">
+                     Talk at hardcore datascience event, Sept. 29th 2015, Strataconf, NY, <a target="_blank" href="http://strataconf.com/big-data-conference-ny-2015/public/schedule/detail/44119" style="text-decoration:none">[Link]</a>
+                 </li>
+                  <li class="NewsEventsListItem">
+                     Talk at DARPA workshop, Sept. 28th 2015, Columbia University, NY   
+                 </li> 
+
+                 <li class="NewsEventsListItem">
+                     Talk at MIT, Cambridge, MA, Sept. 25th 2015    
+                 </li>
+
+                
+                <li class="NewsEventsListItem">
+                    Dagstuhl workshop, "Mathematical and Computational Foundations of Learning Theory", Aug. 30th - Sept. 4th 2015
+                </li>
+
+
+                 <li class="NewsEventsListItem">
+                    UW-MSR Research Institute, Seattle, Aug. 23rd - 26th 2015.
+                </li>
+                 <li class="NewsEventsListItem">
+                     Talk in Machine Learning Track at IJCAI-15, July 25th - 31st 2015,
+                     Buenos Aires, Argentina. 
+                 </li>
+
+                <li class="NewsEventsListItem">
+                     Talk at  IIT Alumni Global Leadership Conference 2015, July 23rd - 26th 2015,
+                     Santa Clara Convention Center, CA. 
+                 </li>
+               
+                   <li class="NewsEventsListItem">
+                    Simon's workshop on Information Theory, Learning and Big Data, March 2015. &nbsp;&nbsp; <a target="_blank" href="http://simons.berkeley.edu/workshops/inftheory2015-2" style="text-decoration:none">[Link]</a>
+                </li>
+                  <li class="NewsEventsListItem">
+                    Young Investigator Award (YIP) 2015 by AFOSR. &nbsp;&nbsp; <a target="_blank" href="http://www.wpafb.af.mil/news/story.asp?id=123436763" style="text-decoration:none">[Link]</a>
+                </li>
+                 
+                <li class="NewsEventsListItem">
+                    Simons Workshop on Spectral Algorithms: From Theory to Practice, October 27-31, 2014.
+                </li>
+                
+                <li class="NewsEventsListItem">
+                    Data science kickoff event, UCI.  &nbsp;&nbsp; <a target="_blank" href="http://newport.eecs.uci.edu/anandkumar/pubs/data-science-kickoff.pdf" style="text-decoration:none">[Slides]</a>
+                </li>
+                
+                <li class="NewsEventsListItem">
+                    Simons Workshop on "Semidefinite Optimization, Approximation, and Applications", September 2014, Simons Institute. September 22-26, 2014.&nbsp;&nbsp; <a target="_blank" href="http://newport.eecs.uci.edu/anandkumar/pubs/CMU_fall2014.pdf" style="text-decoration:none">[Slides]</a>&nbsp;&nbsp; <a target="_blank" href="https://www.youtube.com/watch?v=d0bCO_ECkVo" style="text-decoration:none">[Video]</a>
+                </li>
+
+                <li class="NewsEventsListItem">
+                    Lectures, Machine Learning Summer School, Pittsburgh, July 2014. &nbsp;&nbsp; <a target="_blank" href="http://mlss2014.com/" style="text-decoration:none">[Link]</a>
+                </li>
+                
+                <li class="NewsEventsListItem">
+                   Tutorial, AAAI, July 2014. 
+                </li>
+                
+                <li class="NewsEventsListItem">
+                    What's hot in Machine Learning? Talk at AAAI.&nbsp;&nbsp; <a target="_blank" href="http://newport.eecs.uci.edu/anandkumar/pubs/Anandkumar-AAAI-hot.pdf" style="text-decoration:none">[Link]</a>
+                </li>
+                
+                <li class="NewsEventsListItem">
+                    Invited talk, Spectral learning Workshop, ICML.  &nbsp;&nbsp; <a target="_blank" href="http://newport.eecs.uci.edu/anandkumar/pubs/Anandkumar-spect-workshop-ICML2014.pdf" style="text-decoration:none">[Slides]</a>
+                </li>
+                
+                
+                <li class="NewsEventsListItem">
+                    Invited talk, Deep Learning Models for Emerging Big Data Applications Workshop at ICML 2014. &nbsp;&nbsp; <a target="_blank" href="http://newport.eecs.uci.edu/anandkumar/pubs/anandkumar-deeplearning-workshop.pdf" style="text-decoration:none">[Slides]</a>
+                </li>
+                
+                <li class="NewsEventsListItem">
+                    Invited talk, Learning Tractable Probabilistic Models, ICML workshop. &nbsp;&nbsp; <a target="_blank" href="http://newport.eecs.uci.edu/anandkumar/pubs/AnandkumarLTPM14.pdf" style="text-decoration:none">[Slides]</a>
+                </li>
+                
+                
+                <li class="NewsEventsListItem">
+                    MSR-NE Colloquium, May 14th 2014.
+                </li>
+                
+                <li class="NewsEventsListItem">
+                   Invited talk, Network Science and Graph Algorithms, ICERM, Brown University, April 2014.
+                </li>
+                
+                <li class="NewsEventsListItem">
+                    Invited talk, <a target="_blank" href="http://www.mlconf.com/mlconf-nyc/"> MLConf </a>, April 11th 2014.
+                </li>
+                
+                <li class="NewsEventsListItem">
+                   Sloan fellowship.&nbsp;&nbsp; <a target="_blank" href="http://www.sloan.org/fileadmin/media/images/programs/sloan_research_fellowships/APS_2014_Research_Fellowships_ad_web.pdf" style="text-decoration:none">[Link]</a>&nbsp;&nbsp; <a target="_blank" href="http://www.eng.uci.edu/news/2014/2/anandkumar-receives-early-career-sloan-research-fellowship-her-work-machine-learning" style="text-decoration:none">[UCI-Link]</a>
+                </li>
+                
+                <li class="NewsEventsListItem">
+                   Invited Talk, ITA, Feb. 2014.
+                </li>
+                
+                <li class="NewsEventsListItem">
+                   Talk at NIPS workshop on Topic Modeling, Dec. 2013.
+                </li>
+                
+                <li class="NewsEventsListItem">
+                   Tutorial at the workshop on "Networks and Inference", Bangalore, India, Dec. 16-19th Talk at Google Research, Nov. 15th.
+                </li>
+                
+                <li class="NewsEventsListItem">
+                   Talk at MIT, Oct. 28-29.
+                </li>
+                
+                <li class="NewsEventsListItem">
+                   Talk at UCSD, Nov. 4th.&nbsp;&nbsp; <a target="_blank" href="http://newport.eecs.uci.edu/anandkumar/pubs/AnandkumarOvercomplete-slides.pdf" style="text-decoration:none">[Slides]</a>
+                </li>
+                
+                <li class="NewsEventsListItem">
+                  Awarded Azure resources for research.&nbsp;&nbsp; <a target="_blank" href="http://blogs.msdn.com/b/msr_er/archive/2013/11/05/october-2013-windows-azure-for-research-award-winners.aspx#!" style="text-decoration:none">[Link]</a>
+                </li>
+                
+                <li class="NewsEventsListItem">
+                   Livestream interview at the Microsoft faculty summit.&nbsp;&nbsp; <a target="_blank" href="http://spr.ly/6038wePp" style="text-decoration:none">[Link]</a>
+                </li>
+                
+                <li class="NewsEventsListItem">
+                  Paper on identifiability of overcomplete topic models accepted to NIPS 2013.&nbsp;&nbsp; <a target="_blank" href="http://newport.eecs.uci.edu/anandkumar/pubs/Overcomplete_Ident.pdf" style="text-decoration:none">[Link]</a>
+                </li>
+                
+                <li class="NewsEventsListItem">
+                  Paper on learning overlapping communities posted. &nbsp;&nbsp; <a target="_blank" href="http://newport.eecs.uci.edu/anandkumar/pubs/Huang_etal_communities_GPU.pdf" style="text-decoration:none">[Link]</a>
+                </li>
+                
+                <li class="NewsEventsListItem">
+                 Announcement of the Microsoft Faculty Award.&nbsp;&nbsp; <a target="_blank" href="http://www.eng.uci.edu/news/2013/6/microsoft-research-names-anima-anandkumar-faculty-fellow" style="text-decoration:none">[UCI-Link]</a>&nbsp;&nbsp; <a target="_blank" href="http://blogs.msdn.com/b/msr_er/archive/2013/06/11/microsoft-research-gives-promising-computer-science-faculty-a-boost.aspx" style="text-decoration:none">[MSR-Link]</a>
+                </li>
+                
+                <li class="NewsEventsListItem">
+                    Tutorial at <a target="_blank" href="http://icml.cc/2013">ICML</a> 2013 on tensor methods.&nbsp;&nbsp; <a target="_blank" href="http://newport.eecs.uci.edu/anandkumar/research.html#Tutorial" style="text-decoration:none">[Link]</a>
+                </li>
+                
+                <li class="NewsEventsListItem">
+                 Young Investigator Award (YIP) by ARO.
+                </li>
+                
+                <li class="NewsEventsListItem">
+                  NSF Career award.<br/>
+                    <a target = "_blank" href = "http://cpcc.uci.edu/news.php#CPCCNSERCCareerAward"><i>Announcement on CPCC website</i></a>
+                </li>
+
+            </ul>
+            
+            <!-- Fancy box div for news archieve -->
+            <a class="fancybox" data-fancybox-type="iframe" href="NewsArch.html"><i>News Archive</i></a>
+
+        </div>
+ 
+       
+    </div>
+        <br/>
+        
+</div>
+    </div>
+    
+    <!-- Fancy box code -->
+      <script type="text/javascript">
+	$(document).ready(function() {
+		$(".fancybox").fancybox();
+	});
+    </script>
+    
+</body>
+</html>

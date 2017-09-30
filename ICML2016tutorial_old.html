@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1365px">
+    <title>Animashree Anandkumar</title>
+    <link rel="stylesheet" href="MainCSS.css">
+    <link rel="stylesheet" href="ICML2016tutorial.css">
+    
+</head>
+
+<body>
+       
+    <div id = "Nonconvex optimization: Challenges and Recent Successes">
+
+        <img id = "logo" src = "images/Thumbnail/ICML.png" height="60" width="170"/>
+        <div id = "lab_header">
+        <h1 id = "pageTitle"><u>Nonconvex optimization: Challenges and Recent Successes</u></h1>
+        <CENTER> <h1 id = "LabHeading">  </h1>
+        <h2 id = "LabAddress">ICML2016 Tutorial</h2>
+         </div>
+        
+        <!-- ###### Format to add New class ######### -->
+        
+        <!--
+            <div class = "rowTeaching">
+
+                <p><a target="_blank" href="CLASS URL">*Course title*</a> <span class = "quarter"><i>*Quarter - year*</i></span></p>
+                <p class = "description">*Course description*</p>
+
+             </div>
+            -->
+        
+
+
+        <div class = "rowTeaching">
+                   
+                    <p><a target = "_blank" ><b> Information </b></a> </p>
+          <li class = "newsListItem"> <font size="4">Where:New York, NY &nbsp;<a target = "_blank" href="http://icml.cc/2016/" style="text-decoration:none">[ICML2016]</a>&nbsp;</font></li>
+          <li class = "newsListItem"> <font size="4">When: Jun. 19th, 2:30-4:30pm &nbsp;<a target = "_blank" href="" style="text-decoration:none"></a>&nbsp;</font></li>        
+          <li class = "newsListItem"> <font size="4"> Presenter: Anima Anandkumar&nbsp;</font></li>        
+
+        </div>
+
+
+<div class = "rowTeaching">
+                   
+                    <p><a target = "_blank" ><b> Topic Overview</b></a> </p>
+            <p class = "description"><font size="4"> Most machine learning tasks require solving non-convex optimization problems. For these
+problems, as the data dimensions grow, the number of critical points can grow exponentially.
+Local search methods such as gradient descent can get stuck in one of these critical points.
+Finding the globally optimal solution is computationally hard in the worst case for nonconvex
+optimization. Instead, over the last few years, focus has shifted in characterizing
+transparent conditions for non-convex problems which are tractable. In many instances,
+these conditions turn out to be mild and natural for machine learning applications.
+This tutorial will provide an overview of the recent theoretical success stories in nonconvex
+optimization. This includes learning latent variable models, dictionary learning,
+robust principal component analysis, and so on. Simple iterative methods such as spectral
+methods, alternating projections, and so on, can be proven to learn consistent models with
+polynomial sample and computational complexity. </p>
+<p><font size="4">This tutorial will present main ingredients
+towards establishing these results. For instance, one approach is to first obtain an
+approximate solution which lands in the basin of the globally optimal solution, and then run
+gradient descent to reach the global optimum. Another approach is to discard the original
+objective function, and to instead optimize over different objective functions which are better
+behaved. For example, the use of moment fitting objective instead of maximum likelihood
+for learning latent variable models allows us to establish consistency in estimation.</p>
+<p><font size="4">For problems where finding the globally optimal solution is not tractable, it is desirable
+to at least reach a local optimum. It turns out that even this is computationally hard in the
+worst case. In this tutorial, we will cover the important problem of escaping saddle points.
+Saddle points are critical points which are not local minima, meaning there exist directions
+where the objective value decreases (for minimization problems). Saddle points can slow
+down gradient descent arbitrarily. Alternatively, if Newton's method is run, it converges to
+an arbitrary critical point, and does not distinguish between a local minimum and a saddle
+1 point. Solutions such as Trust region methods and recent work on noisy stochastic gradient
+descent will be covered.
+</p>
+<p><font size="4">There are certainly many challenging open problems in the area of non-convex optimization.
+While guarantees have been established in individual instances, there is no common
+unifying theme of what makes non-convex problem tractable. Many challenging instances
+such as optimization for training multi-layer neural networks or analyzing novel regularization
+techniques such as dropout for non-convex optimization still remain wide open. On
+the practical side, conversations between theorists and practitioners can help identify what
+kind of conditions are reasonable for specific applications, and thus lead to the design of
+practically motivated algorithms for non-convex optimization with rigorous guarantees. The
+tutorial will cover these issues as well.
+</font></p>
+
+        </div>
+
+
+         <div class = "rowTeaching">
+                   
+                    <p><a target = "_blank" ><b>Materials</b></a> </p>
+ <li class = "newsListItem">Proposal &nbsp;<a target = "_blank" href="http://newport.eecs.uci.edu/anandkumar/statement/proposal_icml2016.pdf" style="text-decoration:none">[Link]</a>&nbsp;</li>
+                    
+        </div>
+
+
+
+ 
+    </div>
+</body>
+</html>

@@ -1,0 +1,128 @@
+html, body {
+    margin: auto;
+    padding: 0;
+    background-color: transparent;
+}
+
+#Publications {
+    margin: 0;
+    padding: 0;
+        background-color: transparent;
+     width: -moz-calc(100% - 350px);
+    width: -webkit-calc(100% - 350px);
+    width: calc(100% - 350px);
+    height: 100%;
+    max-height: 4000px;
+    min-width: 1015px;
+
+}
+
+
+#publicationsHeading {
+    position: relative;
+    margin: 70px 40px 10px 40px;
+    padding: 0px 0px 0px 0px;
+    text-align: left;
+    background-color: transparent;
+    line-height: 1.5em;
+    font-size: 36px;
+
+}
+
+#publicationsHeading:after {
+    content:' ';
+    display:block;
+    border:1px solid #666666;
+    border-radius:4px;
+    -webkit-border-radius:4px;
+    -moz-border-radius:4px;
+    box-shadow:inset 0 1px 1px rgba(0, 0, 0, .05);
+    -webkit-box-shadow:inset 0 1px 1px rgba(0, 0, 0, .05);
+    -moz-box-shadow:inset 0 1px 1px rgba(0, 0, 0, .05);
+}
+
+.layer1 {
+    position: relative;
+    margin: 30px 40px 10px 40px;
+    padding: 0px 0px 0px 0px;
+}
+
+.heading {
+margin: 20px 0px 0px 0px;
+color: #333333;
+vertical-align: middle;
+padding:3px 20px;
+cursor: pointer;
+position: relative;
+background-color:white;
+    font-size: 22px;
+    height: 50px;
+           line-height:50px;
+       border-radius:6px;
+        box-shadow:-1px 1px 1px rgba(0,0,0,0.15);
+
+}
+.content {
+margin: 0px 15px 5px 15px;
+
+padding: 5px 20px;
+background-color:#fafafa;
+           border-radius:3px;
+        box-shadow:-1px 1px 1px rgba(0,0,0,0.15);
+
+}
+
+.message{ 
+    margin: 20px 40px 0px 40px;
+    color: #333333;
+    font-size: 17px;
+
+}
+
+#hint{
+ 
+    text-align: center;
+    font-size: 14px;
+    
+}
+   
+.subTopic{
+ 
+    margin: 20px 0px 10px 0px;
+    font-size: 16px;
+    color: #333333;
+    text-align: center;
+    background-color: #e6e6e6;
+    height: 40px;
+    line-height: 40px;
+}
+
+.publication{
+    padding-top: 10px;
+    padding-bottom: 5px;
+    border-bottom: 1px  solid #aaaaaa;
+    font-size: 17px;
+        line-height: 1.2em;
+
+}
+
+.smallText{
+    font-size: 12px;
+}
+
+.download{
+    padding: 5px 0px 5px 0px;
+    font-size: 14px;
+}
+
+#copyright{
+    text-align: right;
+   margin: 5px 40px 10px 40px;  
+}
+
+.expand{
+float: right;
+font-size: 15px;
+    vertical-align:middle;
+margin-top: 9px;    
+}

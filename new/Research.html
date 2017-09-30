@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1365px">
+    <title>Animashree Anandkumar</title>
+    <link rel="stylesheet" href="MainCSS.css">
+    <link rel="stylesheet" href="Research.css">
+    
+        
+    <script type="text/javascript">
+function loadProjects() {
+    //$("#Publications").remove();
+    top.fn_change();
+}
+        
+        function loadPublications() {
+    //$("#Publications").remove();
+    top.fn_change_publications();
+}
+
+        function loadImpact() {
+    //$("#Publications").remove();
+    top.fn_change_impact();
+}
+
+</script>
+
+</head>
+
+<body>
+    
+    <div id = "Research">
+
+    <h1 id = "ResearchHeading"> Research </h1>
+
+        <p class="description">My research focus is in the area of inference and learning of probabilistic
+graphical models and latent variable models. Broadly I am interested in
+machine learning, high-dimensional statistics, tensor methods, statistical
+physics, information theory and signal processing.</p>
+        
+        <br/>
+        
+        <CENTER><iframe width="560" height="315" src="//www.youtube.com/embed/gEFaLKzrKYc" frameborder="0" allowfullscreen></iframe></CENTER>
+
+        <br/>
+        
+        <CENTER><button id = "linkPublications" onclick="loadPublications()">Publications</button><button id = "linkImpact" onclick="loadImpact()">Research Impact</button><button id = "linkProjects" onclick="loadProjects()">View Lab details & Projects</button></CENTER>
+        
+
+
+    </div>
+</body>
+</html>

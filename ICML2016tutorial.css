@@ -1,0 +1,111 @@
+html, body {
+    margin: auto;
+    padding: 0;
+    background-color: #e6e6e6;
+    min-width: 650px;
+}
+
+#logo{
+    
+    float: left;
+    margin-right: 40px;
+    height: 80px;
+    width: 200px;
+    margin: 0px 5px 0px 40px;
+    
+}
+
+#lab_header{
+    
+    margin: 0px 0px 0px 220px;
+    
+}
+
+#pageTitle{
+ 
+    margin-top: 40px;
+    margin-right: 120px;
+    text-align: center;
+    font-size: 36px;
+    font-family: Lato;
+    color: #101010;
+    
+}
+
+
+#LabHeading {
+    position: relative;
+    margin: 30px 40px 5px 0px;
+    padding: 0px 0px 0px 0px;
+    text-align: center;
+    background-color: transparent;
+    line-height: 1.5em;
+    font-size: 26px;
+
+}
+
+#LabAddress {
+    position: relative;
+    margin: 0px 40px 10px 0px;
+    padding: 0px 0px 0px 0px;
+    text-align: center;
+    background-color: transparent;
+    line-height: 1.5em;
+    color: #666666;
+    font-size: 18px;
+
+}
+
+#LabAddress:after {
+    content:' ';
+    display:block;
+    border:1px solid #666666;
+    border-radius:4px;
+    -webkit-border-radius:4px;
+    -moz-border-radius:4px;
+    box-shadow:inset 0 1px 1px rgba(0, 0, 0, .05);
+    -webkit-box-shadow:inset 0 1px 1px rgba(0, 0, 0, .05);
+    -moz-box-shadow:inset 0 1px 1px rgba(0, 0, 0, .05);
+}
+
+
+
+.rowTeaching{
+    
+    position: relative;
+    margin: 55px 40px 10px 40px;
+    padding: 5px 20px 5px 20px;
+    text-align: left;
+    vertical-align: middle;
+    background-color: white;
+    color: #333333;
+    height: auto;
+    line-height:auto;
+    min-height: 30px;
+    border-radius: 5px;
+    border:1px solid #C0C0C0;
+    font-size: 22px;
+}
+
+.quarter{
+float: right;
+font-size: 15px;
+    vertical-align: baseline;
+    
+}
+
+.description{
+ 
+    font-size: 17px;
+}
+
+
+
+.newsListItem{
+ 
+    position: relative;
+
+    margin: 15px 0px 5px 0px;
+    font-size: 17px;
+}
+

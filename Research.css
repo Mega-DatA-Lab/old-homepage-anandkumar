@@ -1,0 +1,108 @@
+html, body {
+    margin: auto;
+    padding: 0;
+    background-color: #e6e6e6;
+    min-width: 650px;
+}
+
+#Research {
+    margin: 0;
+    padding: 0;
+        background-color: transparent;
+     width: -moz-calc(100% - 350px);
+    width: -webkit-calc(100% - 350px);
+    width: calc(100% - 350px);
+    height: 100%;
+    max-height: 4000px;
+    min-width: 1015px;
+
+}
+
+
+#ResearchHeading {
+    position: relative;
+    margin: 70px 40px 10px 40px;
+    padding: 0px 0px 0px 0px;
+    text-align: left;
+    background-color: transparent;
+    line-height: 1.5em;
+    font-size: 34px;
+
+}
+
+#ResearchHeading:after {
+    content:' ';
+    display:block;
+    border:1px solid #666666;
+    border-radius:4px;
+    -webkit-border-radius:4px;
+    -moz-border-radius:4px;
+    box-shadow:inset 0 1px 1px rgba(0, 0, 0, .05);
+    -webkit-box-shadow:inset 0 1px 1px rgba(0, 0, 0, .05);
+    -moz-box-shadow:inset 0 1px 1px rgba(0, 0, 0, .05);
+}
+
+
+.description{
+ 
+    margin: 40px 40px 20px 40px;
+    color: #333333;
+    font-size: 17px;
+}
+
+#linkProjects{
+    margin: 10px 5px 10px 5px;
+    font-size: 17px;
+    vertical-align: baseline;
+    border:1px solid #aecf00;
+    background-color: #aecf00;
+    border-radius: 2px;
+    color: #004a4a;
+    width: 400px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+}
+
+#linkPublications{
+    font-size: 17px;
+       margin: 0px 5px 0px 5px;
+ vertical-align: baseline;
+    border:1px solid #aecf00;
+    background-color: #aecf00;
+    border-radius: 2px;
+    color: #004a4a;
+    width: 240px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+}
+
+
+#linkImpact{
+        margin: 0px 5px 0px 5px;
+font-size: 17px;
+    vertical-align: baseline;
+    border:1px solid #aecf00;
+    background-color: #aecf00;
+    border-radius: 2px;
+    color: #004a4a;
+    width: 240px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+}
+
+#linkTalks{
+    margin: 0px 5px 0px 5px;
+    font-size: 17px;
+    vertical-align: baseline;
+    border:1px solid #aecf00;
+    background-color: #aecf00;
+    border-radius: 2px;
+    color: #004a4a;
+    width: 240px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <link rel="stylesheet" href="MainCSS.css">
+    
+     <script>
+  $(document).ready(function() {
+   /* Try to dis-comment this:
+   $('#a').click(function () {
+    alert('jQuery.click()');
+    return true;
+   });
+   */
+  });
+  function a_onClick(clickedItem) {
+   alert(clickedItem.id);
+      clickedItem.className = "mainPageItemSelected";
+  }
+ </script>
+</head>
+
+<body>
+        <div id = "mainPages">
+             <div id="ex3">
+           <ul class="mainPageList">
+               <li ><a id = "1" href="index.html" style="color: #fff"  onClick="a_onClick(this)"  class = "mainPageItemSelected">Home</a></li>
+               <li><a id = "2" href="index.html" style="color: #fff" onClick="a_onClick(this)" class = "mainPageItemUnselected">Education</a></li>
+               <li><a id = "3" href="index.html" style="color: #fff" onClick="a_onClick(this)" class = "mainPageItemUnselected">Experience</a></li>
+               <li><a id= "4" href="index.html" style="color: #fff" onClick="a_onClick(this)" class = "mainPageItemUnselected">Projects</a></li>
+               <li><a id = "5" href="index.html" style="color: #fff" onClick="a_onClick(this)" class = "mainPageItemUnselected">Teaching</a></li>
+               <li><a id = "6" href="index.html" style="color: #fff" onClick="a_onClick(this)" class = "mainPageItemUnselected">Contact</a></li>
+               <li><a id = "7" href="index.html" style="color: #fff" onClick="a_onClick(this)" class = "mainPageItemUnselected">Timings</a></li>
+            </ul> 
+            </div>
+        </div>
+</body>
+</html>

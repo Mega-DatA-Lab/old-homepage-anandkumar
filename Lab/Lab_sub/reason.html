@@ -1,0 +1,34 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Untitled Document</title>
+<style type="text/css">
+.class1 {	color: #093;
+}
+.class2 {	color: #00F;
+}
+</style>
+</head>
+
+<body style="background-color:#e6e6e6">
+<h1 align="center"><font color="#000080">MEGA DatA Lab</font></h1>
+<h2 align="center"><span class="class1"><span class="class"> Model Estimation, Graphical Algorithms, Data Analysis Lab</span></span></h2>
+<p align="center">EECS, University of California, Irvine, CA 92697.</p>
+<hr />
+<h3 align="left"><font color="#990099">REASON: Guaranteed Stochastic Optimization in High Dimension</font></h3>
+<p>With current trends in large-scale machine learning, we require methods that are fast, cheap to implement and have high accuracy. The algorithm should be robust to noise as in reality we only have access to noisy samples and we need to make fast decisions based on such samples. One of the main applications of this framework is streaming.</p>
+<p>We propose an efficient algorithm based on ADMM with guarantees for high-dimensional problems. Our algorithm is Regularized Epoch-based Admm for Stochastic Optimization in high-dimensioN (REASON). <br />
+  It is based on epoch-based annealing and consists of inexpensive steps which involve projections on to simple norm balls. The proposed method can be applied to large classes of problems in sparse optimization, matrix decompostion and graphical model selection. Famous sparse optimization problems include classification, regression, low-dimensional structures: group-sparse vectors and low-rank matrices. Matrix decomposition into sparse and low rank components in the simplest case is the same as the famous RPCA problem. In addition, our framework is applicable to graphical model selection problem for both sparse model and latent variable graphical model selection.</p>
+<p>We provide explicit bounds for the sparse optimization problem and the noisy matrix decomposition problem. For sparse optimization, we establish that the modified ADMM method has  an optimal convergence rate that matches with the minimax lower bounds for sparse estimation. For  matrix decomposition into sparse and low rank components, we provide the first guarantees for any online method, and prove a tight convergence rate. Our guarantees match the minimax lower bound with respect to sparsity level, rank of the low-rank part and number of iterations. In addition, we match the minimax lower bound with respect to the matrix dimension, for many important statistical models including  the independent noise model, the linear Bayesian network and the latent Gaussian graphical model under some conditions. </p>
+<p>Experiments show that for both sparse optimization and matrix decomposition problems, our algorithm outperforms  the state-of-the-art  methods. In particular, we reach higher accuracy with same time complexity.</p>
+<p><img src="Projects_sub/Reason.png" width="500" height="409" alt="REASON" /></p>
+<p><img src="Projects_sub/REASON2.png" width="600" height="127" alt="table" /></p>
+<p>&nbsp;</p>
+<p><strong><b>&#8220;</b>Multi-Step Stochastic ADMM in High Dimensions: Applications in Sparse Optimization and Noisy Matrix Decomposition</strong><b>&#8221;</b> by H. Sedghi, A. Anandkumar, E. Jonckheere. <em>Preprint, Feb. 2014.</em><em> An abridged version appears in Proc. of NIPS 2014</em>.<br />
+Download: <a href="../../pubs/REASON.pdf">PDF</a>. <a href="https://github.com/haniesedghi/REASON2">Code</a>. <a href="http://papers.nips.cc/paper/5613-multi-step-stochastic-admm-in-high-dimensions-applications-to-sparse-optimization-and-matrix-decomposition.pdf">NIPS-version</a>. <a href="https://www.youtube.com/watch?v=YCEBSo7VdjU">video</a>.</p>
+<hr />
+<p align="left"></p>
+<p align="left">&nbsp;</p>
+</body>
+</html>

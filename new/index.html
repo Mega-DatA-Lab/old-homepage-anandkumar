@@ -1,0 +1,239 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<html lang="english">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1365">
+    <title>Animashree Anandkumar</title>
+
+    <!-- Using Lato font -->
+    <link href='http://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
+    <style>
+        @font-face {
+            font-family: Lato;
+            src: url(Lato-Regular.ttf);
+        }
+    </style>
+
+    <link rel="stylesheet" href="MainCSS.css">
+
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>    
+        
+    <!-- Add fancyBox -->
+    <link rel="stylesheet" href="fancybox/source/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
+    <script type="text/javascript" src="fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+<script type="text/javascript" src="fancybox/source/helpers/jquery.fancybox-media.js?v=1.0.6"></script>
+
+        <script type="text/javascript" src="ticker.js"></script>
+<script type="text/javascript" src="resize.js"></script>
+    
+<script type="text/javascript">
+        
+                var previously_clicked = 1;
+                
+    $(function(){
+            $("#centerDocContent").load("Home.html"); 
+        fn_checkrefresh();
+    });
+    
+    function fn_checkrefresh(){
+        
+                           var minW = 1366;
+            
+        if ($(window).width() < minW) {
+
+        var zoomLev = $(window).width() / minW;
+
+        if (!isFirefox) {
+        //$(document.body).css('zoom', zoomLev);
+            $('#divWrap').css('zoom', zoomLev);
+        }
+        else {
+        // Mozilla doesn't support zoom, use -moz-transform to scale and compensate for lost width
+            
+            $('#divWrap').css('-moz-transform', "scale(" + zoomLev + ")");
+            $('#divWrap').width($(window).width() * zoomLev + 1);
+            $('#divWrap').height($(window).height()/zoomLev + 1);
+
+            $('#divWrap').css('position', 'absolute');
+        }
+        }
+        else {
+            console.log("size equal");
+        $(document.body).css({
+            zoom : '',
+            position : '',
+            left: "",
+            top: "",
+            "-moz-transform" : "",
+            width : ''	
+        });
+        }
+
+    };
+    
+    
+        function fn_change(){
+            
+            document.getElementById("centerDoc").style.backgroundColor = "#e6e6e6";
+
+            $("#centerDocContent").load("Lab.html").fadeIn("fast");
+
+                           var left = $('#centerDocContent').offset().left;  // Get the calculated left position
+              $("#centerDocContent").css({left:left})  // Set the left to its calculated position
+              .animate({"left":"0px"}, "fast"); 
+
+
+              for(var i=1; i<9; i++){
+                   document.getElementById(i).className = "mainPageItemUnselected";
+              }
+                   document.getElementById(5).className = "mainPageItemSelected";
+
+            
+        };
+    
+            function fn_change_publications(){
+            
+            document.getElementById("centerDoc").style.backgroundColor = "#e6e6e6";
+
+                          $("#centerDocContent").load("Publications.html").fadeIn("fast");
+
+                           var left = $('#centerDocContent').offset().left;  // Get the calculated left position
+              $("#centerDocContent").css({left:left})  // Set the left to its calculated position
+              .animate({"left":"0px"}, "fast"); 
+
+            
+        };
+
+
+                function fn_change_impact(){
+            
+            document.getElementById("centerDoc").style.backgroundColor = "#e6e6e6";
+
+                          $("#centerDocContent").load("Impacts.html").fadeIn("fast");
+
+                           var left = $('#centerDocContent').offset().left;  // Get the calculated left position
+              $("#centerDocContent").css({left:left})  // Set the left to its calculated position
+              .animate({"left":"0px"}, "fast"); 
+
+            
+        };
+
+    
+    function a_onClick(clickedItem) {
+
+        if(previously_clicked==1)
+             fn_stopticker();
+        
+        previously_clicked = clickedItem.id;
+
+        document.getElementById("centerDoc").style.backgroundColor = "#e6e6e6";
+
+        $('#centerDocContent').fadeOut(function(){
+                  switch(clickedItem.id){
+                    case '1': 
+                        location.reload(true);
+                        break;
+                      case '2': 
+                          $("#centerDocContent").load("NewsEvents.html").fadeIn("fast");
+                          break;
+                       case '3': 
+                          $("#centerDocContent").load("TalksPress.html").fadeIn("fast");
+                      break;
+                        case '4': 
+                          $("#centerDocContent").load("Research.html").fadeIn("fast");
+                      break;
+
+                      case '14': 
+                          $("#centerDocContent").load("Publications.html").fadeIn("fast");
+                      break;
+                      case '24': 
+                          $("#centerDocContent").load("Impacts.html").fadeIn("fast");
+                      break;
+                      case '5': 
+                          $("#centerDocContent").load("Lab.html").fadeIn("fast");
+                      break;
+                      case '6': 
+                          $("#centerDocContent").load("Teaching.html").fadeIn("fast");
+                      break;
+                      case '7': 
+                          $("#centerDocContent").load("Contact.html").fadeIn("fast");
+                      break;
+                      case '8': 
+                           $("#centerDocContent").load("bio.html").fadeIn("fast");
+                      break;
+
+                      default:
+                          $("#centerDocContent").load("Research.html").fadeIn("fast");
+                      break;
+              }
+            })
+
+
+               var left = $('#centerDocContent').offset().left;  // Get the calculated left position
+              $("#centerDocContent").css({left:left})  // Set the left to its calculated position
+              .animate({"left":"0px"}, "fast"); 
+
+               if(clickedItem.id == '14' || clickedItem.id == '24'){
+                     document.getElementById(4).className = "mainPageItemSelected";
+                  }
+
+              for(var i=1; i<9; i++){
+               if(i==clickedItem.id){
+                            clickedItem.className = "mainPageItemSelected";
+                }
+                  else{
+                      if(!((clickedItem.id == '14' || clickedItem.id == '24') && i==4))
+                         document.getElementById(i).className = "mainPageItemUnselected";
+
+                  }
+              }
+    };
+    
+ 
+    </script> 
+</head>
+
+<body>
+    
+<div id="divWrap">
+    
+    <!-- Navigation panel -->
+    <div id="navigation" class = "navigationClass"> 
+        
+        <img id = "displayPic" src = "images/DP.png"/>
+        <p class="displayName">Animashree Anandkumar</p>
+        <p class="displayTitle">Assistant Professor</p>
+        <p class="displayTitle">University of California Irvine </p>
+
+        <!-- Page menu -->
+        <div id = "mainPages">
+           <div id="ex3">
+            <ul class="mainPageList">
+               <li ><a id = "1" href="#" style="color: #fff"  onClick="a_onClick(this)"  class = "mainPageItemSelected"><div class = "icon home-icon">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Home</div></a></li>
+                <li><a id = "8" href="#" style="color: #fff" onClick="a_onClick(this)" class = "mainPageItemUnselected"><div class = "icon cv-icon">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Bio</div></a></li>
+                <li><a id = "2" href="#" style="color: #fff" onClick="a_onClick(this)" class = "mainPageItemUnselected"><div class = "icon news-icon">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;News & Events</div></a></li>
+               <li><a id = "3" href="#" style="color: #fff" onClick="a_onClick(this)" class = "mainPageItemUnselected"><div class = "icon talk-icon">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Talks & Press Release</div></a></li>
+               <li><a id= "4" href="#" style="color: #fff" onClick="a_onClick(this)" class = "mainPageItemUnselected"><div class = "icon publications-icon">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Research</div></a>
+                    <ul class = "subMenu">
+                       <li class="subMenuItem"><a id= "14" class = "subMenuLink" href="#" style="color: #fff" onClick="a_onClick(this)"><div >Publications</div></a></li>
+                       <li class="subMenuItem"><a id= "24" href="#" style="color: #fff" onClick="a_onClick(this)"><div>Impact</div></a></li>
+                   </ul>
+               </li>
+               <li><a id = "5" href="#" style="color: #fff" onClick="a_onClick(this)" class = "mainPageItemUnselected"><div class = "icon lab-icon">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MEGA DatA Lab</div></a></li>
+               <li><a id = "6" href="#" style="color: #fff" onClick="a_onClick(this)" class = "mainPageItemUnselected"><div class = "icon teaching-icon">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Teaching</div></a></li>
+               <li><a id = "7" href="#" style="color: #fff" onClick="a_onClick(this)" class = "mainPageItemUnselected"><div class = "icon contact-icon">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Contact</div></a></li>
+            </ul> 
+            </div>
+        </div>
+    </div>
+
+    <!-- Content Document -->
+    <div id="centerDoc">
+        <div id = "centerDocContent"></div>
+    </div>
+
+    </div>
+</body>
+</html>

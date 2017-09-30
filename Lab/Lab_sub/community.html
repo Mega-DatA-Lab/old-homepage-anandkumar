@@ -1,0 +1,112 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>MEGA DatA Lab</title>
+<style type="text/css">
+.class1 {
+	color: #093;
+}
+.class2 {
+	color: #00F;
+}
+.class2 font {
+	color: #009;
+}
+</style>
+
+<!-- style type="text/css">
+
+/* All Styles Optional */
+
+* {
+font-family:calibri,arial;
+font-size:16pt;
+}
+
+div#show {
+background-color:#efefe7;
+width:400px;
+margin:0; padding:2px;
+border:1px solid #909090;
+}
+
+div#show table input,  div#show4 table input {
+outline-style:none;
+}
+
+</style -->
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+});
+</script>
+<script type="text/javascript"
+  src="https://c328740.ssl.cf1.rackcdn.com/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+<script src="swissarmy.js" type="text/javascript"></script>
+
+<script src="slideshow.js" type="text/javascript"></script>
+
+</head>
+
+<body style="background-color:#e6e6e6">
+<h1 align="center"><font color="#000080">MEGA DatA Lab</font></h1>
+<h2 align="center"><span class="class1"><span class="class"> Model Estimation, Graphical Algorithms, Data Analysis Lab</span></span></h2>
+<p align="center">EECS, University of California, Irvine, CA 92697.</p>
+<!-- div id="show"><script type="text/javascript">new inter_slide(slideShow)</script></div -->
+<hr />
+
+
+<h3 align="left"><font color="#990099">Fast Detection of Overlapping Communities via Online Tensor Methods</font></h3>
+
+<p><strong><b>&#8220;</b>Fast Detection of Overlapping Communities via Online Tensor Methods </strong><b>&#8221;</b> by F. Huang, U. N. Niranjan, M. U. Hakeem,   A. Anandkumar. <em>Accepted to JMLR 2014.</em><br />
+   Download: <a href="../../pubs/Huang_etal_communities_GPU.pdf">PDF</a> <a href = "https://github.com/FurongHuang/Fast-Detection-of-Overlapping-Communities-via-Online-Tensor-Methods.git">Code</a> </p>
+
+<p align="left">We present a fast tensor-based approach for detecting hidden overlapping communities under the Mixed Membership Stochastic Blockmodel (MMSB). We present two implementations, viz., a GPU-based implementation which exploits the parallelism of SIMD architectures and a CPU-based implementation for larger datasets, wherein the GPU memory does not suffice. Our GPU-based implementation involves a careful optimization of storage, data transfer and matrix computations. Our CPU-based implementation involves sparse linear algebraic operations which exploit the data sparsity. We use stochastic gradient descent for multilinear spectral optimization and this allows for flexibility in the tradeoff between node sub-sampling and accuracy of the results. We validate our results on datasets from Facebook, Yelp and DBLP where ground truth is available, using notions of $p$-values and false discovery rates, and obtain high accuracy for membership recovery. We compare our results, both in terms of execution time and accuracy, to the state-of-the-art algorithms such as the variational method, and report many orders of magnitude gain in the execution time. For instance, for the DBLP dataset with about a million nodes and 16 million edges, the execution time is about two minutes. </p>
+<p>Note that topic modeling is a simplified application of the MMSB model and is implemented as an example in this paper. </p>
+
+<p align="left"><img src="community1.png" width="1000" height="500" alt="Two Subtrees" /></p>
+<blockquote>
+  <blockquote>&nbsp;</blockquote>
+</blockquote>
+<hr />
+<p align="left"><img src="community2.png" width="1000" height="500" alt="Two Subtrees" /></p>
+<blockquote>
+  <blockquote>&nbsp;</blockquote>
+</blockquote>
+<hr />
+<p align="left"> The applications include hidden topic recovery in New York Times and DBLP, common business recovery in Yelp Review Data, and user community recovery on Facebook. </p>
+
+<h3 align="left"><font color="#990099">New York Times Dataset</font></h3>
+<a href="NewYorkTimes.html">Recovered Topics Demo/Animation</a>
+<br>
+</br>
+<br>
+</br><br>
+</br><br>
+</br>
+<hr />
+
+<h3 align="left"><font color="#990099">Yelp Review Dataset</font></h3>
+<p align="left"><img src="community4.png" width="1000" height="400" alt="Two Subtrees" /></p>
+<blockquote>
+  <blockquote>&nbsp;</blockquote>
+</blockquote>
+<hr />
+
+<h3 align="left"><font color="#990099">Facebook Friendship Dataset</font></h3>
+<p align="left"><img src="community3.png" width="1000" height="400" alt="Two Subtrees" /></p>
+<blockquote>
+  <blockquote>&nbsp;</blockquote>
+</blockquote>
+<hr />
+
+
+<p align="left"></p>
+<p align="left">&nbsp;</p>
+
+</body>
+</html>

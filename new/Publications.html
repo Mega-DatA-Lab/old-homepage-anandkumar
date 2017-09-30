@@ -1,0 +1,809 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1365px">
+    <title>Animashree Anandkumar</title>
+    <link rel="stylesheet" href="MainCSS.css">
+    <link rel="stylesheet" href="Publications.css">
+    
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>    
+        
+            <!-- Add fancyBox -->
+<link rel="stylesheet" href="fancybox/source/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
+<script type="text/javascript" src="fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+    
+   <script type="text/javascript">
+jQuery(document).ready(function() {
+  jQuery(".content").hide();
+  //toggle the componenet with class msg_body
+  jQuery(".heading").click(function()
+  {
+    jQuery(this).next(".content").slideToggle(500);
+  });
+});
+</script>
+    
+            <script> 
+        $(function(){
+                  $("#graphDiv").load("Publications_graph.html"); 
+
+        });
+
+    </script>
+    
+        
+    <script>$(document).ready(function() {
+  
+
+    $("#single_2").fancybox({
+    	openEffect	: 'elastic',
+    	closeEffect	: 'elastic',
+        type: 'iframe',
+        width: '950px',
+        height: '100%',
+    	helpers : {
+    		title : {
+    			type : 'inside'
+    		}
+    	}
+    });
+
+
+});</script>
+</head>
+
+<body>
+    
+
+    <script src="simple-expand.js"></script>
+            <div id = "Publications">
+
+    <h1 id = "publicationsHeading"> Publications </h1>
+                <br/>
+                <br/>
+                
+                <!-- Graph Image -->
+             <CENTER>   <a id="single_2" href="Publications_graph.html">
+	<img src="images/Publications_Graph.jpg" alt="" width="300px height=380px"/>
+                 </a> </CENTER>
+                <p id = "hint"><i>Dependency graph of publications (Click)</i></p>
+             
+                
+      <!-- Publication categories -->          
+ <div class="layer1">
+    
+     
+     <!-- Selected: Parameter estimation in latent variable models -->
+     <p class="heading"><img src="images/Thumbnail/NewSign2.png" width="30" height="30"/>&nbsp;Selected Publications: <i>Parameter Estimation in Latent Variable Models</i><span class = "expand"><img src = "images/Thumbnail/arrow_down.png" width="32px" height = "32px"</span></p>
+<div class="content">
+    
+    <ul>
+        
+        <!-- ###### Format to add new element ######## -->
+        <!--
+            For new: (With new icon)
+
+            <li class = "publication"><div><img src="images/Thumbnail/NewSign2.png" width="30" height="25" margin-top="10"/>&nbsp; <b>"*Title*"</b><br/><i>By *Authors*</i></div> <div class = "download"><span class="smallText">Download:</span> &nbsp;<a target="_blank" href="URL"><img src="images/Thumbnail/pdf_icon_red.png" width="25" height="30"></a>&nbsp;</div></li>
+
+            For old: (Without new icon)
+            <li class = "publication"><div><b>"*Title*"</b><br/><i>By *Authors*</i></div> <div class = "download"><span class="smallText">Download:</span> &nbsp;<a target="_blank" href="URL"><img src="images/Thumbnail/pdf_icon_red.png" width="25" height="30"></a>&nbsp;</div></li>
+
+            -->
+        
+        <li class = "publication"><div><img src="images/Thumbnail/NewSign2.png" width="30" height="25" margin-top="10"/>&nbsp; <b>"Analyzing Tensor Power Method Dynamics: Applications to Learning Overcomplete Latent Variable Models"</b><br/><i>By A. Anandkumar, R. Ge, M. Janzamin. Preprint, Nov. 2014.</i></div> <div class = "download"><span class="smallText">Download:</span> &nbsp;<a target="_blank" href="http://newport.eecs.uci.edu/anandkumar/pubs/powerdynamics.pdf"><img src="images/Thumbnail/pdf_icon_red.png" width="25" height="30"></a>&nbsp;</div></li>
+        
+        <li  class = "publication"><div><img src="images/Thumbnail/NewSign2.png" width="30" height="25" margin-top="10"/>&nbsp; <b>"Modeling Dynamic Social Interaction via Conditional Latent Tree Models"</b><br/> <i>By F.Arabshahi, F. Huang, A. Anandkumar and C Butts. Preprint, Oct. 2014.</i></div><div class = "download"><span class="smallText">Download:</span>  &nbsp;<a target="_blank" href="http://arxiv.org/pdf/1411.1132v3.pdf"><img src="images/Thumbnail/pdf_icon_red.png" width="25" height="30"></a>&nbsp;</div></li>
+        
+        <li class = "publication"><div><img src="images/Thumbnail/NewSign2.png" width="30" height="25" margin-top="10"/>&nbsp; <b>"Provable Learning of Overcomplete Latent Variable Models: Semi-supervised and Unsupervised Settings"</b><br/> <i>By A. Anandkumar, R. Ge, M. Janzamin. Preprint, Aug. 2014.</i></div><div class = "download"><span class="smallText">Download:</span>  &nbsp;<a  target="_blank" href="http://newport.eecs.uci.edu/anandkumar/pubs/AltTensorDecomp_Part2LVMs.pdf"><img src="images/Thumbnail/pdf_icon_red.png" width="25" height="30"></a>&nbsp;<a  target = "_blank" href="http://newport.eecs.uci.edu/anandkumar/pubs/Anandkumar-spect-workshop-ICML2014.pdf" style="text-decoration:none">[Slides]</a> </div></li>
+        
+        <li class = "publication"><div><img src="images/Thumbnail/NewSign2.png" width="30" height="25" margin-top="10"/>&nbsp; <b>"Integrated Structure and Parameter Learning in Latent Tree Graphical Models"</b><br/> <i>By F. Huang, U. N. Niranjan, A. Anandkumar. Preprint, June 2014.</i></div><div class = "download"><span class="smallText">Download:</span>  &nbsp;<a  target="_blank" href="http://newport.eecs.uci.edu/anandkumar/pubs/latent-struct-param.pdf"><img src="images/Thumbnail/pdf_icon_red.png" width="25" height="30"></a>&nbsp;<a  target = "_blank" href="https://github.com/FurongHuang/StructureParameterLatentTree.git" style="text-decoration:none">[Code]</a> &nbsp;<a  target = "_blank" href="http://newport.eecs.uci.edu/anandkumar/pubs/AnandkumarLTPM14.pdf" style="text-decoration:none">[Slides]</a> </div></li>
+        
+        <li class = "publication"><div><img src="images/Thumbnail/NewSign2.png" width="30" height="25" margin-top="10"/>&nbsp; <b>"Multi-Step Stochastic ADMM in High Dimensions: Applications in Sparse Optimization and Noisy Matrix Decomposition"</b><br/> <i>By H. Sedghi, A. Anandkumar, E. Jonckheere. Preprint, Feb. 2014.</i></div><div class = "download"><span class="smallText">Download:</span>  &nbsp;<a  target="_blank" href="http://newport.eecs.uci.edu/anandkumar/pubs/REASON.pdf"><img src="images/Thumbnail/pdf_icon_red.png" width="25" height="30"></a>&nbsp;</div></li>
+        
+        <li class = "publication"><div><img src="images/Thumbnail/NewSign2.png" width="30" height="25" margin-top="10"/>&nbsp; <b>"Guaranteed Non-Orthogonal Tensor Decomposition via Alternating Rank-1 Updates"</b><br/> <i>By A. Anandkumar, R. Ge, M. Janzamin. Preprint, Feb. 2014.</i></div><div class = "download"><span class="smallText">Download:</span>  &nbsp;<a  target="_blank" href="http://newport.eecs.uci.edu/anandkumar/pubs/AltTensorDecomp_Part1Algorithm.pdf"><img src="images/Thumbnail/pdf_icon_red.png" width="25" height="30"></a>&nbsp;<a  target = "_blank" href="http://newport.eecs.uci.edu/anandkumar/pubs/AltTensorDecompCodes.zip" style="text-decoration:none">[Code]</a> &nbsp;<a  target = "_blank" href="http://newport.eecs.uci.edu/anandkumar/pubs/Anandkumar-spect-workshop-ICML2014.pdf" style="text-decoration:none">[Slides]</a> </div></li>
+        
+        
+        <li class = "publication"><div><b>"Nonparametric Estimation of Multi-View Latent Variable Models"</b><br/>  <i>By L. Song, A. Anandkumar, B. Dai, B. Xie, ICML, June 2014. </i></div><div class = "download"><span class="smallText">Download:</span>  &nbsp;<a  target="_blank" href="http://newport.eecs.uci.edu/anandkumar/pubs/Song_etal_nov2013.pdf"><img src="images/Thumbnail/pdf_icon_red.png" width="25" height="30"></a>&nbsp;</div></li>
+        
+        <li class = "publication"><div><b>"Learning Sparsely Used Overcomplete Dictionaries via Alternating Minimization"</b><br/> <i>By A. Agarwal, A. Anandkumar, P. Jain, P. Netrapalli, R. Tandon. Preprint, Oct. 2013. An abridged version appears in Proc. of COLT 2014. </i></div><div class = "download"><span class="smallText">Download:</span>  &nbsp;<a  target="_blank" href="http://newport.eecs.uci.edu/anandkumar/pubs/AgarwalEtal-altmin2013.pdf"><img src="images/Thumbnail/pdf_icon_red.png" width="25" height="30"></a>&nbsp;<a  target = "_blank" href="http://newport.eecs.uci.edu/anandkumar/pubs/Anandkumar-COLT2014.pdf" style="text-decoration:none">[COLT-Version]</a> &nbsp;<a  target = "_blank" href="http://newport.eecs.uci.edu/anandkumar/pubs/anandkumar-deeplearning-workshop.pdf" style="text-decoration:none">[Slides]</a></div></li>
+        
+        <li class = "publication"><div><b>"A Clustering Approach to Learning Sparsely Used Overcomplete Dictionaries"</b><br/> <i>By A. Agarwal, A. Anandkumar, P. Netrapalli. Preprint, Sept. 2013. An abridged version appears in Proc. of COLT 2014.
+</i></div><div class = "download"><span class="smallText">Download:</span>  &nbsp;<a  target="_blank" href="http://newport.eecs.uci.edu/anandkumar/pubs/AgarwalEtal2013.pdf"><img src="images/Thumbnail/pdf_icon_red.png" width="25" height="30"></a>&nbsp;&nbsp;<a  target = "_blank" href="http://newport.eecs.uci.edu/anandkumar/pubs/Anandkumar-COLT2014.pdf" style="text-decoration:none">[COLT-Version]</a> &nbsp;<a  target = "_blank" href="http://newport.eecs.uci.edu/anandkumar/pubs/anandkumar-deeplearning-workshop.pdf" style="text-decoration:none">[Slides]</a></div></li>
+        
+        <li class = "publication"><div><b>"Fast Detection of Overlapping Communities via Online Tensor Methods"</b><br/> <i>By F. Huang, U. N. Niranjan, M. U. Hakeem, A. Anandkumar. Preprint, Sept. 2013. </i></div><div class = "download"><span class="smallText">Download:</span>  &nbsp;<a  target="_blank" href="http://newport.eecs.uci.edu/anandkumar/pubs/Huang_etal_communities_GPU.pdf"><img src="images/Thumbnail/pdf_icon_red.png" width="25" height="30"></a> &nbsp;<a  target = "_blank" href="https://github.com/FurongHuang/Fast-Detection-of-Overlapping-Communities-via-Online-Tensor-Methods.git" style="text-decoration:none">[Code]</a></div></li>
+        
+        <li class = "publication"><div><b>"When are Overcomplete Topic Models Identifiable? Uniqueness of Tensor Tucker Decompositions with Structured Sparsity"</b><br/> <i>By A. Anandkumar, D. Hsu, M. Janzamin and S. Kakade. Preprint, August 2013. An abridged version appears in Proc. of NIPS 2013. </i></div><div class = "download"><span class="smallText">Download:</span>  &nbsp;<a  target="_blank" href="http://newport.eecs.uci.edu/anandkumar/pubs/Overcomplete_Ident.pdf"><img src="images/Thumbnail/pdf_icon_red.png" width="25" height="30"></a>&nbsp;<a  target = "_blank" href="http://newport.eecs.uci.edu/anandkumar/pubs/Overcomplete_Ident_NIPS.pdf" style="text-decoration:none">[NIPS-Version]</a></div></li>
+        
+        <li class = "publication"><div><b>"A Tensor Spectral Approach to Learning Mixed Membership Community Models"</b><br/><i>By A. Anandkumar, R. Ge, D. Hsu, and S.M. Kakade. Conference on Learning Theory, June 2013, an extended version appears in JMLR. </i></div><div class = "download"><span class="smallText">Download:</span>  &nbsp;<a  target="_blank" href="http://newport.eecs.uci.edu/anandkumar/pubs/AnandkumarCommunity.pdf"><img src="images/Thumbnail/pdf_icon_red.png" width="25" height="30"></a>&nbsp;<a  target = "_blank" href="http://newport.eecs.uci.edu/anandkumar/pubs/AnandkumarCommunityDec12-slides.pdf" style="text-decoration:none">[Slides]</a>&nbsp;<a  target = "_blank" href="http://newport.eecs.uci.edu/anandkumar/pubs/AnandkumarCommunityCOLT13.pdf" style="text-decoration:none">[Conf-Version]</a>&nbsp;<a  target = "_blank" href="http://www.newton.ac.uk/programmes/SCS/seminars/2013081310001" style="text-decoration:none">[Video Lecture]</a></div></li>
+        
+        <li class = "publication"><div><b>"Tensor Decompositions for Learning Latent Variable Models"</b><br/> <i>By A. Anandkumar, R. Ge, D. Hsu, S.M. Kakade and M. Telgarsky. Preprint, October 2012. </i></div><div class = "download"><span class="smallText">Download:</span>  &nbsp;<a  target="_blank" href="http://newport.eecs.uci.edu/anandkumar/pubs/AnandkumarEtal_Tensor12.pdf"><img src="images/Thumbnail/pdf_icon_red.png" width="25" height="30"></a>&nbsp;</div></li>
+        
+        <li class = "publication"><div><b>"Learning Latent Bayesian Networks and Topic Models Under Expansion Constraints"</b><br/> <i>By A. Anandkumar, D. Hsu, A. Javanmard and S.M. Kakade. Preprint, March 2013. An abridged version appears in the Proc. of ICML, June 2013. </i></div><div class = "download"><span class="smallText">Download:</span>  &nbsp;<a  target="_blank" href="http://newport.eecs.uci.edu/anandkumar/pubs/AnandkumarEtalDAG12.pdf"><img src="images/Thumbnail/pdf_icon_red.png" width="25" height="30"></a>&nbsp;<a  target = "_blank" href="http://newport.eecs.uci.edu/anandkumar/pubs/AnandkumarEtalDAG-ICML13.pdf" style="text-decoration:none">[ICML-Version]</a></div></li>
+        
+        <li class = "publication"><div><b>"Two SVDs Suffice: Spectral decompositions for probabilistic topic modeling and latent Dirichlet allocation"</b><br/> <i>By A. Anandkumar, D. P. Foster, D. Hsu, S.M. Kakade and Y.K. Liu. Preprint, April 2012. An abridged version appears in NIPS 2012. Extended version to appear in the special issue of Algorithmica on " New Theoretical Challenges in Machine Learning" by invitation.  </i></div><div class = "download"><span class="smallText">Download:</span>  &nbsp;<a  target="_blank" href="http://newport.eecs.uci.edu/anandkumar/pubs/Anandkumar_LDA_apr12.pdf"><img src="images/Thumbnail/pdf_icon_red.png" width="25" height="30"></a>&nbsp;<a  target = "_blank" href="http://newport.eecs.uci.edu/anandkumar/pubs/AnandkumarEtal_LDA_NIPS12.pdf" style="text-decoration:none">[NIPS-Version]</a></div></li>
+        
+        <li class = "publication"><div><b>"A Method of Moments for Mixture Models and Hidden Markov Models"</b><br/> <i>By A. Anandkumar, D. Hsu, and S.M. Kakade. Preprint, Feb. 2012. An abridged version appears in the Proc. of COLT, June 2012. </i></div><div class = "download"><span class="smallText">Download:</span>  &nbsp;<a  target="_blank" href="http://newport.eecs.uci.edu/anandkumar/pubs/AnandkumarEtal_mixtures12.pdf"><img src="images/Thumbnail/pdf_icon_red.png" width="25" height="30"></a>&nbsp;<a  target = "_blank" href="http://newport.eecs.uci.edu/anandkumar/pubs/AnandkumarEtalCOLT12.pdf" style="text-decoration:none">[COLT-Version]</a></div></li>
+
+    </ul>
+    
+</div>
+     
+     <!-- Selected: Structural estimation in graphical models -->
+     <p class="heading">Selected Publications: <i>Structure Estimation in Graphical Models</i><span class = "expand"><img src = "images/Thumbnail/arrow_down.png" width="32px" height = "32px"</span></p>
+<div class="content">
+    
+        <ul>
+                <!-- ###### Format to add new element ######## -->
+        <!--
+            For new: (With new icon)
+
+            <li class = "publication"><div><img src="images/Thumbnail/NewSign2.png" width="30" height="25" margin-top="10"/>&nbsp; <b>"*Title*"</b><br/><i>By *Authors*</i></div> <div class = "download"><span class="smallText">Download:</span> &nbsp;<a target="_blank" href="URL"><img src="images/Thumbnail/pdf_icon_red.png" width="25" height="30"></a>&nbsp;</div></li>
+
+            For old: (Without new icon)
+            <li class = "publication"><div><b>"*Title*"</b><br/><i>By *Authors*</i></div> <div class = "download"><span class="smallText">Download:</span> &nbsp;<a target="_blank" href="URL"><img src="images/Thumbnail/pdf_icon_red.png" width="25" height="30"></a>&nbsp;</div></li>
+
+            -->
+
+        <li class = "publication"><div><b>"Learning High-Dimensional Mixtures of Graphical Models"</b><br/><i>By A. Anandkumar, D. Hsu, F. Huang, and S.M. Kakade. An abridged version appears in NIPS 2012. </i></div> <div class = "download"><span class="smallText">Download:</span> &nbsp;<a  target="_blank" href="http://newport.eecs.uci.edu/anandkumar/pubs/AnandkumarEtal_graphicalmixtures12.pdf"><img src="images/Thumbnail/pdf_icon_red.png" width="25" height="30"></a>&nbsp;<a  target = "_blank" href="http://newport.eecs.uci.edu/anandkumar/pubs/AnandkumarLIDS12.pdf" style="text-decoration:none">[Slides]</a>&nbsp;<a  target = "_blank" href="http://newport.eecs.uci.edu/anandkumar/pubs/AnandkumarHsuHuangKakadeNIPS12.pdf" style="text-decoration:none">[NIPS-Version]</a></div></li>
+            
+            <li class = "publication"><div><b>"Learning Loopy Graphical Models with Latent Variables: Efficient Methods and Guarantees "</b><br/><i>By  A. Anandkumar and R. Valluvan. Ann. Statist. Volume 41, Number 2 (2013), 401-435. An abridged version appears in NIPS 2012.  </i></div> <div class = "download"><span class="smallText">Download:</span> &nbsp;<a  target="_blank" href="http://newport.eecs.uci.edu/anandkumar/pubs/AnandkumarValluvanStat13.pdf"><img src="images/Thumbnail/pdf_icon_red.png" width="25" height="30"></a>&nbsp;<a  target = "_blank" href="http://newport.eecs.uci.edu/anandkumar/pubs/AnandkumarValluvanStat-supp.pdf" style="text-decoration:none">[Supplement]</a>&nbsp;<a  target = "_blank" href="http://newport.eecs.uci.edu/anandkumar/pubs/AnandkumarIMA12.pdf" style="text-decoration:none">[Slides]</a>&nbsp;<a  target = "_blank" href="http://newport.eecs.uci.edu/anandkumar/pubs/AnandkumarValluvanNIPS12.pdf" style="text-decoration:none">[NIPS-Version]</a>&nbsp;<a  target = "_blank" href="http://newport.eecs.uci.edu/anandkumar/pubs/Loopy-Latent-Results.zip" style="text-decoration:none">[Code and datasets]</a>&nbsp;<a  target = "_blank" href="http://www.ima.umn.edu/videos/index.php?id=1844" style="text-decoration:none">[Video lecture]</a></div></li>
+
+            
+        <li class = "publication"><div><b>"High-Dimensional Covariance Decomposition into Sparse Markov and Independence Domains"</b><br/><i>By M. Janzamin and A. Anandkumar. Preprint, Feb. 2012. An abridged version appears in the Proc. of ICML, June 2012. </i></div> <div class = "download"><span class="smallText">Download:</span> &nbsp;<a  target="_blank" href="http://newport.eecs.uci.edu/anandkumar/pubs/JanzaminAnandkumar12.pdf"><img src="images/Thumbnail/pdf_icon_red.png" width="25" height="30"></a>&nbsp;<a  target = "_blank" href="http://newport.eecs.uci.edu/anandkumar/pubs/JanzaminAnandkumarICML12.pdf" style="text-decoration:none">[ICML-Version]</a>&nbsp;<a  target = "_blank" href="http://newport.eecs.uci.edu/anandkumar/pubs/AnandkumarICML12-slides.pdf" style="text-decoration:none">[Slides]</a></div></li>
+            
+            
+        <li class = "publication">
+            
+        <div><b>"High-Dimensional Structure Learning of Ising Models: Local Separation Criterion"</b><br/><i>By A. Anandkumar, V.Y.F Tan, F. Huang, and A.S. Willsky. Annals of Statistics, Volume 40, Number 3 (2012), 1346-1375. An abridged version appears in the Proc. of NIPS, Dec. 2011. </i>&nbsp;<a  target = "_blank" href="http://newport.eecs.uci.edu/anandkumar/pubs/AnandkumarTanIsing11-abstract.html" style="text-decoration:none">[Details]</a></div> 
+            <div class = "download"><span class="smallText">Download:</span> &nbsp;
+                <a  target="_blank" href="http://newport.eecs.uci.edu/anandkumar/pubs/AnandkumarTan-Ising11.pdf"><img src="images/Thumbnail/pdf_icon_red.png" width="25" height="30"></a>&nbsp;
+                <a  target = "_blank" href="http://newport.eecs.uci.edu/anandkumar/pubs/AnandkumarTan-Ising11-supp.pdf" style="text-decoration:none">[Supplementary file]</a>&nbsp;
+                <a  target = "_blank" href="http://newport.eecs.uci.edu/anandkumar/pubs/code_IsingModel.zip" style="text-decoration:none">[Code and datasets]</a>&nbsp;
+                 <a  target = "_blank" href="http://newport.eecs.uci.edu/anandkumar/pubs/AnandkumarTan11-shortver.pdf" style="text-decoration:none">[Short(NIPS) Version]</a>&nbsp;
+                 <a  target = "_blank" href="http://videolectures.net/nips2011_anandkumar_conditions/" style="text-decoration:none">[Video lecture]</a>&nbsp;
+                 <a  target = "_blank" href="http://newport.eecs.uci.edu/anandkumar/pubs/AnandkumarNIPS11-slides.pdf" style="text-decoration:none">[NIPS-Slides]</a>
+                </div>
+                </li>
+            
+            
+        <li class = "publication">
+            
+        <div><b>"High-Dimensional Gaussian Graphical Model Selection: Walk-Summability and Local Separation Criterion"</b><br/><i>By A. Anandkumar, V.Y.F Tan, F. Huang, and A.S. Willsky. J. Machine Learning Research, 13:2293–2337, Aug. 2012. An abridged version appears in the Proc. of NIPS, Dec. 2011.  </i>&nbsp;<a  target = "_blank" href="http://newport.eecs.uci.edu/anandkumar/pubs/AnandkumarTanGaussian11-abstract.html" style="text-decoration:none">[Details]</a></div> 
+            <div class = "download"><span class="smallText">Download:</span> &nbsp;
+                <a  target="_blank" href="http://newport.eecs.uci.edu/anandkumar/pubs/AnandkumarTan-Gaussian11.pdf"><img src="images/Thumbnail/pdf_icon_red.png" width="25" height="30"></a>&nbsp;
+                <a  target = "_blank" href="http://newport.eecs.uci.edu/anandkumar/pubs/GaussianStructLearning-code.zip" style="text-decoration:none">[Code and datasets]</a>&nbsp;
+                <a  target = "_blank" href="http://newport.eecs.uci.edu/anandkumar/pubs/AnandkumarTan11-shortver.pdf" style="text-decoration:none">[Short(NIPS) Version]</a>&nbsp;
+                 <a  target = "_blank" href="http://videolectures.net/nips2011_anandkumar_conditions/" style="text-decoration:none">[Video lecture]</a>&nbsp;
+                 <a  target = "_blank" href="http://newport.eecs.uci.edu/anandkumar/pubs/AnandkumarNIPS11-slides.pdf" style="text-decoration:none">[NIPS-Slides]</a>
+                </div>
+                </li>
+            
+            
+        <li class = "publication">
+            
+        <div><b>"Spectral Methods for Learning Multivariate Latent Tree Structure"</b><br/><i>By A. Anandkumar, K. Chaudhuri, D. Hsu, S.M. Kakade, L. Song and T. Zhang. Preprint, July 2011. An abridged version appears in the Proc. of NIPS, Dec. 2011. </i>&nbsp;<a  target = "_blank" href="http://newport.eecs.uci.edu/anandkumar/pubs/AnandkumaretalSpectral-abstract.html" style="text-decoration:none">[Details]</a></div> 
+            <div class = "download"><span class="smallText">Download:</span> &nbsp;
+                <a  target="_blank" href="http://newport.eecs.uci.edu/anandkumar/pubs/1107.1283v1.pdf"><img src="images/Thumbnail/pdf_icon_red.png" width="25" height="30"></a>&nbsp;
+                </div>
+                </li>
+         
+                
+        <li class = "publication">
+            
+        <div><b>"Topology Discovery of Sparse Random Graphs With Few Participants"</b><br/><i>By A. Anandkumar, A. Hassidim, and J. Kelner. Proc. of ACM SIGMETRICS, (San Jose, USA), June 2011. <a  target = "_blank" href="http://cpcc.uci.edu/news.php#NewsAnimashreeAnandkumarBestPaperAward" style="text-decoration:none">Best Paper Award</a> Extended version to appear in J. on Random Structures and Algorithms, Dec. 2011.</i>&nbsp;<a  target = "_blank" href="http://newport.eecs.uci.edu/anandkumar/pubs/AnandkumarSigmetrics11-abstract.html" style="text-decoration:none">[Details]</a></div> 
+            <div class = "download"><span class="smallText">Download:</span> &nbsp;
+                <a  target="_blank" href="http://newport.eecs.uci.edu/anandkumar/pubs/AnandkumarHassidimKelner_Sigmetrics11.pdf"><img src="images/Thumbnail/pdf_icon_red.png" width="25" height="30"></a>&nbsp;
+                <a  target = "_blank" href="http://newport.eecs.uci.edu/anandkumar/pubs/AnandkumarHassidimKelner_Discovery.pdf" style="text-decoration:none">[Full version]</a>&nbsp;
+                <a  target = "_blank" href="http://newport.eecs.uci.edu/anandkumar/pubs/AnandkumarITA11.pdf" style="text-decoration:none">[Talk]</a>
+                </div>
+                </li>
+            
+            
+            
+        <li class = "publication">
+            
+        <div><b>"Learning Latent Tree Graphical Models"</b><br/><i>By M.J. Choi, V. Tan, A. Anandkumar, and A. Willsky. Journal of Machine Learning Research, volume 12, pp. 1771−1812, May 2011. </i>&nbsp;<a  target = "_blank" href="http://newport.eecs.uci.edu/anandkumar/pubs/ChoiJMLR10-abstract.html" style="text-decoration:none">[Details]</a></div> 
+            <div class = "download"><span class="smallText">Download:</span> &nbsp;
+                <a  target="_blank" href="http://newport.eecs.uci.edu/anandkumar/pubs/ChoiJMLR10.pdf"><img src="images/Thumbnail/pdf_icon_red.png" width="25" height="30"></a>&nbsp;
+                <a  target = "_blank" href="http://people.csail.mit.edu/myungjin/latentTree.html" style="text-decoration:none">[Project Webpage]</a>&nbsp;
+                <a  target = "_blank" href="http://newport.eecs.uci.edu/anandkumar/pubs/latentTree.tar" style="text-decoration:none">[Code]</a>&nbsp;
+                 <a  target = "_blank" href="http://newport.eecs.uci.edu/anandkumar/pubs/ChoiAllerton10.pdf" style="text-decoration:none">[Allerton version]</a>&nbsp;
+                 <a  target = "_blank" href="http://newport.eecs.uci.edu/anandkumar/pubs/ChoiAllerton10-slides.pdf" style="text-decoration:none">[Slides]</a>&nbsp;
+                <a  target = "_blank" href="http://newport.eecs.uci.edu/anandkumar/pubs/AnandkumarUIUC10.pdf" style="text-decoration:none">[Seminar Slides]</a>
+                </div>
+                </li>
+            
+            
+        <li class = "publication">
+            
+        <div><b>"Learning Gaussian Tree Models: Analysis of Error Exponents and Extremal Structures"</b><br/><i>By V. Tan, A. Anandkumar, and A. Willsky. IEEE Tran. on Signal Processing, vol. 58, no. 5, May 2010, pp. 2701-2714.</i>&nbsp;<a  target = "_blank" href="http://newport.eecs.uci.edu/anandkumar/pubs/TanSP09-abstract.html" style="text-decoration:none">[Details]</a></div> 
+            <div class = "download"><span class="smallText">Download:</span> &nbsp;
+                <a  target="_blank" href="http://newport.eecs.uci.edu/anandkumar/pubs/TanSP09.pdf"><img src="images/Thumbnail/pdf_icon_red.png" width="25" height="30"></a>&nbsp;
+                <a  target = "_blank" href="http://newport.eecs.uci.edu/anandkumar/pubs/TanAllerton09-slides.pdf" style="text-decoration:none">[Slides]</a>&nbsp;
+                <a  target = "_blank" href="http://newport.eecs.uci.edu/anandkumar/pubs/LearningGaussianTreeModels.zip" style="text-decoration:none">[Code]</a>&nbsp;
+                 <a  target = "_blank" href="http://web.mit.edu/newsoffice/2010/sizing-samples-0825.html" style="text-decoration:none">[MIT News]</a>
+             &nbsp;    <a  target = "_blank" href="http://technews.acm.org/archives.cfm?fo=2010-09-sep/sep-01-2010.html" style="text-decoration:none">[ACM Technews]</a>&nbsp;
+                <a  target = "_blank" href="http://www.kdnuggets.com/2010/09/f-most-viewed-week-Sep-05.html?c2b" style="text-decoration:none">[KDnuggets]</a>
+                </div>
+                </li>
+    </ul>
+    
+</div>
+     
+     
+     <!-- Preprints -->
+<p class="heading">Preprints<span class = "expand"><img src = "images/Thumbnail/arrow_down.png" width="32px" height = "32px"</span></p>
+<div class="content">
+    
+    <ul>
+                <!-- ###### Format to add new element ######## -->
+        <!--
+            For new: (With new icon)
+
+            <li class = "publication"><div><img src="images/Thumbnail/NewSign2.png" width="30" height="25" margin-top="10"/>&nbsp; <b>"*Title*"</b><br/><i>By *Authors*</i></div> <div class = "download"><span class="smallText">Download:</span> &nbsp;<a target="_blank" href="URL"><img src="images/Thumbnail/pdf_icon_red.png" width="25" height="30"></a>&nbsp;</div></li>
+
+            For old: (Without new icon)
+            <li class = "publication"><div><b>"*Title*"</b><br/><i>By *Authors*</i></div> <div class = "download"><span class="smallText">Download:</span> &nbsp;<a target="_blank" href="URL"><img src="images/Thumbnail/pdf_icon_red.png" width="25" height="30"></a>&nbsp;</div></li>
+
+            -->
+
+           <li class = "publication"><div><b>"Non-convex Robust PCA"</b><br/><i>By P. Netrapalli, U. N. Niranjan, S. Sanghavi, A. Anandkumar, P. Jain. Preprint, Oct. 2014. An abridged version appears in NIPS 2014.</i> 
+                   </div> 
+                    <div class = "download"><span class="smallText">Download:</span> &nbsp;
+                    <a  target="_blank" href="http://newport.eecs.uci.edu/pubs/nrpca.pdf"><img src="images/Thumbnail/pdf_icon_red.png" width="25" height="30"></a>&nbsp;<a  target="_blank" href="http://simons.berkeley.edu/talks/animashree-anandkumar-2014-09-22" style="text-decoration:none">[Talk]</a>&nbsp;<a  target="_blank" href="http://newport.eecs.uci.edu/pubs/CMU_fall2014.pdf" style="text-decoration:none">[Slides]</a>&nbsp;<a  target="_blank" href="http://newport.eecs.uci.edu/anandkumar/Projects_sub/code_ncrpca.zip" style="text-decoration:none">[Code]</a>
+                    </div>
+                </li>
+        
+        
+                <li class = "publication"><div><b>"Provable Learning of Overcomplete Latent Variable Models: Semi-supervised and Unsupervised Settings"</b><br/><i>By A. Anandkumar, R. Ge, M. Janzamin. Preprint, June 2014.</i> 
+                   </div> 
+                    <div class = "download"><span class="smallText">Download:</span> &nbsp;
+                    <a  target="_blank" href="http://newport.eecs.uci.edu/anandkumar/pubs/AltTensorDecomp_Part2LVMs.pdf"><img src="images/Thumbnail/pdf_icon_red.png" width="25" height="30"></a>
+                    </div>
+                </li>
+        
+        
+        <li class = "publication"><div><b>"Integrated Structure and Parameter Learning in Latent Tree Graphical Models"</b><br/><i>By F. Huang, U. N. Niranjan, A. Anandkumar. Preprint, June 2014.</i> 
+                    </div> 
+                    <div class = "download">
+                    </div>
+                </li>
+        
+        <li class = "publication"><div><b>"Multi-Step Stochastic ADMM in High Dimensions: Applications to Sparse Optimization and Noisy Matrix Decomposition"</b><br/><i>By H. Sedghi, A. Anandkumar, E. Jonckheere. Preprint, Feb. 2014.</i> 
+                   </div> 
+                    <div class = "download"><span class="smallText">Download:</span> &nbsp;
+                    <a  target="_blank" href="http://newport.eecs.uci.edu/anandkumar/pubs/REASON.pdf"><img src="images/Thumbnail/pdf_icon_red.png" width="25" height="30"></a>
+                    </div>
+                </li>
+        
+        
+        <li class = "publication"><div><b>"Guaranteed Non-Orthogonal Tensor Decomposition via Alternating Rank-1 Updates"</b><br/><i>By A. Anandkumar, R. Ge, M. Janzamin. Preprint, Feb. 2014.</i> 
+                    </div> 
+                    <div class = "download"><span class="smallText">Download:</span> &nbsp;
+                    <a  target="_blank" href="http://newport.eecs.uci.edu/anandkumar/pubs/AltTensorDecomp_Part1Algorithm.pdf"><img src="images/Thumbnail/pdf_icon_red.png" width="25" height="30"></a>&nbsp;<a  target="_blank" href="http://newport.eecs.uci.edu/anandkumar/pubs/pubs/AltTensorDecompCodes.zip" style="text-decoration:none">[Code]</a>
+                    </div>
+                </li>
+        
+        <li class = "publication"><div><b>"Unsupervised Learning of Transcriptional Regulatory Networks via Latent Tree Graphical Model"</b><br/><i>By A. Gitter, F. Huang, R. Valluvan, E. Fraenkel and A. Anandkumar Submitted to BMC Bioinformatics, Jan. 2014.</i> </div> 
+                    <div class = "download">
+                    </div>
+                </li>
+        
+        <li class = "publication"><div><b>"Learning Sparsely Used Overcomplete Dictionaries via Alternating Minimization"</b><br/><i>By A. Agarwal, A. Anandkumar, P. Jain, P. Netrapalli, R. Tandon. Preprint, Oct. 2013.
+</i> </div> 
+                    <div class = "download"><span class="smallText">Download:</span> &nbsp;
+                    <a  target="_blank" href="http://newport.eecs.uci.edu/anandkumar/pubs/AgarwalEtal-altmin2013.pdf
+"><img src="images/Thumbnail/pdf_icon_red.png" width="25" height="30"></a>
+                    </div>
+                </li>
+        
+        <li class = "publication"><div><b>"Exact Recovery of Sparsely Used Overcomplete Dictionaries"</b><br/><i>By A. Agarwal, A. Anandkumar, P. Netrapalli. Preprint, Sept. 2013.</i> 
+                    </div> 
+                    <div class = "download"><span class="smallText">Download:</span> &nbsp;
+                    <a  target="_blank" href="http://newport.eecs.uci.edu/anandkumar/pubs/AgarwalEtal2013.pdf"><img src="images/Thumbnail/pdf_icon_red.png" width="25" height="30"></a>
+                    </div>
+                </li>
+        
+        <li class = "publication"><div><b>"Fast Detection of Overlapping Communities via Online Tensor Methods"</b><br/><i>By  F. Huang, Niranjan U N, M. U. Hakeem, A. Anandkumar. Preprint, Sept. 2013.</i> 
+                    </div> 
+                    <div class = "download"><span class="smallText">Download:</span> &nbsp;
+                    <a  target="_blank" href="http://newport.eecs.uci.edu/anandkumar/pubs/Huang_etal_communities_GPU.pdf"><img src="images/Thumbnail/pdf_icon_red.png" width="25" height="30"></a>
+                    </div>
+                </li>
+        
+        <li class = "publication"><div><b>"When are Overcomplete Topic Models Identifiable? Uniqueness of Tensor Tucker Decompositions with Structured Sparsity"</b><br/><i>By A. Anandkumar, D. Hsu, M. Janzamin and S. Kakade. Preprint, August 2013. An abridged version appears in Proc. of NIPS 2013.</i> 
+                  </div> 
+                    <div class = "download"><span class="smallText">Download:</span> &nbsp;
+                    <a  target="_blank" href="http://newport.eecs.uci.edu/anandkumar/pubs/Overcomplete_Ident.pdf"><img src="images/Thumbnail/pdf_icon_red.png" width="25" height="30"></a>&nbsp;<a  target="_blank" href="http://newport.eecs.uci.edu/anandkumar/pubs/Overcomplete_Ident_NIPS.pdf" style="text-decoration:none">[NIPS-Version]</a>
+                    </div>
+                </li>
+        
+        <li class = "publication"><div><b>"A Tensor Spectral Approach to Learning Mixed Membership Community Models"</b><br/><i>By A. Anandkumar, R. Ge, D. Hsu, and S.M. Kakade. Conference on Learning Theory, June 2013.</i> </div> 
+                    <div class = "download"><span class="smallText">Download:</span> &nbsp;
+                    <a  target="_blank" href="http://newport.eecs.uci.edu/anandkumar/pubs/AnandkumarCommunity.pdf"><img src="images/Thumbnail/pdf_icon_red.png" width="25" height="30"></a>
+                        &nbsp;<a  target="_blank" href="http://newport.eecs.uci.edu/anandkumar/pubs/AnandkumarCommunityDec12-slides.pdf" style="text-decoration:none">[Slides]</a>
+&nbsp;<a  target="_blank" href="http://newport.eecs.uci.edu/anandkumar/pubs/AnandkumarCommunityCOLT13.pdf" style="text-decoration:none">[Conf-Version]</a>
+&nbsp;<a  target="_blank" href="http://www.newton.ac.uk/programmes/SCS/seminars/2013081310001" style="text-decoration:none">[Video lecture]</a>
+
+                    </div>
+                </li>
+        
+        <li class = "publication"><div><b>"Tensor Decompositions for Learning Latent Variable Models"</b><br/><i>By A. Anandkumar, R. Ge, D. Hsu, S.M. Kakade and M. Telgarsky. Preprint, October 2012.</i> 
+                   </div> 
+                    <div class = "download"><span class="smallText">Download:</span> &nbsp;
+                    <a  target="_blank" href="http://newport.eecs.uci.edu/anandkumar/pubs/AnandkumarEtal_Tensor12.pdf"><img src="images/Thumbnail/pdf_icon_red.png" width="25" height="30"></a>
+                    </div>
+                </li>
+        
+        <li class = "publication"><div><b>"Learning Linear Bayesian Networks with Latent Variables"</b><br/><i>By A. Anandkumar, D. Hsu, A. Javanmard and S.M. Kakade. Preprint, September 2012.</i> </div> 
+                    <div class = "download"><span class="smallText">Download:</span> &nbsp;
+                    <a  target="_blank" href="http://newport.eecs.uci.edu/anandkumar/pubs/AnandkumarEtalDAG12.pdf"><img src="images/Thumbnail/pdf_icon_red.png" width="25" height="30"></a>
+                        &nbsp;<a  target="_blank" href="http://newport.eecs.uci.edu/anandkumar/pubs/AnandkumarEtalDAG-ICML13.pdf" style="text-decoration:none">[ICML-Version]</a>
+
+                    </div>
+                </li>
+        
+        <li class = "publication"><div><b>"Learning High-Dimensional Mixtures of Graphical Models"</b><br/><i>By A. Anandkumar, D. Hsu, and S.M. Kakade. An abridged version appears in NIPS 2012. </i> 
+                    </div> 
+                    <div class = "download"><span class="smallText">Download:</span> &nbsp;
+                    <a  target="_blank" href="http://newport.eecs.uci.edu/anandkumar/pubs/AnandkumarEtal_graphicalmixtures12.pdf"><img src="images/Thumbnail/pdf_icon_red.png" width="25" height="30"></a>
+                        &nbsp;<a  target="_blank" href="http://newport.eecs.uci.edu/anandkumar/pubs/AnandkumarHsuHuangKakadeNIPS12.pdf" style="text-decoration:none">[NIPS-Version]</a>
+
+                    </div>
+                </li>
+        
+        <li class = "publication"><div><b>"High-Dimensional Covariance Decomposition into Sparse Markov and Independence Domains"</b><br/><i>By  M. Janzamin and A. Anandkumar. Preprint, Feb. 2012. An abridged version appears in the Proc. of ICML, June 2012.</i> 
+                    </div> 
+                    <div class = "download"><span class="smallText">Download:</span> &nbsp;
+                    <a  target="_blank" href="http://newport.eecs.uci.edu/anandkumar/pubs/JanzaminAnandkumar12.pdf"><img src="images/Thumbnail/pdf_icon_red.png" width="25" height="30"></a>
+                        &nbsp;<a  target="_blank" href="http://newport.eecs.uci.edu/anandkumar/pubs/JanzaminAnandkumarICML12.pdf" style="text-decoration:none">[ICML-Version]</a>
+
+                        &nbsp;<a  target="_blank" href="http://newport.eecs.uci.edu/anandkumar/pubs/AnandkumarICML12-slides.pdf" style="text-decoration:none">[Slides]</a>
+
+                    </div>
+                </li>
+     
+    </ul>
+    
+</div>
+     
+     
+     <!-- Journal publications -->
+<p class="heading">Journal Publications<span class = "expand"><img src = "images/Thumbnail/arrow_down.png" width="32px" height = "32px"</span></p>
+<div class="content">
+    
+    <ul>
+                <!-- ###### Format to add new element ######## -->
+        <!--
+            For new: (With new icon)
+
+            <li class = "publication"><div><img src="images/Thumbnail/NewSign2.png" width="30" height="25" margin-top="10"/>&nbsp; <b>"*Title*"</b><br/><i>By *Authors*</i></div> <div class = "download"><span class="smallText">Download:</span> &nbsp;<a target="_blank" href="URL"><img src="images/Thumbnail/pdf_icon_red.png" width="25" height="30"></a>&nbsp;</div></li>
+
+            For old: (Without new icon)
+            <li class = "publication"><div><b>"*Title*"</b><br/><i>By *Authors*</i></div> <div class = "download"><span class="smallText">Download:</span> &nbsp;<a target="_blank" href="URL"><img src="images/Thumbnail/pdf_icon_red.png" width="25" height="30"></a>&nbsp;</div></li>
+
+            -->
+
+        <li class = "publication"><div><b>"Two SVDs Suffice: Spectral decompositions for probabilistic topic modeling and latent Dirichlet allocation"</b><br/><i>By  A. Anandkumar, D. P. Foster, D. Hsu, S.M. Kakade and Y.K. Liu.Preprint, April 2012. An abridged version appears in NIPS 2012. Extended version to appear in the special issue of Algorithmica on " New Theoretical Challenges in Machine Learning" by invitation. </i> 
+                   </div> 
+                    <div class = "download"><span class="smallText">Download:</span> &nbsp;
+                    <a  target="_blank" href="http://newport.eecs.uci.edu/anandkumar/pubs/Anandkumar_LDA_apr12.pdf"><img src="images/Thumbnail/pdf_icon_red.png" width="25" height="30"></a>
+                        &nbsp;<a  target="_blank" href="http://newport.eecs.uci.edu/anandkumar/pubs/AnandkumarEtal_LDA_NIPS12.pdf" style="text-decoration:none">[NIPS-Version]</a>
+
+                    </div>
+                </li>
+        
+        <li class = "publication"><div><b>"Learning Loopy Graphical Models with Latent Variables: Efficient Methods and Guarantees "</b><br/><i>By A. Anandkumar and R. Valluvan. <a  target = "_blank" href = "http://projecteuclid.org/handle/euclid.aos">Ann. Statist</a>. Volume 41, Number 2 (2013), 401-435. An abridged version appears in NIPS 2012. </i> </div> 
+                    <div class = "download"><span class="smallText">Download:</span> &nbsp;
+                    <a  target="_blank" href="http://newport.eecs.uci.edu/anandkumar/pubs/AnandkumarValluvanStat13.pdf"><img src="images/Thumbnail/pdf_icon_red.png" width="25" height="30"></a>
+                        &nbsp;<a  target="_blank" href="http://newport.eecs.uci.edu/anandkumar/pubs/AnandkumarValluvanStat-supp.pdf" style="text-decoration:none">[Supplementary material]</a>
+                        &nbsp;<a  target="_blank" href="http://newport.eecs.uci.edu/anandkumar/pubs/AnandkumarITA12.pdf" style="text-decoration:none">[Slides]</a>
+&nbsp;<a  target="_blank" href="http://newport.eecs.uci.edu/anandkumar/pubs/AnandkumarValluvanNIPS12.pdf" style="text-decoration:none">[NIPS-Version]</a>
+&nbsp;<a  target="_blank" href="http://newport.eecs.uci.edu/anandkumar/pubs/Loopy-Latent-Results.zip" style="text-decoration:none">[Code and datasets]</a>
+&nbsp;<a  target="_blank" href="http://www.ima.umn.edu/videos/index.php?id=1844" style="text-decoration:none">[Videolecture]</a>
+
+                    </div>
+                </li>
+        
+        
+        <li class = "publication"><div><b>"High-Dimensional Structure Learning of Ising Models: Local Separation Criterion"</b><br/><i>By A. Anandkumar, V.Y.F Tan, F. Huang, and A.S. Willsky. Annals of Statistics, Volume 40, Number 3 (2012), 1346-1375. An abridged version appears in the Proc. of NIPS, Dec. 2011.</i> 
+                    <a  target="_blank" href="http://newport.eecs.uci.edu/anandkumar/pubs/AnandkumarTanIsing11-abstract.html" style="text-decoration:none">[Details]</a></div> 
+                    <div class = "download"><span class="smallText">Download:</span> &nbsp;
+                    <a  target="_blank" href="http://newport.eecs.uci.edu/anandkumar/pubs/AnandkumarTan-Ising11.pdf"><img src="images/Thumbnail/pdf_icon_red.png" width="25" height="30"></a>
+                        &nbsp;<a  target="_blank" href="http://newport.eecs.uci.edu/anandkumar/pubs/AnandkumarTan-Ising11-supp.pdf" style="text-decoration:none">[Supplementary file]</a>
+&nbsp;<a  target="_blank" href="http://newport.eecs.uci.edu/anandkumar/pubs/code_IsingModel.zip" style="text-decoration:none">[Code and datasets]</a>
+&nbsp;<a  target="_blank" href="http://newport.eecs.uci.edu/anandkumar/pubs/AnandkumarTan11-shortver.pdf" style="text-decoration:none">[Short(NIPS) Version]</a>
+&nbsp;<a  target="_blank" href="http://videolectures.net/nips2011_anandkumar_conditions/" style="text-decoration:none">[Videolecture]</a>
+&nbsp;<a  target="_blank" href="http://newport.eecs.uci.edu/anandkumar/pubs/AnandkumarNIPS11-slides.pdf" style="text-decoration:none">[NIPS-Slides]</a>
+
+                    </div>
+                </li>
+        
+        <li class = "publication"><div><b>"High-Dimensional Gaussian Graphical Model Selection: Walk-Summability and Local Separation Criterion"</b><br/><i>By A. Anandkumar, V.Y.F Tan, F. Huang, and A.S. Willsky. J. Machine Learning Research, 13:2293–2337, Aug. 2012.. An abridged version appears in the Proc. of NIPS, Dec. 2011. </i> 
+                    <a  target="_blank" href="http://newport.eecs.uci.edu/anandkumar/pubs/AnandkumarTanGaussian11-abstract.html" style="text-decoration:none">[Details]</a></div> 
+                    <div class = "download"><span class="smallText">Download:</span> &nbsp;
+                    <a  target="_blank" href="http://newport.eecs.uci.edu/anandkumar/pubs/AnandkumarTan-Gaussian11.pdf"><img src="images/Thumbnail/pdf_icon_red.png" width="25" height="30"></a>
+                        &nbsp;<a  target="_blank" href="http://newport.eecs.uci.edu/anandkumar/pubs/GaussianStructLearning-code.zip" style="text-decoration:none">[Code and datasets]</a>
+&nbsp;<a  target="_blank" href="http://newport.eecs.uci.edu/anandkumar/pubs/AnandkumarTan11-shortver.pdf" style="text-decoration:none">[Short(NIPS)-Version]</a>
+&nbsp;<a  target="_blank" href="http://videolectures.net/nips2011_anandkumar_conditions/" style="text-decoration:none">[Videolecture]</a>
+&nbsp;<a  target="_blank" href="http://newport.eecs.uci.edu/anandkumar/pubs/AnandkumarNIPS11-slides.pdf" style="text-decoration:none">[NIPS-Slides]</a>
+
+                    </div>
+                </li>
+        
+        <li class = "publication"><div><b>"Feedback Message Passing for Inference in Gaussian Graphical Models"</b><br/><i>By Y. Liu, V. Chandrasekaran, A. Anandkumar, and A. Willsky. IEEE Tran. on Signal Processing, 60(8):4135–4150, Aug. 2012.</i> 
+                    <a  target="_blank" href="http://newport.eecs.uci.edu/anandkumar/pubs/Liu_etal_SP-abstract.html" style="text-decoration:none">[Details]</a></div> 
+                    <div class = "download"><span class="smallText">Download:</span> &nbsp;
+                    <a  target="_blank" href="http://newport.eecs.uci.edu/anandkumar/pubs/Liu_etal_SP.pdf"><img src="images/Thumbnail/pdf_icon_red.png" width="25" height="30"></a>
+                    </div>
+                </li>
+        
+        
+        <li class = "publication"><div><b>"Robust Rate Maximization Game Under Bounded Channel Uncertainty"</b><br/><i>By AJG. Anandkumar, A. Anandkumar, S. Lambotharan, J.A. Chambers. Vehicular Technology, IEEE Transactions on, volume 60, issue 9, pp. 4471 - 4486, Nov. 2011. </i> 
+                    <a  target="_blank" href="http://newport.eecs.uci.edu/anandkumar/pubs/AnandkumarTVT-abstract.html" style="text-decoration:none">[Details]</a></div> 
+                    <div class = "download"><span class="smallText">Download:</span> &nbsp;
+                    <a  target="_blank" href="http://newport.eecs.uci.edu/anandkumar/pubs/AnandkumarTVT.pdf"><img src="images/Thumbnail/pdf_icon_red.png" width="25" height="30"></a>
+                    </div>
+                </li>
+        
+        <li class = "publication"><div><b>"Learning Latent Tree Graphical Models"</b><br/><i>By M.J. Choi, V. Tan, A. Anandkumar, and A. Willsky. Journal of Machine Learning Research, volume 12, pp. 1771−1812, May 2011. </i> 
+                    <a  target="_blank" href="http://newport.eecs.uci.edu/anandkumar/pubs/ChoiJMLR10-abstract.html" style="text-decoration:none">[Details]</a></div> 
+                    <div class = "download"><span class="smallText">Download:</span> &nbsp;
+                    <a  target="_blank" href="http://newport.eecs.uci.edu/anandkumar/pubs/ChoiJMLR10.pdf"><img src="images/Thumbnail/pdf_icon_red.png" width="25" height="30"></a>
+                        &nbsp;<a  target="_blank" href="http://people.csail.mit.edu/myungjin/latentTree.html" style="text-decoration:none">[Project webpage]</a>
+&nbsp;<a  target="_blank" href="http://newport.eecs.uci.edu/anandkumar/pubs/latentTree.tar" style="text-decoration:none">[Code]</a>
+&nbsp;<a  target="_blank" href="http://newport.eecs.uci.edu/anandkumar/pubs/ChoiAllerton10.pdf" style="text-decoration:none">[Allerton version]</a>
+&nbsp;<a  target="_blank" href="http://newport.eecs.uci.edu/anandkumar/pubs/ChoiAllerton10-slides.pdf" style="text-decoration:none">[Slides]</a>
+&nbsp;<a  target="_blank" href="http://newport.eecs.uci.edu/anandkumar/pubs/AnandkumarUIUC10.pdf" style="text-decoration:none">[Seminar slides]</a>
+
+                    </div>
+                </li>
+        
+        
+        <li class = "publication"><div><b>"Learning High-Dimensional Markov Forest Distributions: Analysis of Error Rates"</b><br/><i>By V. Tan, A. Anandkumar, and A. Willsky. Journal of Machine Learning Research, volume 12, pp. 1617-1653, May 2011.</i> 
+                    <a  target="_blank" href="http://newport.eecs.uci.edu/anandkumar/pubs/TanJMLR10-abstract.html" style="text-decoration:none">[Details]</a></div> 
+                    <div class = "download"><span class="smallText">Download:</span> &nbsp;
+                    <a  target="_blank" href="http://newport.eecs.uci.edu/anandkumar/pubs/TanJMLR10.pdf"><img src="images/Thumbnail/pdf_icon_red.png" width="25" height="30"></a>
+                        &nbsp;<a  target="_blank" href="http://newport.eecs.uci.edu/anandkumar/pubs/TanAllerton10.PDF" style="text-decoration:none">[Allerton-Version]</a>
+&nbsp;<a  target="_blank" href="http://newport.eecs.uci.edu/anandkumar/pubs/TanAllerton10-slides.pdf" style="text-decoration:none">[Slides]</a>
+
+                    </div>
+                </li>
+        
+        
+        <li class = "publication"><div><b>"Distributed Algorithms for Learning and Cognitive Medium Access with Logarithmic Regret"</b><br/><i>By A. Anandkumar, N. Michael, A.K. Tang, and A. Swami. IEEE JSAC on Advances in Cognitive Radio Networking and Communications,  Apr. 2011, volume 29, no. 4, pp. 781-745. Featured in the Best Readings on Cognitive Radio by IEEE Comsoc society.</i> 
+                    <a  target="_blank" href="http://newport.eecs.uci.edu/anandkumar/pubs/AnandkumarEtal_JSAC10-abstract.html" style="text-decoration:none">[Details]</a></div> 
+                    <div class = "download"><span class="smallText">Download:</span> &nbsp;
+                    <a  target="_blank" href="http://newport.eecs.uci.edu/anandkumar/pubs/AnandkumarJSAC10.pdf"><img src="images/Thumbnail/pdf_icon_red.png" width="25" height="30"></a>
+                    </div>
+                </li>
+        
+        <li class = "publication"><div><b>"Learning Gaussian Tree Models: Analysis of Error Exponents and Extremal Structures"</b><br/><i>By V. Tan, A. Anandkumar, and A. Willsky. IEEE Tran. on Signal Processing, vol. 58, no. 5, May 2010, pp. 2701-2714.</i> 
+                    <a  target="_blank" href="http://newport.eecs.uci.edu/anandkumar/pubs/TanSP09-abstract.html" style="text-decoration:none">[Details]</a></div> 
+                    <div class = "download"><span class="smallText">Download:</span> &nbsp;
+                    <a  target="_blank" href="http://newport.eecs.uci.edu/anandkumar/pubs/TanSP09.pdf"><img src="images/Thumbnail/pdf_icon_red.png" width="25" height="30"></a>
+                        &nbsp;<a  target="_blank" href="http://newport.eecs.uci.edu/anandkumar/pubs/TanAllerton09-slides.pdf" style="text-decoration:none">[Slides]</a>
+&nbsp;<a  target="_blank" href="http://newport.eecs.uci.edu/anandkumar/pubs/LearningGaussianTreeModels.zip" style="text-decoration:none">[Code]</a>
+&nbsp;<a  target="_blank" href="http://web.mit.edu/newsoffice/2010/sizing-samples-0825.html" style="text-decoration:none">[MIT News]</a>
+&nbsp;<a  target="_blank" href="http://technews.acm.org/archives.cfm?fo=2010-09-sep/sep-01-2010.html" style="text-decoration:none">[ACM Technews]</a>
+&nbsp;<a  target="_blank" href="http://www.kdnuggets.com/2010/09/f-most-viewed-week-Sep-05.html?c2b" style="text-decoration:none">[KDnuggets]</a>
+
+                    </div>
+                </li>
+        
+        
+        <li class = "publication"><div><b>"Seeing Through Black Boxes : Tracking Transactions through Queues under Monitoring Resource Constraints"</b><br/><i>By A. Anandkumar, T. He, C. Bisdikian, and D. Agrawal. Accepted to Elsevier Performance Evaluation, Feb. 2010. </i> 
+                    <a  target="_blank" href="http://newport.eecs.uci.edu/anandkumar/pubs/AnandkumarPE10-abstract.html" style="text-decoration:none">[Details]</a></div> 
+                    <div class = "download"><span class="smallText">Download:</span> &nbsp;<a  target="_blank" href="http://newport.eecs.uci.edu/anandkumar/pubs/AnandkumarPE10.pdf" style="text-decoration:none">[Paper]</a>
+
+                    </div>
+                </li>
+        
+        
+        <li class = "publication"><div><b>"A Large-Deviation Analysis of the Maximum-Likelihood Learning of Markov Tree Structures"</b><br/><i>By V.Y.F. Tan, A. Anandkumar, L. Tong, and A.S. Willsky. IEEE Tran. on Information Theory, Vol. 57, No. 3, March. 2011, pp. 1714-1735.</i> 
+                    <a  target="_blank" href="http://newport.eecs.uci.edu/anandkumar/pubs/TATW_IT09-abstract.html" style="text-decoration:none">[Details]</a></div> 
+                    <div class = "download"><span class="smallText">Download:</span> 
+                   &nbsp;<a  target="_blank" href="http://newport.eecs.uci.edu/anandkumar/pubs/TATW_IT09.pdf" style="text-decoration:none">[Paper]</a>
+&nbsp;<a  target="_blank" href="http://lids.mit.edu/research/project-highlights/large-deviation-analysis.html" style="text-decoration:none">[Project highlights]</a>
+
+                    </div>
+                </li>
+        
+        <li class = "publication"><div><b>"Energy Scaling Laws for Distributed Inference in Random Fusion Networks"</b><br/><i>By A. Anandkumar, J.E.Yukich, L. Tong, and A. Swami. IEEE J. Selec. Area Comm., vol. 27, no. 7, pp.1203-1217, Sept. 2009.</i> 
+                    <a  target="_blank" href="http://newport.eecs.uci.edu/anandkumar/pubs/AnandkumarEtal09JSAC-abstract.html" style="text-decoration:none">[Details]</a></div> 
+                    <div class = "download"><span class="smallText">Download:</span> &nbsp;
+                    &nbsp;<a  target="_blank" href="http://newport.eecs.uci.edu/anandkumar/pubs/AnandkumarEtal09JSAC.pdf" style="text-decoration:none">[Paper]</a>
+
+                    </div>
+                </li>
+        
+        <li class = "publication"><div><b>"Detection of Gauss-Markov random fields with nearest-neighbor dependency"</b><br/><i>By A. Anandkumar, L. Tong, and A. Swami. IEEE Trans. Information Theory, vol. 55, no. 2, Feb. 2009. 
+ </i> 
+                    <a  target="_blank" href="http://newport.eecs.uci.edu/anandkumar/pubs/Anandkumar09IT-abstract.html" style="text-decoration:none">[Details]</a></div> 
+                    <div class = "download"><span class="smallText">Download:</span> &nbsp;<a  target="_blank" href="http://newport.eecs.uci.edu/anandkumar/pubs/Anandkumar09IT.pdf" style="text-decoration:none">[Paper]</a>
+
+                    </div>
+                </li>
+        
+        <li class = "publication"><div><b>"Optimal Node Density for Detection in Energy Constrained Random Networks"</b><br/><i>By A. Anandkumar, L. Tong, and A. Swami. IEEE Trans. Signal Proc., vol. 56, no. 10, Oct. 2008.</i> 
+                    <a  target="_blank" href="http://newport.eecs.uci.edu/anandkumar/pubs/Anandkumar08SP-abstract.html" style="text-decoration:none">[Details]</a></div> 
+                    <div class = "download"><span class="smallText">Download:</span>&nbsp;<a  target="_blank" href="http://newport.eecs.uci.edu/anandkumar/pubs/Anandkumar08SP.pdf" style="text-decoration:none">[Paper]</a>
+
+                    </div>
+                </li>
+        
+        <li class = "publication"><div><b>"Distributed Estimation Via Random Access"</b><br/><i>By A. Anandkumar, L. Tong, and A. Swami. Information Theory, IEEE Transactions on, vol. 54, no. 7, July 2008, pp. 3175-3181.</i> 
+                    <a  target="_blank" href="http://newport.eecs.uci.edu/anandkumar/pubs/Anandkumar08IT-abstract.html" style="text-decoration:none">[Details]</a></div> 
+                    <div class = "download"><span class="smallText">Download:</span>&nbsp;<a  target="_blank" href="http://newport.eecs.uci.edu/anandkumar/pubs/Anandkumar08IT.pdf" style="text-decoration:none">[Paper]</a>
+
+                    </div>
+                </li>
+        
+        <li class = "publication"><div><b>"Type-Based Random Access for Distributed Detection over Multiaccess Fading Channels"</b><br/><i>By A. Anandkumar and L. Tong. IEEE Trans. Signal Proc., vol. 55, no. 10, Oct. 2007, pp. 5032-5043. (2008 IEEE Signal Proc. Society Young Author Best Paper Award). </i> 
+                    <a  target="_blank" href="http://newport.eecs.uci.edu/anandkumar/pubs/AnandkumarTong07SP-abstract.html" style="text-decoration:none">[Details]</a></div> 
+                    <div class = "download"><span class="smallText">Download:</span>&nbsp;<a  target="_blank" href="http://newport.eecs.uci.edu/anandkumar/pubs/AnandkumarTong07SP.pdf" style="text-decoration:none">[Paper]</a>
+
+                    </div>
+                </li>
+    </ul>
+</div>
+    
+    <!-- Conferences - Long papers -->
+     <p class="heading">Conferences Papers (Long)<span class = "expand"><img src = "images/Thumbnail/arrow_down.png" width="32px" height = "32px"</span></p>
+<div class="content">
+    
+    <ul>
+                <!-- ###### Format to add new element ######## -->
+        <!--
+            For new: (With new icon)
+
+            <li class = "publication"><div><img src="images/Thumbnail/NewSign2.png" width="30" height="25" margin-top="10"/>&nbsp; <b>"*Title*"</b><br/><i>By *Authors*</i></div> <div class = "download"><span class="smallText">Download:</span> &nbsp;<a target="_blank" href="URL"><img src="images/Thumbnail/pdf_icon_red.png" width="25" height="30"></a>&nbsp;</div></li>
+
+            For old: (Without new icon)
+            <li class = "publication"><div><b>"*Title*"</b><br/><i>By *Authors*</i></div> <div class = "download"><span class="smallText">Download:</span> &nbsp;<a target="_blank" href="URL"><img src="images/Thumbnail/pdf_icon_red.png" width="25" height="30"></a>&nbsp;</div></li>
+
+            -->
+
+        <li class = "publication"><div><b>"A Method of Moments for Mixture Models and Hidden Markov Models."</b><br/><i>By A. Anandkumar, D. Hsu, and S.M. Kakade. Proc. of COLT, June 2012.</i> </div> 
+                    <div class = "download"><span class="smallText">Download:</span> &nbsp;
+                    <a  target="_blank" href="http://newport.eecs.uci.edu/anandkumar/pubs/AnandkumarEtal_mixtures12.pdf"><img src="images/Thumbnail/pdf_icon_red.png" width="25" height="30"></a>&nbsp;<a  target="_blank" href="http://newport.eecs.uci.edu/anandkumar/pubs/AnandkumarEtalCOLT12.pdf" style="text-decoration:none">[COLT-Version]</a>
+
+                    </div>
+                </li>
+        
+        
+        <li class = "publication"><div><b>"Topology Discovery of Sparse Random Graphs With Few Participants"</b><br/><i>By A. Anandkumar, A. Hassidim, and J. Kelner. Proc. of ACM SIGMETRICS, (San Jose, USA), June 2011. Best Paper Award
+Extended version accepted to J. on Random Structures and Algorithms, Dec. 2011.</i> 
+                    <a  target="_blank" href="http://newport.eecs.uci.edu/anandkumar/pubs/AnandkumarSigmetrics11-abstract.html" style="text-decoration:none">[Details]</a></div> 
+                    <div class = "download"><span class="smallText">Download:</span> &nbsp;
+                    <a  target="_blank" href="http://newport.eecs.uci.edu/anandkumar/pubs/AnandkumarHassidimKelner_Sigmetrics11.pdf"><img src="images/Thumbnail/pdf_icon_red.png" width="25" height="30"></a>
+                        &nbsp;<a  target="_blank" href="http://newport.eecs.uci.edu/anandkumar/pubs/AnandkumarHassidimKelner_Discovery.pdf" style="text-decoration:none">[Full version]</a>
+&nbsp;<a  target="_blank" href="http://newport.eecs.uci.edu/anandkumar/pubs/AnandkumarITA11.pdf" style="text-decoration:none">[Talk]</a>
+
+                    </div>
+                </li>
+        
+        <li class = "publication"><div><b>"Fast, Concurrent and Distributed Load Balancing under Switching Costs and Imperfect Observations"</b><br/><i>By F. Huang and A. Anandkumar. Proc. of IEEE INFOCOM, Apr. 2013. </i> </div> 
+                    <div class = "download"><span class="smallText">Download:</span> &nbsp;
+                    <a  target="_blank" href="http://newport.eecs.uci.edu/anandkumar/pubs/HuangAnandkumar11.pdf"><img src="images/Thumbnail/pdf_icon_red.png" width="25" height="30"></a>
+                    </div>
+                </li>
+        
+        <li class = "publication"><div><b>"Energy-Latency Tradeoff for In-Network Function Computation in Random Networks"</b><br/><i>By P. Balister, B. Bollobas, A. Anandkumar, and A.S. Willsky. Proc. of IEEE INFOCOM, (Shanghai, China), Apr. 2011.</i> 
+                    <a  target="_blank" href="http://newport.eecs.uci.edu/anandkumar/pubs/latency_energy_Infocom11-abstract.html" style="text-decoration:none">[Details]</a></div> 
+                    <div class = "download"><span class="smallText">Download:</span> &nbsp;
+                    <a  target="_blank" href="http://newport.eecs.uci.edu/anandkumar/pubs/latency_energy_Infocom11.pdf"><img src="images/Thumbnail/pdf_icon_red.png" width="25" height="30"></a>&nbsp;<a  target="_blank" href="http://newport.eecs.uci.edu/anandkumar/pubs/latency_energy_Arxiv.pdf" style="text-decoration:none">[Long Version]</a>
+&nbsp;<a  target="_blank" href="http://newport.eecs.uci.edu/anandkumar/pubs/AnandkumarInfocom11-slides.pdf" style="text-decoration:none">[Slides]</a>
+
+                    </div>
+                </li>
+        
+        <li class = "publication"><div><b>"Index-Based Sampling Policies for Tracking Dynamic Networks under Sampling Constraints"</b><br/><i>By T. He, A. Anandkumar, and D. Agrawal.  Proc. of IEEE INFOCOM, (Shanghai, China), Apr. 2011.</i> 
+                    <a  target="_blank" href="http://newport.eecs.uci.edu/anandkumar/pubs/HeEtalInfocom11-abstract.html" style="text-decoration:none">[Details]</a></div> 
+                    <div class = "download"><span class="smallText">Download:</span> &nbsp;
+                    <a  target="_blank" href="http://newport.eecs.uci.edu/anandkumar/pubs/HeEtalInfocom11.pdf"><img src="images/Thumbnail/pdf_icon_red.png" width="25" height="30"></a>&nbsp;<a  target="_blank" href="http://newport.eecs.uci.edu/anandkumar/pubs/HeEtalInfocom11-supp.pdf" style="text-decoration:none">[Supplementary material]</a>
+
+                    </div>
+                </li>
+        
+        <li class = "publication"><div><b>"Opportunistic Spectrum Access with Multiple Users: Learning under Competition"</b><br/><i>By A. Anandkumar, N. Michael, and A.K. Tang. Proc. of IEEE INFOCOM, (San Deigo, USA), Mar. 2010. (AR 17%) </i> 
+                    <a  target="_blank" href="http://newport.eecs.uci.edu/anandkumar/pubs/AnandkumarEtal_INFOCOM10sub-abstract.html" style="text-decoration:none">[Details]</a></div> 
+                    <div class = "download"><span class="smallText">Download:</span> &nbsp;<a  target="_blank" href="http://newport.eecs.uci.edu/anandkumar/pubs/AnandkumarInfocom10.pdf" style="text-decoration:none">[Paper]</a>
+&nbsp;<a  target="_blank" href="http://newport.eecs.uci.edu/anandkumar/pubs/AnandkumarInfocom10-slides.pdf" style="text-decoration:none">[Slides]</a>
+
+                    </div>
+                </li>
+        
+        
+        <li class = "publication"><div><b>"Prize-Collecting Data Fusion for Cost-Performance Tradeoff in Distributed Inference"</b><br/><i>By  A. Anandkumar, M. Wang, L. Tong, and A. Swami. In Proc. of IEEE INFOCOM, (Rio De Janeiro, Brazil), Apr. 2009. (AR 20%)</i> 
+                    <a  target="_blank" href="http://newport.eecs.uci.edu/anandkumar/pubs/AnandkumarInfocom09-abstract.html" style="text-decoration:none">[Details]</a></div> 
+                    <div class = "download"><span class="smallText">Download:</span> &nbsp;
+                    <a  target="_blank" href="http://newport.eecs.uci.edu/anandkumar/pubs/AnandkumarInfocom09.pdf"><img src="images/Thumbnail/pdf_icon_red.png" width="25" height="30"></a>&nbsp;<a  target="_blank" href="http://newport.eecs.uci.edu/anandkumar/pubs/Anandkumar09TR.pdf" style="text-decoration:none">[Tech report]</a>
+
+                    </div>
+                </li>
+        
+        <li class = "publication"><div><b>"Tracking in a Spaghetti Bowl: Monitoring Transactions Using Footprints"</b><br/><i>By A. Anandkumar, C. Bisdikian, and D. Agrawal. In Proc. ACM Intl. Conf. on Measurement & Modeling of Computer Systems (Sigmetrics), (Annapolis, Maryland, USA ), June 2008. (AR 18%)</i> 
+                    <a  target="_blank" href="http://newport.eecs.uci.edu/anandkumar/pubs/Anandkumar08Sigmetrics-abstract.html" style="text-decoration:none">[Details]</a></div> 
+                    <div class = "download"><span class="smallText">Download:</span>&nbsp;<a  target="_blank" href="http://newport.eecs.uci.edu/anandkumar/pubs/Anandkumar08Sigmetrics.pdf" style="text-decoration:none">[Paper]</a>
+
+                    </div>
+                </li>
+        
+        <li class = "publication"><div><b>"Minimum Cost Data Aggregation with Localized Processing for Statistical Inference"</b><br/><i>By A. Anandkumar, L. Tong, A. Swami, and A. Ephremides. In Proc. of IEEE INFOCOM, (Phoenix, USA), Apr. 2008, pp. 780-788. (AR 20%)</i> 
+                    <a  target="_blank" href="http://newport.eecs.uci.edu/anandkumar/pubs/Anandkumar08INFOCOM-abstract.html" style="text-decoration:none">[Details]</a></div> 
+                    <div class = "download"><span class="smallText">Download:</span> &nbsp;<a  target="_blank" href="http://newport.eecs.uci.edu/anandkumar/pubs/Anandkumar08INFOCOM.pdf" style="text-decoration:none">[Paper]</a>
+
+                    </div>
+                </li>
+    </ul>
+    
+</div>
+
+     
+     <!-- Conferences - Short papers -->
+     <p class="heading">Conferences Papers (Short)<span class = "expand"><img src = "images/Thumbnail/arrow_down.png" width="32px" height = "32px"</span></p>
+<div class="content">
+    
+    <ul>
+                <!-- ###### Format to add new element ######## -->
+        <!--
+            For new: (With new icon)
+
+            <li class = "publication"><div><img src="images/Thumbnail/NewSign2.png" width="30" height="25" margin-top="10"/>&nbsp; <b>"*Title*"</b><br/><i>By *Authors*</i></div> <div class = "download"><span class="smallText">Download:</span> &nbsp;<a target="_blank" href="URL"><img src="images/Thumbnail/pdf_icon_red.png" width="25" height="30"></a>&nbsp;</div></li>
+
+            For old: (Without new icon)
+            <li class = "publication"><div><b>"*Title*"</b><br/><i>By *Authors*</i></div> <div class = "download"><span class="smallText">Download:</span> &nbsp;<a target="_blank" href="URL"><img src="images/Thumbnail/pdf_icon_red.png" width="25" height="30"></a>&nbsp;</div></li>
+
+            -->
+
+        <li class = "publication"><div><b>"High-Dimensional Graphical Model Selection: Tractable Graph Families and Necessary Conditions"</b><br/><i>By A. Anandkumar, V. Y. F. Tan and A. S. Willsky. In Proc. of NIPS, (Granada, Spain), Dec. 2011.
+Selected for full oral presentation (20 papers out of 1400 submissions).</i> 
+                   </div> 
+                    <div class = "download"><span class="smallText">Download:</span> &nbsp;
+                    <a  target="_blank" href="http://newport.eecs.uci.edu/anandkumar/pubs/AnandkumarTan11-shortver.pdf"><img src="images/Thumbnail/pdf_icon_red.png" width="25" height="30"></a>
+                    </div>
+                </li>
+        
+        <li class = "publication"><div><b>"Spectral Methods for Learning Multivariate Latent Tree Structure"</b><br/><i>By A. Anandkumar, K. Chaudhuri, D. Hsu, S.M. Kakade, L. Song and T. Zhang. In Proc. of NIPS, (Granada, Spain), Dec. 2011.
+Selected for poster presentation (305 papers out of 1400 submissions).</i> 
+                   </div> 
+                    <div class = "download"><span class="smallText">Download:</span> &nbsp;
+                    <a  target="_blank" href="http://newport.eecs.uci.edu/anandkumar/pubs/1107.1283v1.pdf"><img src="images/Thumbnail/pdf_icon_red.png" width="25" height="30"></a>
+                    </div>
+                </li>
+        
+        <li class = "publication"><div><b>"Summary Based Structures with Improved Sublinear Recovery for Compressed Sensing"</b><br/><i>By M. A. Khajehnejad, J. Yoo, A. Anandkumar and B. Hassibi. In Proc. of IEEE ISIT, (St. Petersburg, Russia), July 2011.</i> 
+                  </div> 
+                    <div class = "download"><span class="smallText">Download:</span> &nbsp;
+                    <a  target="_blank" href="http://newport.eecs.uci.edu/anandkumar/pubs/Khajehnejad11ISIT.pdf"><img src="images/Thumbnail/pdf_icon_red.png" width="25" height="30"></a>
+                    </div>
+                </li>
+        
+        <li class = "publication"><div><b>"Scaling Laws for Random Spatial Graphical Models"</b><br/><i>By A. Anandkumar, J.E. Yukich, and A. Willsky. In Proc. of IEEE ISIT, (Austin, USA), June 2010.</i> 
+                    <a  target="_blank" href="http://newport.eecs.uci.edu/anandkumar/pubs/AnandkumarISIT10-abstract.html" style="text-decoration:none">[Details]</a></div> 
+                    <div class = "download"><span class="smallText">Download:</span> &nbsp;
+                    <a  target="_blank" href="http://newport.eecs.uci.edu/anandkumar/pubs/AnandkumarISIT10.pdf"><img src="images/Thumbnail/pdf_icon_red.png" width="25" height="30"></a>&nbsp;<a  target="_blank" href="http://newport.eecs.uci.edu/anandkumar/pubs/AnandkumarISIT10-slides.pdf" style="text-decoration:none">[Slides]</a>
+
+                    </div>
+                </li>
+        
+        <li class = "publication"><div><b>"Feedback Message Passing for Inference in Gaussian Graphical Models"</b><br/><i>By Y. Liu, V. Chandrasekaran, A. Anandkumar, and A. Willsky. In Proc. of IEEE ISIT, (Austin, USA), June 2010.</i> 
+                    <a  target="_blank" href="http://newport.eecs.uci.edu/anandkumar/pubs/Liu_etal_ISIT10-abstract.html" style="text-decoration:none">[Details]</a></div> 
+                    <div class = "download"><span class="smallText">Download:</span> &nbsp;
+                    <a  target="_blank" href="http://newport.eecs.uci.edu/anandkumar/pubs/Liu_etal_ISIT10.pdf"><img src="images/Thumbnail/pdf_icon_red.png" width="25" height="30"></a>&nbsp;<a  target="_blank" href="http://newport.eecs.uci.edu/anandkumar/pubs/Liu_etal_ISIT10-slides.pdf" style="text-decoration:none">[Slides]</a>
+
+                    </div>
+                </li>
+        
+        <li class = "publication"><div><b>"Error Exponents for Composite Hypothesis Testing of Markov Forest Distributions"</b><br/><i>By V. Tan, A. Anandkumar, and A. Willsky. In Proc. of IEEE ISIT, (Austin, USA), June 2010.</i> 
+                    <a  target="_blank" href="http://newport.eecs.uci.edu/anandkumar/pubs/TanISIT10-abstract.html" style="text-decoration:none">[Details]</a></div> 
+                    <div class = "download"><span class="smallText">Download:</span> &nbsp;
+                    <a  target="_blank" href="http://newport.eecs.uci.edu/anandkumar/pubs/TanISIT10.pdf"><img src="images/Thumbnail/pdf_icon_red.png" width="25" height="30"></a>&nbsp;<a  target="_blank" href="http://newport.eecs.uci.edu/anandkumar/pubs/TanISIT10-slides.pdf" style="text-decoration:none">[Slides]</a>
+&nbsp;<a  target="_blank" href="http://newport.eecs.uci.edu/anandkumar/pubs/TanISIT10-proofs.pdf" style="text-decoration:none">[Proofs]</a>
+
+                    </div>
+                </li>
+        
+        <li class = "publication"><div><b>"Robust Rate Maximization Game Under Bounded Channel Uncertainty"</b><br/><i>By A.JG. Anandkumar, A. Anandkumar, S. Lambotharan, and J. Chambers. In Proc. of IEEE ICASSP, (Dallas, USA), Mar. 2010.</i> 
+                    <a  target="_blank" href="http://newport.eecs.uci.edu/anandkumar/pubs/Anandkumar_ICASSP10-abstract.html" style="text-decoration:none">[Details]</a></div> 
+                    <div class = "download"><span class="smallText">Download:</span> &nbsp;
+                    <a  target="_blank" href="http://newport.eecs.uci.edu/anandkumar/pubs/Anandkumar_ICASSP10.pdf"><img src="images/Thumbnail/pdf_icon_red.png" width="25" height="30"></a>
+                    </div>
+                </li>
+        
+        <li class = "publication"><div><b>"Selectively Retrofitting Monitoring in Distributed Systems"</b><br/><i>By A. Anandkumar, C. Bisdikian, T. He, and D. Agrawal. In Proc. of the Eleventh Workshop on Mathematical Performance Modeling and Analysis (MAMA). (Seattle, USA). June 2009.</i> 
+                    <a  target="_blank" href="http://newport.eecs.uci.edu/anandkumar/pubs/AnandkumarMAMA09-abstract.html" style="text-decoration:none">[Details]</a></div> 
+                    <div class = "download"><span class="smallText">Download:</span> &nbsp;
+                    <a  target="_blank" href="http://newport.eecs.uci.edu/anandkumar/pubs/AnandkumarMAMA09.pdf"><img src="images/Thumbnail/pdf_icon_red.png" width="25" height="30"></a>
+                    </div>
+                </li>
+        
+        <li class = "publication"><div><b>"Detection Error Exponent for Spatially Dependent Samples in Random Networks"</b><br/><i>By A. Anandkumar, J.E. Yukich, L. Tong, and A. Willsky. In Proc. of IEEE ISIT, (Seoul, S. Korea), July 2009.</i> 
+                    <a  target="_blank" href="http://newport.eecs.uci.edu/anandkumar/pubs/AnandkumarISIT09-abstract.html" style="text-decoration:none">[Details]</a></div> 
+                    <div class = "download"><span class="smallText">Download:</span> &nbsp;
+                    <a  target="_blank" href="http://newport.eecs.uci.edu/anandkumar/pubs/AnandkumarISIT09.pdf"><img src="images/Thumbnail/pdf_icon_red.png" width="25" height="30"></a>
+                    </div>
+                </li>
+        
+        
+        <li class = "publication"><div><b>"A Large Deviation Analysis of Detection over Multi-Access Channels with Random Number of Sensors"</b><br/><i>By A. Anandkumar and L. Tong. In Proc. of ICASSP'06, (Toulouse, France), May 2006, pp. 1097-1101. (Best Paper Award). </i> 
+                    <a  target="_blank" href="http://newport.eecs.uci.edu/anandkumar/pubs/AnandkumarTong06ICASSP-abstract.html" style="text-decoration:none">[Details]</a></div> 
+                    <div class = "download"><span class="smallText">Download:</span>&nbsp;<a  target="_blank" href="http://newport.eecs.uci.edu/anandkumar/pubs/AnandkumarTong06ICASSP.pdf" style="text-decoration:none">[Paper]</a>
+
+                    </div>
+                </li>
+    </ul>
+</div>
+     
+          <!-- Selected: Distributed inference in sensor networks -->
+     <p class="heading">Publications during graduate school<span class = "expand"><img src = "images/Thumbnail/arrow_down.png" width="32px" height = "32px"</span></p>
+<div class="content">
+      <ul>
+                <!-- ###### Format to add new element ######## -->
+        <!--
+            For new: (With new icon)
+
+            <li class = "publication"><div><img src="images/Thumbnail/NewSign2.png" width="30" height="25" margin-top="10"/>&nbsp; <b>"*Title*"</b><br/><i>By *Authors*</i></div> <div class = "download"><span class="smallText">Download:</span> &nbsp;<a target="_blank" href="URL"><img src="images/Thumbnail/pdf_icon_red.png" width="25" height="30"></a>&nbsp;</div></li>
+
+            For old: (Without new icon)
+            <li class = "publication"><div><b>"*Title*"</b><br/><i>By *Authors*</i></div> <div class = "download"><span class="smallText">Download:</span> &nbsp;<a target="_blank" href="URL"><img src="images/Thumbnail/pdf_icon_red.png" width="25" height="30"></a>&nbsp;</div></li>
+
+            -->
+
+        <li class = "publication"><div><b>"Distributed Algorithms for Learning and Cognitive Medium Access with Logarithmic Regret"</b><br/><i>By A. Anandkumar, N. Michael, A.K. Tang, and A. Swami.
+            IEEE JSAC on Advances in Cognitive Radio Networking and Communications,  Apr. 2011, volume 29, no. 4, pp. 781-745. Featured in the Best Readings on Cognitive Radio by IEEE Comsoc society. <a  target = "_blank" href="http://www.comsoc.org/BestReadings/topic/Cognitive-Radio" style="text-decoration:none">[Link]</a> </i> <a  target="_blank" href="http://newport.eecs.uci.edu/anandkumar/pubs/AnandkumarEtal_JSAC10-abstract.html" style="text-decoration:none">[Details]</a></div> <div class = "download"><span class="smallText">Download:</span> &nbsp;<a  target="_blank" href="http://newport.eecs.uci.edu/anandkumar/pubs/AnandkumarJSAC10.pdf"><img src="images/Thumbnail/pdf_icon_red.png" width="25" height="30"></a></div>
+            </li>
+          
+          <li class = "publication"><div><b>"Energy Scaling Laws for Distributed Inference in Random Fusion Networks"</b><br/><i>By A. Anandkumar, J.E.Yukich, L. Tong, and A. Swami. IEEE J. Selec. Area Comm., vol. 27, no. 7, pp.1203-1217, Sept. 2009.</i> <a  target="_blank" href="http://newport.eecs.uci.edu/anandkumar/pubs/AnandkumarEtal09JSAC-abstract.html" style="text-decoration:none">[Details]</a></div> <div class = "download"><span class="smallText">Download:</span> &nbsp;<a  target="_blank" href="http://newport.eecs.uci.edu/anandkumar/pubs/AnandkumarEtal09JSAC.pdf">[Paper]</a></div>
+            </li>
+          
+           <li class = "publication"><div><b>"Detection of Gauss-Markov random fields with nearest-neighbor dependency"</b><br/><i>By A. Anandkumar, L. Tong, and A. Swami. IEEE Trans. Information Theory, vol. 55, no. 2, Feb. 2009.</i> <a  target="_blank" href="http://newport.eecs.uci.edu/anandkumar/pubs/Anandkumar09IT-abstract.html" style="text-decoration:none">[Details]</a></div> <div class = "download"><span class="smallText">Download:</span> &nbsp;<a  target="_blank" href="http://newport.eecs.uci.edu/anandkumar/pubs/Anandkumar09IT.pdf">[Paper]</a></div>
+            </li>
+          
+           <li class = "publication"><div><b>"Type-Based Random Access for Distributed Detection over Multiaccess Fading Channels"</b><br/><i>By A. Anandkumar and L. Tong. IEEE Trans. Signal Proc., vol. 55, no. 10, Oct. 2007, pp. 5032-5043. (2008 IEEE Signal Proc. Society Young Author Best Paper Award). </i> <a  target="_blank" href="http://newport.eecs.uci.edu/anandkumar/pubs/AnandkumarTong07SP-abstract.html" style="text-decoration:none">[Details]</a></div> <div class = "download"><span class="smallText">Download:</span> &nbsp;<a  target="_blank" href="http://newport.eecs.uci.edu/anandkumar/pubs/AnandkumarTong07SP.pdf">[Paper]</a></div>
+            </li>
+                  <li class = "publication"><div><b>"Scalable Algorithms for Distributed Statistical Inference"</b><br/><i>By A. Anandkumar.<br/>July, 2009.</i> 
+                    <a  target="_blank" href="http://newport.eecs.uci.edu/anandkumar/pubs/Anandkumar_thesis-abstract.htm" style="text-decoration:none">[Details]</a></div> 
+                    <div class = "download"><span class="smallText">Download:</span> &nbsp;<a  target="_blank" href="http://newport.eecs.uci.edu/anandkumar/pubs/Anandkumar_thesis.pdf" style="text-decoration:none">[Thesis]</a>
+&nbsp;<a  target="_blank" href="http://newport.eecs.uci.edu/anandkumar/pubs/Anandkumar_thesis-slides.pdf" style="text-decoration:none">[Slides]</a>
+
+                    </div>
+                </li>
+                  <li class = "publication"><div><b>"Routing for Statistical Inference in Sensor Networks"</b><br/><i>By A. Anandkumar, A. Ephremides, A. Swami, and L. Tong. <br/>In Handbook on Array Processing and Sensor Networks, (S. Haykin and R. Liu, eds.), 2009.</i> 
+                    <a  target="_blank" href="http://newport.eecs.uci.edu/anandkumar/pubs/Anandkumar_bookchapter-abstract.html" style="text-decoration:none">[Details]</a></div> 
+                    <div class = "download"><span class="smallText">Download:</span>&nbsp;<a  target="_blank" href="http://newport.eecs.uci.edu/anandkumar/pubs/Anandkumar_bookchapter.pdf" style="text-decoration:none">[Bookchapter]</a>
+
+                    </div>
+                </li>
+        <li class = "publication"><div><b>"Selective instrumentation for distributed applications for transaction monitoring"</b><br/><i>A. Anandkumar, D. Agrawal, C. Bisdikian, T. He, and S. Perelman, Filed, Aug. 2009.</i> 
+                    <a  target="_blank" href="http://appft.uspto.gov/netacgi/nph-Parser?Sect1=PTO2&Sect2=HITOFF&p=1&u=/netahtml/PTO/search-bool.html&r=1&f=G&l=50&co1=AND&d=PG01&s1=20100318648.PGNR.&OS=DN/20100318648&RS=DN/20100318648" style="text-decoration:none">[Link]</a></div> 
+                    <div class = "download">
+                    </div>
+                </li>
+
+
+    </ul>
+</div>
+
+     
+     
+</div>
+
+                
+                <!-- Copyright notice -->
+                <p id = "copyright"> <a  target="_blank" href="http://www.ieee.org/web/publications/rights/policies.html"><b>Copyright Notice</b></a> </p>
+                
+                
+                
+    </div>
+    
+
+    <!-- Graph code -->
+    <script type="text/javascript" src="https://www.draw.io/embed.js"></script>
+
+</body>
+</html>

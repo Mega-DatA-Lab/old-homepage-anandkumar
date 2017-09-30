@@ -1,0 +1,54 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Untitled Document</title>
+<style type="text/css">
+.class1 {	color: #093;
+}
+.class2 {	color: #00F;
+}
+</style>
+</head>
+
+<body style="background-color:#e6e6e6">
+<h1 align="center"><font color="#000080">MEGA DatA Lab</font></h1>
+<h2 align="center"><span class="class1"><span class="class"> Model Estimation, Graphical Algorithms, Data Analysis Lab</span></span></h2>
+<p align="center">EECS, University of California, Irvine, CA 92697.</p>
+<hr />
+<h3 align="left"><font color="#990099">Learning Overcomplete Latent Variable Models through Tensor Methods</font></h3>
+<p>Learning several latent variable models including multi-view mixtures, mixture of Gaussians, independent component analysis and so on can be done by the decomposition of a low-order moment tensor (e.g., 3rd order tensor) to its rank-1 components. Many earlier studies using tensor methods only consider undercomplete regime where the number of hidden components is smaller than the observed dimension. In these series of works, we show that the <em>tensor power iteration</em> (as the key element for tensor decomposition) works well even in the <em>overcomplete</em> regime where the hidden dimension is larger than the observed dimension. We establish that a wide range of overcomplete latent variable models can be learned efficiently with <em>low computational and sample complexity </em>through tensor power iteration.</p>
+<p>The analysis of learning overcomplete latent variable models is performed in a series of papers as follows. [1] analyze the algorithmic aspects where local and global convergence guarantees for tensor power iteration in the overcomplete regime is provided. [2] analyze the sample complexity guarantees for different latent variable models, and finally [3] provide a more precise analysis of the dynamics of third order tensor power iteration. A detailed description for each paper is also provided as follows.</p>
+<p align="left">&nbsp;</p>
+<p align="left"><strong><b>[1] </b>Guaranteed Non-Orthogonal Tensor Decomposition via Alternating Rank-1 Updates</strong><b>. </b>by  A. Anandkumar, R. Ge, M. Janzamin. <em>Preprint, Feb. 2014.</em><br />
+Download: <a href="../../pubs/AltTensorDecomp_Part1Algorithm.pdf">PDF</a>. <a href="../../pubs/AltTensorDecompCodes.zip">Code</a>.<em></em> <a href="../../pubs/Anandkumar-spect-workshop-ICML2014.pdf">Slides</a></p>
+<p align="left">In the first work of the series, we analyze tensor power iteration in the overcomplete regime where the tensor rank is larger than the tensor dimension. The asymmetric power iterations are equivalent to rank-1 ALS (Alternating Least Square) updates for the optimization problem of approximating original tensor by a rank-1 tensor. This problem is<em> non-convex</em>, and we provide both <em>local convergence</em> (given vectors constantly close to the true components) and <em>global convergence</em> (based on a rank-1 SVD initialization) guarantees. The guarantees also include tight <em>perturbation analysis</em> given noisy tensor.</p>
+<p align="left"><img src="Projects_sub/TenDecomp.png" width="348" height="133" alt="Tensor decomposition" /></p>
+<blockquote>
+  <blockquote>&nbsp;</blockquote>
+</blockquote>
+<p align="left"><strong><b>[2] </b><b>Sample Complexity Analysis for Learning Overcomplete Latent Variable Models through Tensor Methods</b></strong><b>. </b>by  A. Anandkumar, R. Ge, M. Janzamin. <em>Preprint, Aug. 
+    2014.</em><br />
+  Download: <a href="../../pubs/AltTensorDecomp_Part2LVMs.pdf">PDF</a>. <a href="../../pubs/Anandkumar-spect-workshop-ICML2014.pdf">Slides</a></p>
+<p align="left">As mentioned in the beginning, learning several latent variable models can be done by the decomposition of a low-order moment tensor to its rank-1 components. Following the analysis of overcomplete tensor decomposition in [1], we apply the tensor power iteration for learning some latent variable models including multi-view mixtures, mixture of Gaussians, independent component analysis and sparse coding. Note that we again emphasize on the overcomplete regime, where the dimensionality of the latent space can exceed the observed dimensionality. Our work can handle models with polynomial overcompleteness. The main technical analysis in this part is to argue <em>concentration bounds</em> for empirical moments through novel covering arguments which lead to optimal <em>sample complexity</em> in many settings. Our analysis establishes that a wide range of overcomplete latent variable models can be learned efficiently with <em>low computational and sample complexity</em> through tensor decomposition methods.</p>
+<table width="200" border="1">
+  <tr>
+    <td><img src="Projects_sub/multiview.png" width="238" height="152" /></td>
+    <td><img src="Projects_sub/SGM.png" width="228" height="194" /></td>
+  </tr>
+  <tr>
+    <td>Multiview mixtures model</td>
+    <td>Spherical Gaussian mixtures</td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+<p align="left"><strong><b>[3] </b>Analyzing Tensor Power Method Dynamics in Overcomplete Regime</strong><b>.</b> by  A. Anandkumar, R. Ge, M. Janzamin. <em>Preprint, Nov. 
+  2014.</em><br />
+Download: <a href="../../pubs/powerdynamics.pdf">PDF</a>.</p>
+<p>In our latest work in the series, we present a novel analysis of the dynamics of tensor power iterations, and an <em>efficient characterization of the basin of attraction</em> of the desired local optima. This is done by assuming random Gaussian tensor components, and analyzing the conditional distribution of each iteration conditioned on the previous iterations. We show that there exists enough randomness left in the next iterations enabling us to argue the convergence toward the local optima. In contrast to our earlier work in [1], here we analyze the dynamics of tensor power method when the initialization vector is far from the true tensor component, while in [1] we assume that the initialization is constant close to the true tensor component (having constant correlation with it). In addition, the analysis in this paper has random nature and the Gaussian assumption is crucial, while the assumptions in [1] are deterministic.<br />
+</p>
+<hr />
+<p align="left"></p>
+<p align="left">&nbsp;</p>
+</body>
+</html>

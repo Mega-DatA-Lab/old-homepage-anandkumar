@@ -1,0 +1,229 @@
+html, body {
+    margin: auto;
+    padding: 0;
+    background-color: #e6e6e6;
+    min-width: 650px;
+}
+
+#pageTitle{
+ 
+    margin-top: 40px;
+    text-align: center;
+    font-size: 36px;
+    font-family: Lato;
+    color: #101010;
+    
+}
+
+#Lab {
+    margin: 0;
+    margin-left: 5px;
+    margin-right: 5px;
+    padding: 0;
+    background-color: transparent;
+    height: 100%;
+    width: auto;
+    max-height: 4000px;
+
+}
+
+
+#LabHeading {
+    position: relative;
+    margin: 30px 40px 5px 40px;
+    padding: 0px 0px 0px 0px;
+    text-align: left;
+    background-color: transparent;
+    line-height: 1.5em;
+    font-size: 26px;
+
+}
+
+#LabAddress {
+    position: relative;
+    margin: 0px 40px 10px 40px;
+    padding: 0px 0px 0px 0px;
+    text-align: left;
+    background-color: transparent;
+    line-height: 1.5em;
+    color: #666666;
+    font-size: 18px;
+
+}
+
+#LabAddress:after {
+    content:' ';
+    display:block;
+    border:1px solid #666666;
+    border-radius:4px;
+    -webkit-border-radius:4px;
+    -moz-border-radius:4px;
+    box-shadow:inset 0 1px 1px rgba(0, 0, 0, .05);
+    -webkit-box-shadow:inset 0 1px 1px rgba(0, 0, 0, .05);
+    -moz-box-shadow:inset 0 1px 1px rgba(0, 0, 0, .05);
+}
+
+
+
+
+/*----- Tabs -----*/
+.tabs {
+    width:90%;
+    margin-left: 5%;
+    display:inline-block;
+}
+ 
+    /*----- Tab Links -----*/
+
+    .tab-links{
+        padding: 0px;
+        margin: 0px;
+        margin-top: 25px;
+        margin-bottom: 0px;
+    }
+    /* Clearfix */
+    .tab-links:after {
+        display:block;
+        clear:both;
+        content:'';
+    }
+ 
+    .tab-links li {
+        margin:0px 5px 0px 5px;
+        float:left;
+        list-style: none;
+        box-shadow:-1px 0px 1px rgba(0,0,0,0.15);
+
+    }
+ 
+        .tab-links a {
+            padding: 10px 35px;
+            display:inline-block;
+            border-radius:3px 3px 0px 0px;
+            background:#D0D0D0;
+            font-size:18px;
+            font-family: 'Lato', sans-serif;
+            font-weight: normal;
+            font-weight:600;
+            color:#4c4c4c;
+            transition:all linear 0.15s;
+        }
+ 
+        .tab-links a:hover {
+            background:#a7cce5;
+            text-decoration:none;
+        }
+ 
+    li.active a, li.active a:hover {
+        background:#fff;
+        color:#4c4c4c;
+    }
+ 
+    /*----- Content of Tabs -----*/
+    .tab-content {
+        margin-top: 1px;
+        padding:15px;
+            width: 96%;
+    margin-left: 5px;
+        border-radius:0px;
+        box-shadow:0px 0px 1px rgba(0,0,0,0.15);
+        background:#fff;
+        display: inline-block;
+    }
+ 
+        .tab {
+            display:none;
+        }
+ 
+        .tab.active {
+            display:block;
+        }
+
+
+#LabIntro{
+ 
+    margin: 20px 20px 0px 20px;
+    position: relative;
+    width: auto;
+    height: auto;
+    display: inherit;
+}
+
+#presentationDownload{
+    margin-top: -10px;
+    text-align: center;
+    display: inherit;
+}
+
+.people{
+    position: relative;
+    height: 150px;
+    width: 49%;
+    border:1px solid #C0C0C0;
+    border-radius:10px;
+    margin: 0px 0px 5px 0px;
+    float:left;
+    background-color: #F8F8F8;
+}
+
+.peopleDP{
+    position: relative;
+    display: inherit;
+    float: left;
+    margin: 0px 1.5% 1px 5%;
+    margin-top: 5px;
+    border:1px solid #C0C0C0;
+    border-radius: 70px;
+}
+
+.peopleInfo{
+    position: relative;
+    display: inherit;
+       margin: 0px 2.5% 0px 0px;
+     margin-left: -moz-calc(5% + 150px);
+    margin-left: -webkit-calc(5% + 150px);
+    margin-left: calc(5% + 150px);
+    height: 150px;
+   
+    padding-top: 35px;
+}
+
+.name{
+    color: #333333;
+    font-size: 17px;
+    margin: 10px 0px 0px 0px;
+    text-align: center;
+}
+
+.qualification{
+    color: #333333;
+    font-size: 15px;
+    margin: 10px 0px 0px 0px;
+    text-align: center;
+}
+
+
+.ProjectIntro{
+ 
+    margin: -5px 20px 0px 20px;
+    position: relative;
+    width: auto;
+    height: auto;
+    display: inherit;
+    font-size: 14px;
+}
+
+.ProjectDetails {
+   position: relative;
+    margin: 10px 0px 10px 0px;
+    padding: 1px 0px 10px 20px;
+    background-color: #e6e6e6;
+    width: 98%;
+    height: Auto;
+    border-radius: 4px;
+
+}
+
+.LabNews{
+    margin: 5px 0px 5px 0px;   
+}
